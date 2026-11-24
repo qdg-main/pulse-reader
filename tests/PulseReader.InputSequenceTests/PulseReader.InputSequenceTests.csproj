@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\PulseReader\PulseReader.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TestData\text-preparation-corpus.json"
+          CopyToOutputDirectory="PreserveNewest" />
+    <None Update="TestData\spoken-text-ab-corpus.json"
+          CopyToOutputDirectory="PreserveNewest" />
+    <None Update="TestData\spoken-text-ab-round2-corpus.json"
+          CopyToOutputDirectory="PreserveNewest" />
+    <None Update="TestData\spoken-text-ab-edge-corpus.json"
+          CopyToOutputDirectory="PreserveNewest" />
+    <None Update="TestData\spoken-text-ab-line-boundary-corpus.json"
+          CopyToOutputDirectory="PreserveNewest" />
+    <None Update="TestData\spoken-text-identifier-ab-corpus.json"
+          CopyToOutputDirectory="PreserveNewest" />
+    <None Update="TestData\measurement-unit-ab-corpus.json"
+          CopyToOutputDirectory="PreserveNewest" />
+    <None Update="TestData\four-digit-number-ab-corpus.json"
+          CopyToOutputDirectory="PreserveNewest" />
+    <None Update="TestData\local-text-cleanup-corpus.json"
+          CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "numeric-unmarked-list",
+    "category": "Confident list",
+    "title": "Short numeric status list",
+    "rationale": "Tests the exact failure mode: independent unpunctuated lines should become one utterance with ordinary sentence boundaries.",
+    "originalText": "10 voices available\n2 backends installed\n1 hotkey configured\n0 errors reported",
+    "baselineText": "10 voices available 2 backends installed 1 hotkey configured 0 errors reported",
+    "expectedPreparedText": "10 voices available. 2 backends installed. 1 hotkey configured. 0 errors reported.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "lowercase-unmarked-list",
+    "category": "Uncertain list",
+    "title": "Lowercase action lines",
+    "rationale": "Tests whether a list-like block without capitalised starts should receive the same period-and-space treatment.",
+    "originalText": "install Pulse Reader\nselect the Kokoro backend\npress the global hotkey\nlisten to the result",
+    "baselineText": "install Pulse Reader select the Kokoro backend press the global hotkey listen to the result",
+    "expectedPreparedText": "install Pulse Reader. select the Kokoro backend. press the global hotkey. listen to the result.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "address-postcode",
+    "category": "Address line group",
+    "title": "Address ending in a UK postcode",
+    "rationale": "Tests line boundaries separately from postcode pronunciation; no punctuation is appended after the final postcode.",
+    "originalText": "Pulse Reader House\n14 Market Street\nLondon\nSW1A 1AA",
+    "baselineText": "Pulse Reader House 14 Market Street London SW1A 1AA",
+    "expectedPreparedText": "Pulse Reader House. 14 Market Street. London. SW1A 1AA",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "wrapped-prose-control",
+    "category": "Wrapped prose control",
+    "title": "Sentence split across physical lines",
+    "rationale": "Tests the safety boundary: grammatical continuation cues must keep wrapped prose flowing exactly as before.",
+    "originalText": "This guide explains how to\nselect a voice and preview it\nwithout interrupting the application.",
+    "baselineText": "This guide explains how to select a voice and preview it without interrupting the application.",
+    "expectedPreparedText": "This guide explains how to select a voice and preview it without interrupting the application.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "embedded-list-with-prose",
+    "category": "Embedded marked list",
+    "title": "Markdown status list surrounded by prose",
+    "rationale": "Tests that adding long prose around a Markdown list does not merge its marked lines into one sentence.",
+    "originalText": "Paused navigation remains paused, Windows playback shows navigation controls disabled, and normal Kokoro synthesis retains its existing segmentation and voice quality.\nValidation passed:\n- Release build: 0 warnings/errors\n- Full regression suite\n- Live Kokoro next/restart/pause smoke tests\n- Updated island rendering checks\nPulse Reader is currently running from the Release build as PID 62428. No commit has been made yet.",
+    "baselineText": "Paused navigation remains paused, Windows playback shows navigation controls disabled, and normal Kokoro synthesis retains its existing segmentation and voice quality.\nValidation passed: - Release build: 0 warnings/errors - Full regression suite - Live Kokoro next/restart/pause smoke tests - Updated island rendering checks Pulse Reader is currently running from the Release build as PID 62428. No commit has been made yet.",
+    "expectedPreparedText": "Paused navigation remains paused, Windows playback shows navigation controls disabled, and normal Kokoro synthesis retains its existing segmentation and voice quality.\nValidation passed:\nRelease build: 0 warnings/errors\nFull regression suite\nLive Kokoro next/restart/pause smoke tests\nUpdated island rendering checks\nPulse Reader is currently running from the Release build as PID 62428. No commit has been made yet.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "title-before-prose",
+    "category": "Title boundary",
+    "title": "Short title followed by a prose paragraph",
+    "rationale": "Separates a short unpunctuated title-like line from the substantially longer complete paragraph beneath it.",
+    "originalText": "Unity 6, the SDK, and VCC\nWe’re hard at work on the Unity 6 SDK and VCC support! As of right now everything is going through QA to make sure creators get a smooth upgrade experience.",
+    "baselineText": "Unity 6, the SDK, and VCC We’re hard at work on the Unity 6 SDK and VCC support! As of right now everything is going through QA to make sure creators get a smooth upgrade experience.",
+    "expectedPreparedText": "Unity 6, the SDK, and VCC. We're hard at work on the Unity 6 SDK and VCC support! As of right now everything is going through QA to make sure creators get a smooth upgrade experience.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  }
+]

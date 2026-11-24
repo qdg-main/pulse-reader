@@ -1,0 +1,52 @@
+[
+  {
+    "id": "ordinary-quantities",
+    "category": "Cardinal quantities",
+    "title": "Four-digit counts and values",
+    "rationale": "Overrides Kokoro's year-style reading when ordinary prose makes these numbers quantities.",
+    "originalText": "The value is 1024. There are 2024 entries. The buffer contains 4096 bytes. The query returned 9999 results.",
+    "expectedPreparedText": "The value is one thousand and twenty-four. There are two thousand and twenty-four entries. The buffer contains four thousand and ninety-six bytes. The query returned nine thousand nine hundred and ninety-nine results.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "grouped-and-decimal",
+    "category": "Cardinal quantities",
+    "title": "Thousands separator and decimal",
+    "rationale": "Applies one cardinal policy whether the four-digit integer has a comma or a fractional part.",
+    "originalText": "The values are 1,024 and 1024.5.",
+    "expectedPreparedText": "The values are one thousand and twenty-four and one thousand and twenty-four point five.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "explicit-years",
+    "category": "Years",
+    "title": "Explicit historical years",
+    "rationale": "Preserves year-style pronunciation when surrounding language explicitly identifies a year.",
+    "originalText": "The year was 2024. In 1066, the situation changed. During 1999, the service expanded.",
+    "expectedPreparedText": "The year was 2024. In 1066, the situation changed. During 1999, the service expanded.",
+    "expectChange": false,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "labelled-identifiers",
+    "category": "Identifiers",
+    "title": "Labelled numeric identifiers",
+    "rationale": "Reads ports, version components, PINs, and build numbers as identifiers rather than years or cardinal quantities.",
+    "originalText": "Use port 8080, version 2024.1, PIN 4096, and build 9999.",
+    "expectedPreparedText": "Use port eight zero eight zero, version two zero two four point one, PIN four zero nine six, and build nine nine nine nine.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "numeric-controls",
+    "category": "Controls",
+    "title": "Already-correct number lengths",
+    "rationale": "Preserves the number lengths Kokoro already reads naturally, including the special case 1000.",
+    "originalText": "The values are 999, 1000, 12345, and 1,234,567.",
+    "expectedPreparedText": "The values are 999, 1000, 12345, and 1,234,567.",
+    "expectChange": false,
+    "expectedPauseMilliseconds": 0
+  }
+]

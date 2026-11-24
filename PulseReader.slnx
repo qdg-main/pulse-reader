@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="src/MisakiSharp.PulseReader/MisakiSharp.PulseReader.csproj" />
+  <Project Path="src/PulseReader/PulseReader.csproj" />
+  <Project Path="tests/PulseReader.FrontendCompatibilityTests/PulseReader.FrontendCompatibilityTests.csproj" />
+  <Project Path="tests/PulseReader.InputSequenceTests/PulseReader.InputSequenceTests.csproj" />
+</Solution>

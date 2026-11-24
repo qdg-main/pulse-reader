@@ -1,0 +1,127 @@
+MisakiSharp 2.1.1 converted pronunciation data, retained in Pulse Reader's patch
+Reviewed 2026-10-13; source 4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06.
+
+This notice supplements the upstream MisakiSharp NOTICE. Data licences apply
+to protected data and adaptations inside the listed embedded resources,
+separately from code licences. Placing data inside a DLL does not remove its
+attribution or reuse rights. Pulse Reader redistributes the generated resource
+bytes unchanged. Their conversion was performed upstream by MisakiSharp.
+
+1. wordfreq-derived data
+
+Copyright 2022 Robyn Speer. Source: https://github.com/rspeer/wordfreq
+Attribution snapshot: 912caf64b657478d1dff1138efdc078947d54bb1.
+Actual generator package version is unrecorded. The inspected v2.5.1, v3.0.2
+and attribution-snapshot data blobs agree for the relevant language files;
+this does not identify the author's installed package version.
+
+Covered generated resources in MisakiSharp.dll:
+MisakiSharp.enus_espeak.tsv.gz
+MisakiSharp.engb_espeak.tsv.gz
+MisakiSharp.es_espeak.tsv.gz
+MisakiSharp.fr_espeak.tsv.gz
+MisakiSharp.it_espeak.tsv.gz
+MisakiSharp.pt_espeak.tsv.gz
+MisakiSharp.hi_espeak.tsv.gz
+MisakiSharp.hi_espeak_lexicon.tsv.gz
+
+Upstream modifications include selecting word lists, adding numbers/symbols
+and uppercase variants, reserving held-out entries, probing pronunciations
+through eSpeak-NG, filtering and sorting lookups, generating learned
+letter-to-sound/context tables, converting to TSV, and gzip compression.
+Frequency columns are not retained; selected vocabulary keys are retained.
+Synthetic probes and other sources also contribute to the listed resources.
+
+Wordfreq data is licensed under Creative Commons Attribution-ShareAlike 4.0
+International: https://creativecommons.org/licenses/by-sa/4.0/
+Covered adapted data and applicable adapter rights held by Pulse Reader are
+redistributed under those terms. Keep this notice, wordfreq-NOTICE.md,
+wordfreq-LICENSE.txt, wordfreq-README.md and CC-BY-SA-4.0.txt with reuse.
+This does not relicense the original data under MIT or Apache, confer rights
+in unrelated content, or assert an exclusive licence for the entire DLL.
+
+Wordfreq credits Google Books Ngrams and Syntactic Ngrams, the Leeds Internet
+Corpus, Wikipedia contributors, ParaCrawl, OPUS OpenSubtitles 2018 and the
+OpenSubtitles project, and SUBTLEX-US/UK/CH/DE/NL by Marc Brysbaert et al.
+SUBTLEX remains freely available data. Complete source links, bibliography,
+supplied notices and permission statements are retained in wordfreq-README.md
+and wordfreq-NOTICE.md; they are part of this attribution.
+
+2. Direct Wikipedia-derived vocabulary and bigrams
+
+Credit the contributors to Spanish, French, Italian, Portuguese and Hindi
+Wikipedia. The corresponding es/fr/it/pt/hi resources above contain converted
+frequent word pairs; hi_espeak_lexicon also uses Hindi titles and articles.
+Upstream transformations strip markup, select vocabulary/frequent pairs,
+probe pronunciations and retain pronunciation exceptions rather than whole
+articles. Actual dump dates and per-pair article provenance are unrecorded.
+
+Wikipedia source and contributor-history links:
+https://es.wikipedia.org/  https://fr.wikipedia.org/
+https://it.wikipedia.org/  https://pt.wikipedia.org/
+https://hi.wikipedia.org/
+https://dumps.wikimedia.org/eswiki/
+https://dumps.wikimedia.org/frwiki/
+https://dumps.wikimedia.org/itwiki/
+https://dumps.wikimedia.org/ptwiki/
+https://dumps.wikimedia.org/hiwiki/
+https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use
+
+Current Wikimedia text terms include CC-BY-SA-4.0. Earlier CC-BY-SA-3.0
+terms are retained too because exact dump revisions are not recorded.
+CC-BY-SA-3.0.txt and CC-BY-SA-4.0.txt contain the complete terms. Covered
+adapted text/data is distributed under the applicable ShareAlike conditions;
+this notice does not claim unrelated material has been relicensed.
+
+generate_hi_native.py in the pinned source lists these Hindi vocabulary
+article titles: मुम्बई, कोलकाता, क्रिकेट, बॉलीवुड, रामायण, महाभारत, हिमालय,
+गंगा नदी, अर्थशास्त्र, जीव विज्ञान, कम्प्यूटर, रेल परिवहन, भारतीय संविधान,
+योग, आयुर्वेद, सचिन तेंदुलकर, रवीन्द्रनाथ ठाकुर, भारतीय स्वतन्त्रता आन्दोलन.
+The article and contributor history can be reached through the matching title
+at https://hi.wikipedia.org/wiki/ and its View history link. Retain this title
+list and the generator with source/data reuse. Held-out test articles are
+listed separately in the generator and are not claimed as training input.
+
+3. Chinese converted data
+
+MisakiSharp.zh_g2p.tsv.gz and MisakiSharp.zh_g2p_v2.tsv.gz include converted
+pypinyin/pypinyin-dict character and phrase entries, jieba dictionary entries,
+Misaki overrides and phoneme mappings. large_pinyin merges phrase-pinyin-data
+sources, including CC-CEDICT, Zdic and corrections. Exact input revisions and
+the full merge history are not recorded in the generated tables.
+
+The MIT notices for the wrappers do not replace the underlying data terms.
+CC-CEDICT is credited to its contributors/editors, original creator Paul
+Andrew Denisowski and former editor Erik Peterson. Its publisher currently
+declares CC-BY-SA-4.0: https://cc-cedict.org/wiki/
+Covered converted CC-CEDICT data retains its applicable ShareAlike terms.
+The original publisher credit is preserved in MisakiSharp-COMPONENT-NOTICES.txt.
+Unicode/Unihan's supplied copyright and permission notice is in that file too;
+the current notice is an attribution snapshot, not an asserted input version.
+Zdic's current terms section 4 declares CC0 1.0:
+https://www.zdic.net/terms/ . Its declaration and CC0 text are retained in
+MisakiSharp-COMPONENT-NOTICES.txt; CC0-1.0.txt also contains the full terms.
+
+4. Other converted data and scope limitations
+
+English gold/silver lexicons and ja_words derive from misaki (hexgrad,
+Apache-2.0). Lexicon expansion, TSV export and compression are upstream
+modifications. English tokenizer rules derive from spaCy; the small POS
+perceptron learns its labels rather than shipping spaCy's model tensors.
+Their original notices and conservative source-model credits are retained
+in MisakiSharp-COMPONENT-NOTICES.txt. Exact model versions are unrecorded.
+Japanese converted UniDic 3.1.0 data, including the compact connection matrix,
+retains the BSD option and AUTHORS/COPYING files in UniDic-3.1.0-*.
+
+The modified code replaces the reviewed number and punctuation source ports;
+these data notices are not the basis for that code change. Ordinary output
+from a GPL program is not automatically GPL. The bounded source check found
+no concrete conflicting output term or identified protected eSpeak source
+expression in these generated resources. The published project declarations
+and scoped input notices support retaining their bytes. Residual dictionary
+content uncertainty is documented, not a new permission prerequisite or a
+blanket legal-clearance claim.
+No permission or relicensing of third-party material absent from its supplied
+grants is asserted here. No restrictive application terms override the
+licensed extraction and reuse of the covered data. All twenty original
+generated resource files are retained in the dependency-source asset.

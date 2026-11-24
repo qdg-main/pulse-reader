@@ -1,0 +1,56 @@
+Microsoft Visual C++ runtime binaries
+
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+The four application-local x64 CRT files are copied without modification from
+a licensed Visual Studio installation's VC/Redist/MSVC directory. These files
+are Microsoft software and are not covered by Pulse Reader's application license.
+Their redistribution is subject to the Microsoft Software License Terms for
+the Visual Studio edition supplying them and its Distributable Code list.
+
+Primary references:
+https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files
+https://learn.microsoft.com/en-us/visualstudio/releases/2026/redistribution
+https://visualstudio.microsoft.com/license-terms/
+
+The build verifies each file's Microsoft Authenticode signature and records
+the source, version, signer and SHA-256 in native-runtime-manifest.json.
+The release publisher must confirm its Visual Studio redistribution entitlement.
+Application-local CRT servicing requires rebuilding and delivering Pulse Reader.
+
+The reviewed build machine has stable Visual Studio Community 2026, not a
+preview edition. Its release VC145 CRT files have version 14.51.36247.0.
+The 2026 Distributable Code list expressly includes Community and unmodified
+files under VC/redist, excluding debug_nonredist and prerelease components.
+
+The original Microsoft licence documents accompany this notice:
+Microsoft-Visual-Studio-2026-Community-LICENSE.docx (publisher/tool entitlement)
+Microsoft-VC-Runtime-LICENSE.docx (runtime end-user terms)
+
+Source documents, retrieved 2026-10-12:
+https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual_Studio_2026-License-Community_ENU.docx
+https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual-C-V14-License-Redistributable_and_Runtime_ENU.docx
+
+The runtime end-user licence is not, by itself, a publisher redistribution
+grant. Publisher entitlement comes from the supplying Visual Studio edition
+and the Distributable Code list. The Community terms permit individual
+developers' own applications and qualifying open-source projects, with
+conditions. Those conditions include significant primary functionality and
+end-user/distributor terms protecting the Microsoft Distributable Code at
+least as much as Microsoft's agreement. They do not relicense Pulse Reader's
+MIT source or unrelated open-source components as proprietary software.
+
+The exact documents are preserved alongside a scoped package agreement.
+Distribution-Terms.txt combines Pulse Reader's MIT licence, the complete original
+runtime text and a separate introduction limited to these four Microsoft files.
+The installer presents it; portable launch requires agreement before application
+setup or speech. An accepted content hash is recorded for the Windows user.
+Changed terms require fresh acceptance. Silent installation requires explicit
+/ACCEPTDISTRIBUTIONTERMS=yes after reviewing that text.
+
+On 13 October 2026 the maintainer confirmed individual development and
+acknowledged Community Section 8(b)(iii)'s publisher defence/indemnity condition,
+including its exception for claims based solely on Microsoft Distributable Code.
+Package acceptance still requires validation of the agreement flow. This review
+records the documented grant and its implementation, not contract enforceability
+or blanket legal clearance. No public release is authorised by this notice.

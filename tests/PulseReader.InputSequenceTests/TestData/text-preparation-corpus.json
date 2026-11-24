@@ -1,0 +1,76 @@
+[
+  {
+    "id": "clean-prose",
+    "text": "Dr. Rivera released version 2.1 today. Read the notes at https://example.com/docs. Is everything ready? Yes!",
+    "expectedKinds": [ "Sentence", "Sentence", "Sentence", "Sentence" ],
+    "expectedTexts": [
+      "Dr. Rivera released version 2.1 today.",
+      "Read the notes at https://example.com/docs.",
+      "Is everything ready?",
+      "Yes!"
+    ],
+    "minimumComplexity": "Simple"
+  },
+  {
+    "id": "heading-and-list",
+    "text": "# Setup\r\n\r\n1. Start Pulse Reader.\r\n2. Select the text.\r\n   Keep the source window focused.\r\n3. Press Ctrl + Shift + Space.",
+    "expectedKinds": [ "Heading", "ListItem", "ListItem", "ListItem" ],
+    "expectedTexts": [
+      "# Setup",
+      "1. Start Pulse Reader.",
+      "2. Select the text.\r\n   Keep the source window focused.",
+      "3. Press Ctrl + Shift + Space."
+    ],
+    "minimumComplexity": "Simple"
+  },
+  {
+    "id": "dialogue",
+    "text": "Alice: Are you ready?\nBob: Yes, start reading.\n> The quoted response stays together.",
+    "expectedKinds": [ "Dialogue", "Dialogue", "Dialogue" ],
+    "expectedTexts": [
+      "Alice: Are you ready?",
+      "Bob: Yes, start reading.",
+      "> The quoted response stays together."
+    ],
+    "minimumComplexity": "Simple"
+  },
+  {
+    "id": "fenced-code",
+    "text": "```csharp\nif (reader.IsSpeaking)\n{\n    reader.Stop();\n}\n```",
+    "expectedKinds": [ "CodeBlock" ],
+    "expectedTexts": [ "```csharp\nif (reader.IsSpeaking)\n{\n    reader.Stop();\n}\n```" ],
+    "minimumComplexity": "Moderate"
+  },
+  {
+    "id": "table",
+    "text": "Name | Status | Duration\n--- | --- | ---\nKokoro | Ready | 240 ms\nWindows | Ready | 50 ms",
+    "expectedKinds": [ "TableRow", "TableRow", "TableRow", "TableRow" ],
+    "expectedTexts": [
+      "Name | Status | Duration",
+      "--- | --- | ---",
+      "Kokoro | Ready | 240 ms",
+      "Windows | Ready | 50 ms"
+    ],
+    "minimumComplexity": "Complex"
+  },
+  {
+    "id": "logs-and-stack-trace",
+    "text": "12:04:09 Starting synthesis\n12:04:10 Playback failed\nat PulseReader.Speech.Playback.Run()\nat PulseReader.Program.Main()",
+    "expectedKinds": [ "StructuredBlock" ],
+    "expectedTexts": [ "12:04:09 Starting synthesis\n12:04:10 Playback failed\nat PulseReader.Speech.Playback.Run()\nat PulseReader.Program.Main()" ],
+    "minimumComplexity": "Moderate"
+  },
+  {
+    "id": "mixed-layout",
+    "text": "RELEASE NOTES\n\nThe reader now supports pause and resume.\n\n- Keep the original voice.\n- Preserve the clipboard.\n\n```json\n{\"backend\":\"kokoro\"}\n```",
+    "expectedKinds": [ "Heading", "Sentence", "ListItem", "ListItem", "CodeBlock" ],
+    "expectedTexts": [
+      "RELEASE NOTES",
+      "The reader now supports pause and resume.",
+      "- Keep the original voice.",
+      "- Preserve the clipboard.",
+      "```json\n{\"backend\":\"kokoro\"}\n```"
+    ],
+    "minimumComplexity": "Complex"
+  }
+]

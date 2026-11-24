@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>PulseReader</AssemblyName>
+    <RootNamespace>PulseReader</RootNamespace>
+    <ApplicationIcon>Assets\TrayIcon\pulse-reader.ico</ApplicationIcon>
+    <KokoroSharpVersion>0.8.4</KokoroSharpVersion>
+    <UiAutomationInteropVersion>10.19041.0</UiAutomationInteropVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Interop.UIAutomationClient" Version="$(UiAutomationInteropVersion)" />
+    <PackageReference Include="KokoroSharp.CPU" Version="$(KokoroSharpVersion)" />
+    <!-- Keep the upstream package out of compile/runtime assets; the pinned
+         source frontend below supplies the compatible MisakiSharp assembly. -->
+    <PackageReference Include="MisakiSharp" Version="2.1.1" ExcludeAssets="all" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="System.Speech" Version="10.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MisakiSharp.PulseReader\MisakiSharp.PulseReader.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(NuGetPackageRoot)interop.uiautomationclient\$(UiAutomationInteropVersion)\LICENSE.txt"
+          Link="licenses\Interop.UIAutomationClient-LICENSE.txt"
+          CopyToPublishDirectory="PreserveNewest"
+          Visible="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Setup\contextual-pronunciation-manifest.json" LogicalName="PulseReader.Setup.contextual-pronunciation-manifest.json" />
+    <EmbeddedResource Include="..\..\licenses\llama.cpp-LICENSE.txt" LogicalName="PulseReader.Setup.llama.cpp-LICENSE.txt" />
+    <EmbeddedResource Include="..\..\licenses\LLVM-OpenMP-LICENSE.txt" LogicalName="PulseReader.Setup.LLVM-OpenMP-LICENSE.txt" />
+    <EmbeddedResource Include="..\..\licenses\Kokoro-Voices-LICENSE.txt" LogicalName="PulseReader.Setup.Apache-2.0-LICENSE.txt" />
+    <EmbeddedResource Include="Assets\TrayIcon\pulse-reader-idle.png" LogicalName="PulseReader.Assets.TrayIcon.pulse-reader-idle.png" />
+    <EmbeddedResource Include="Assets\TrayIcon\pulse-reader-logo.png" LogicalName="PulseReader.Assets.TrayIcon.pulse-reader-logo.png" />
+    <EmbeddedResource Include="Assets\TrayIcon\pulse-reader-speaking-02.png" LogicalName="PulseReader.Assets.TrayIcon.pulse-reader-speaking-02.png" />
+    <EmbeddedResource Include="Assets\TrayIcon\pulse-reader-speaking-03.png" LogicalName="PulseReader.Assets.TrayIcon.pulse-reader-speaking-03.png" />
+  </ItemGroup>
+
+  <Target Name="RemoveUnusedKokoroV11Voices" AfterTargets="CopyContent">
+    <RemoveDir Directories="$(OutputPath)voices\voices-zh" />
+  </Target>
+
+  <Target Name="IncludeKokoroVoicesInPublish" AfterTargets="ComputeResolvedFilesToPublishList">
+    <ItemGroup>
+      <KokoroVoiceFile Include="$(NuGetPackageRoot)\kokorosharp\$(KokoroSharpVersion)\content\voices\*" />
+      <ResolvedFileToPublish Include="@(KokoroVoiceFile)">
+        <RelativePath>voices\%(Filename)%(Extension)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>

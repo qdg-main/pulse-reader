@@ -1,0 +1,192 @@
+[
+  {
+    "id": "decimal-storage",
+    "category": "Data size",
+    "title": "Decimal byte units",
+    "rationale": "Expands common decimal storage symbols and preserves singular and plural quantities.",
+    "originalText": "The values are 1 B, 2 KB, 3 MB, 4 GB, and 5 TB.",
+    "expectedPreparedText": "The values are 1 byte, 2 kilobytes, 3 megabytes, 4 gigabytes, and 5 terabytes.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "binary-storage",
+    "category": "Data size",
+    "title": "Binary byte units",
+    "rationale": "Uses approved candidate phonemes for the binary unit names that Kokoro mispronounces as plain text.",
+    "originalText": "The values are 1 KiB, 2 MiB, 3 GiB, and 4 TiB.",
+    "expectedPreparedText": "The values are 1 [kibibyte](/kˈɪbɪbˌIt/), 2 [mebibytes](/mˈɛbɪbˌIts/), 3 [gibibytes](/ɡˈɪbɪbˌIts/), and 4 [tebibytes](/tˈɛbɪbˌIts/).",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "data-rates",
+    "category": "Data rate",
+    "title": "Network and transfer rates",
+    "rationale": "Distinguishes bits per second from bytes per second and removes spoken slash characters.",
+    "originalText": "The link reaches 100 Mbps and 10 Gbps, while the disk reaches 500 MB/s and 5 GB/s.",
+    "expectedPreparedText": "The link reaches 100 megabits per second and 10 gigabits per second, while the disk reaches 500 megabytes per second and 5 gigabytes per second.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "metric-length",
+    "category": "Length",
+    "title": "Metric length",
+    "rationale": "Expands common metric length symbols in numeric measurements.",
+    "originalText": "The measurements are 1 mm, 20 cm, 2 m, and 5 km.",
+    "expectedPreparedText": "The measurements are 1 millimetre, 20 centimetres, 2 metres, and 5 kilometres.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "imperial-length",
+    "category": "Length",
+    "title": "Imperial length",
+    "rationale": "Handles regular and irregular singular forms for inches and feet.",
+    "originalText": "The measurements are 1 in, 12 in, 1 ft, and 6 ft.",
+    "expectedPreparedText": "The measurements are 1 inch, 12 inches, 1 foot, and 6 feet.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "mass",
+    "category": "Mass",
+    "title": "Mass units",
+    "rationale": "Expands common metric and imperial mass symbols while leaving the already-correct lbs form alone.",
+    "originalText": "The values are 1 mg, 500 g, 1 kg, 2 oz, 1 lb, and 2 lbs.",
+    "expectedPreparedText": "The values are 1 milligram, 500 grams, 1 kilogram, 2 ounces, 1 pound, and 2 lbs.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "volume",
+    "category": "Volume",
+    "title": "Volume units",
+    "rationale": "Supports the standard mL spelling, its common lowercase variant, and litres.",
+    "originalText": "The values are 1 mL, 250 ml, 1 L, and 2 L.",
+    "expectedPreparedText": "The values are 1 millilitre, 250 millilitres, 1 litre, and 2 litres.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "time",
+    "category": "Time",
+    "title": "Time units",
+    "rationale": "Expands common subsecond, second, minute, and hour symbols only after numeric quantities.",
+    "originalText": "Wait 1 ns, 2 µs, 3 μs, 4 us, 5 ms, 1 s, 10 min, 1 h, and 2 hr.",
+    "expectedPreparedText": "Wait 1 nanosecond, 2 microseconds, 3 microseconds, 4 microseconds, 5 milliseconds, 1 second, 10 minutes, 1 hour, and 2 hours.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "frequency",
+    "category": "Frequency",
+    "title": "Frequency units",
+    "rationale": "Expands hertz units without pluralising the word hertz.",
+    "originalText": "The values are 1 Hz, 2 kHz, 500 MHz, and 4 GHz.",
+    "expectedPreparedText": "The values are 1 hertz, 2 kilohertz, 500 megahertz, and 4 gigahertz.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "electrical",
+    "category": "Electrical",
+    "title": "Voltage and current",
+    "rationale": "Expands volts and amps while respecting milli-prefix casing.",
+    "originalText": "The values are 1 mV, 12 V, 1 mA, and 2 A.",
+    "expectedPreparedText": "The values are 1 millivolt, 12 volts, 1 milliamp, and 2 amps.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "power-energy",
+    "category": "Electrical",
+    "title": "Power and energy",
+    "rationale": "Expands watts, kilowatts, watt-hours, and kilowatt-hours.",
+    "originalText": "The values are 1 W, 2 kW, 1 Wh, and 80 kWh.",
+    "expectedPreparedText": "The values are 1 watt, 2 kilowatts, 1 watt-hour, and 80 kilowatt-hours.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "speed",
+    "category": "Speed",
+    "title": "Speed units",
+    "rationale": "Expands slash rates and miles per hour without reading punctuation aloud.",
+    "originalText": "The values are 1 m/s, 5 m/s, 1 km/h, 50 km/h, 1 mph, and 30 mph.",
+    "expectedPreparedText": "The values are 1 metre per second, 5 metres per second, 1 kilometre per hour, 50 kilometres per hour, 1 mile per hour, and 30 miles per hour.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "temperature",
+    "category": "Temperature",
+    "title": "Temperature units",
+    "rationale": "Expands degree symbols to Celsius and Fahrenheit with singular and plural quantities.",
+    "originalText": "The values are 1 °C, 20 °C, 1 °F, and 70 °F.",
+    "expectedPreparedText": "The values are 1 degree Celsius, 20 degrees Celsius, 1 degree Fahrenheit, and 70 degrees Fahrenheit.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "titles",
+    "category": "Titles",
+    "title": "Scoped name titles",
+    "rationale": "Adds the working punctuation for Ms and expands the titles Kokoro otherwise spells out.",
+    "originalText": "Ms Smith, Prof. Daniel Jones, Rev. Anna Brown, and Mx. Taylor Smith approved the report.",
+    "expectedPreparedText": "Ms. Smith, Professor Daniel Jones, Reverend Anna Brown, and Mix Taylor Smith approved the report.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "attributive-measurements",
+    "category": "Grammar",
+    "title": "Measurements used before nouns",
+    "rationale": "Uses the singular unit name in determiner-led modifier phrases without changing ordinary measured quantities.",
+    "originalText": "Copy the 4 GB file after a 5 ms delay using this 12 V adapter.",
+    "expectedPreparedText": "Copy the 4 gigabyte file after a 5 millisecond delay using this 12 volt adapter.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "attributive-control",
+    "category": "Grammar",
+    "title": "Modifier and measured quantity together",
+    "rationale": "Distinguishes a unit modifying a noun from the same unit describing a measured value.",
+    "originalText": "Use a 20 cm cable, but confirm that it is 20 cm long.",
+    "expectedPreparedText": "Use a 20 centimetre cable, but confirm that it is 20 centimetres long.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "decimal-quantities",
+    "category": "Grammar",
+    "title": "Decimal quantities",
+    "rationale": "Keeps fractional quantities plural while treating a numeric value equal to one as singular.",
+    "originalText": "The images occupy 0.5 GB and 1.0 GB.",
+    "expectedPreparedText": "The images occupy 0.5 gigabytes and 1.0 gigabyte.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "separators-and-compact-rate",
+    "category": "Formatting",
+    "title": "Thousands separators and compact rates",
+    "rationale": "Removes spoken thousands separators that Kokoro treats as number breaks, and expands compact transfer-rate forms.",
+    "originalText": "The cache uses 1,024 MB and streams at 500MB/s.",
+    "expectedPreparedText": "The cache uses one thousand and twenty-four megabytes and streams at 500 megabytes per second.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "controls",
+    "category": "Controls",
+    "title": "Ambiguous text remains unchanged",
+    "rationale": "Proves that non-numeric unit symbols, MOD, and the already-correct lbs form are not rewritten while the approved Ms title refinement still applies.",
+    "originalText": "Ms Smith discussed GB and cm, installed the MOD, and moved 2 lbs.",
+    "expectedPreparedText": "Ms. Smith discussed GB and cm, installed the MOD, and moved 2 lbs.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  }
+]

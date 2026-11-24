@@ -1,0 +1,557 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-12",
+  "sourceRef": "f6652e6c493587fe174d379e9b553176b114b163",
+  "source": "https://github.com/opentk/opentk/tree/f6652e6c493587fe174d379e9b553176b114b163",
+  "scope": [
+    "src/OpenAL/OpenTK.Audio.OpenAL",
+    "src/OpenTK.Core",
+    "src/OpenTK.Mathematics"
+  ],
+  "sourceFilesReviewed": 107,
+  "method": "Read complete C# source files for the three shipped managed libraries; collect copyright and permission notices. Review exact restored NuGet assets and existing payload file inventory.",
+  "result": "MIT source notices retained in OpenTK-LICENSE.txt and OpenTK-COPYRIGHT-NOTICES.txt. No other license or copyright text found in the reviewed C# files. The root LICENSE reference to an absent THIRD_PARTIES.md is recorded; no native OpenAL binary or corresponding native-library redistribution obligation was evidenced.",
+  "limitations": "This review is bounded to the listed source files and current package/payload assets. It is not a legal certification and must be repeated if dependencies or native payloads change.",
+  "packages": [
+    "OpenTK.Audio.OpenAL/5.0.0-pre.13",
+    "OpenTK.Core/5.0.0-pre.13",
+    "OpenTK.Mathematics/5.0.0-pre.13"
+  ],
+  "files": [
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/AL/AL.cs",
+      "gitBlobSha": "a9f27df853ec0037af8952f24b561ddf42d37d9f",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/AL/AL.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/AL/ALEnums.cs",
+      "gitBlobSha": "18951486b0df10fa465684cc1b11ba6461d73249",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/AL/ALEnums.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/ALC/ALC.cs",
+      "gitBlobSha": "0e38d09e775f8db5c7346dfa2f01d0f250317a1e",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/ALC/ALC.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/ALC/ALCEnums.cs",
+      "gitBlobSha": "8cbbd5edc540dcea496e0b2bec6897db3b960676",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/ALC/ALCEnums.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/ALC/ALContextAttributes.cs",
+      "gitBlobSha": "6eb03bb10827a2c777959429717538cfd4c8d977",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/ALC/ALContextAttributes.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/ALCaptureDevice.cs",
+      "gitBlobSha": "584c34662a8c0ecf6fa96447a26aabd5ccf8a9fe",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/ALCaptureDevice.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/ALContext.cs",
+      "gitBlobSha": "25a2afa33853f195d93522227332d9e9b67d9082",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/ALContext.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/ALDevice.cs",
+      "gitBlobSha": "33b7d267e3e0f00f848f944ce793fb591050343f",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/ALDevice.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/AlcVersion.cs",
+      "gitBlobSha": "bcd05921b7581d7632adeb2802a435e90a1e1289",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/AlcVersion.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/EFX.cs",
+      "gitBlobSha": "ed6abea03bf52e037f3cc673625848c65bf5fe21",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/EFX.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EFXContextAttributes.cs",
+      "gitBlobSha": "facbe6a1dbb8f5b3546fa53e2e2161fbc70779ff",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EFXContextAttributes.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EFXContextInteger.cs",
+      "gitBlobSha": "1de41709b57da6fcce5c3a9d177f38ce8230c8d6",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EFXContextInteger.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EFXListenerFloat.cs",
+      "gitBlobSha": "fb329e466de94d6e02add9d24c6da8d06316c992",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EFXListenerFloat.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EFXSourceBoolean.cs",
+      "gitBlobSha": "7893d12a77d6ab19fe10228a15bd33e78207861c",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EFXSourceBoolean.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EFXSourceFloat.cs",
+      "gitBlobSha": "56aeb79614560bd04d02839d2283c2356a428e37",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EFXSourceFloat.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EFXSourceInteger.cs",
+      "gitBlobSha": "bcd6b0594b0ef25efadd335bb931142681598d68",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EFXSourceInteger.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EFXSourceInteger3.cs",
+      "gitBlobSha": "34e094f2d74e3b11fdfdc6466d971bb22aabe1ac",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EFXSourceInteger3.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EffectFloat.cs",
+      "gitBlobSha": "06b5032e717dd6bccb6a2e7cf6a5beaa33de68a8",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EffectFloat.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EffectInteger.cs",
+      "gitBlobSha": "59640e51f48484ecf0870e1012d95468b9d6a0f0",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EffectInteger.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EffectSlotFloat.cs",
+      "gitBlobSha": "948c16bedc44713e0d0ddba51c1b6fa411f69a9c",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EffectSlotFloat.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EffectSlotInteger.cs",
+      "gitBlobSha": "7b4a1af685e967a735c9968805a4f5a4c5336b22",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EffectSlotInteger.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EffectType.cs",
+      "gitBlobSha": "d0defee889c9aaddcb8c97cd1eabb682168a7f50",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EffectType.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EffectVector3.cs",
+      "gitBlobSha": "de2028c08e911d106c5cc15e6098de09f71b22ce",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/EffectVector3.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/FilterFloat.cs",
+      "gitBlobSha": "772ad21b5c4d202f0435fa58050595c05f912fa9",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/FilterFloat.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/FilterInteger.cs",
+      "gitBlobSha": "6b2a17c8bb603fa6e421180517eb7f15afc95358",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/FilterInteger.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/FilterType.cs",
+      "gitBlobSha": "eff510cee045c49c4d5466a9e1e3bf5a3c3b0600",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/FilterType.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/FormantFilterSettings.cs",
+      "gitBlobSha": "5f97b99a89cca226137d4b219eb3c2e1d11cf7f4",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/FormantFilterSettings.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/MaxAuxiliarySends.cs",
+      "gitBlobSha": "d97a73414afe74d451fdbe44173438414965fc73",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Enums/MaxAuxiliarySends.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Presets/ReverbPresets.cs",
+      "gitBlobSha": "0879ebe4348554a9f89c160c5a083ffd5663902b",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Presets/ReverbPresets.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Presets/ReverbProperties.cs",
+      "gitBlobSha": "1c1349da1e7727a8a7949bfbb309a1e55f15ce5a",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EFX/Presets/ReverbProperties.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EnumerateAll/EnumerateAll.cs",
+      "gitBlobSha": "08adb818366db56dbdec351a6d7feb53cb0395a1",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EnumerateAll/EnumerateAll.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EnumerateAll/Enums/GetEnumerateAllContextString.cs",
+      "gitBlobSha": "3eeb928ae341dfd4bbbc1158efa2eb589883998f",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EnumerateAll/Enums/GetEnumerateAllContextString.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EnumerateAll/Enums/GetEnumerateAllContextStringList.cs",
+      "gitBlobSha": "0fb1bd4d83bb8b6bcc8a0876f7f1b8123bbe94ca",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/Creative.EnumerateAll/Enums/GetEnumerateAllContextStringList.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/EXT.Double/EXTDouble.cs",
+      "gitBlobSha": "34ef41c58b657aba613b385077e2b8bd84b9b571",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/EXT.Double/EXTDouble.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/EXT.Double/Enums/DoubleBufferFormat.cs",
+      "gitBlobSha": "b51e85c476cd0296a51b7c8a3ddce3f2761266a0",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/EXT.Double/Enums/DoubleBufferFormat.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/EXT.Float32/EXTFloat32.cs",
+      "gitBlobSha": "c84cad0d46fb45738c7224120d6ecede81ee2e57",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/EXT.Float32/EXTFloat32.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/EXT.Float32/Enums/FloatBufferFormat.cs",
+      "gitBlobSha": "a433ce06dff619e86a9315dfc981c6cfa5531ad2",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/EXT.Float32/Enums/FloatBufferFormat.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.DeviceClock/DeviceClock.cs",
+      "gitBlobSha": "cd76093e8c2a5820c625ea898b561981753faaa4",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.DeviceClock/DeviceClock.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.DeviceClock/Enums/GetInteger64.cs",
+      "gitBlobSha": "4edca1796a4a1585939745bdd02a6c4a847aa7be",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.DeviceClock/Enums/GetInteger64.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.DeviceClock/Enums/SourceDouble.cs",
+      "gitBlobSha": "415afa8eda7862f82ed7ad997d4ae4018d1e78dc",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.DeviceClock/Enums/SourceDouble.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.DeviceClock/Enums/SourceInteger64.cs",
+      "gitBlobSha": "df6bbc8b2a8e9875346bc3537247d9d2b2aa46c2",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.DeviceClock/Enums/SourceInteger64.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.LoopPoints/Enums/BufferLoopPoint.cs",
+      "gitBlobSha": "27ac35423ebf10e10ccfa0f28db6d0e3754c16be",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.LoopPoints/Enums/BufferLoopPoint.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.LoopPoints/LoopPoints.cs",
+      "gitBlobSha": "87c6472e650ab48685aba9be5d706b04c0866488",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.LoopPoints/LoopPoints.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.SourceLatency/Enums/SourceLatencyVector2.cs",
+      "gitBlobSha": "9db7f1d8d824546042214d9412f394cbda67dd44",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.SourceLatency/Enums/SourceLatencyVector2.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.SourceLatency/SourceLatency.cs",
+      "gitBlobSha": "00ff7297214da3ed8810b3f8d59f58824bb24090",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Extensions/SOFT.SourceLatency/SourceLatency.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Native/ALBase.cs",
+      "gitBlobSha": "36a834a2827cb3221a688daa67589c620bc40205",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Native/ALBase.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Native/ALLoader.cs",
+      "gitBlobSha": "7309f9e2046ad662a4ceff0edb78c103a36ba661",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Native/ALLoader.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/Native/ConstCharPtrMarshaler.cs",
+      "gitBlobSha": "5ec3f890c03635f1b3268541c3f055bf5f448a78",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/Native/ConstCharPtrMarshaler.cs"
+    },
+    {
+      "path": "src/OpenAL/OpenTK.Audio.OpenAL/OpenALLibraryNameContainer.cs",
+      "gitBlobSha": "bfac4a4c6313067cada63cdde751cf3f6f87654f",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenAL/OpenTK.Audio.OpenAL/OpenALLibraryNameContainer.cs"
+    },
+    {
+      "path": "src/OpenTK.Core/Context/IBindingsContext.cs",
+      "gitBlobSha": "d46021d6619b16cad8b9eb8fdd995478bf91af45",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Core/Context/IBindingsContext.cs"
+    },
+    {
+      "path": "src/OpenTK.Core/Exceptions/BindingsNotRewrittenException.cs",
+      "gitBlobSha": "0932be1bad12096196f4d3b07ad064b4b630d14c",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Core/Exceptions/BindingsNotRewrittenException.cs"
+    },
+    {
+      "path": "src/OpenTK.Core/Exceptions/ExtensionNotSupportedException.cs",
+      "gitBlobSha": "ca4d078ac093e49f42ee5d9afe6fcee7fd33edd4",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Core/Exceptions/ExtensionNotSupportedException.cs"
+    },
+    {
+      "path": "src/OpenTK.Core/GlobalSuppressions.cs",
+      "gitBlobSha": "d9c237d1e7f52d35c6d3906b8b327f90f7a79a83",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Core/GlobalSuppressions.cs"
+    },
+    {
+      "path": "src/OpenTK.Core/Native/AutoGeneratedAttribute.cs",
+      "gitBlobSha": "0dd8ad74bd4b7516b55a2142d56f079c0bb3aa58",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Core/Native/AutoGeneratedAttribute.cs"
+    },
+    {
+      "path": "src/OpenTK.Core/Native/CountAttribute.cs",
+      "gitBlobSha": "e617f5f241c0a36f68a1336ee6d6a203badb025a",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Core/Native/CountAttribute.cs"
+    },
+    {
+      "path": "src/OpenTK.Core/Native/MarshalTk.cs",
+      "gitBlobSha": "c9f7a61d603b47360e648258f8725aa52e9ac561",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Core/Native/MarshalTk.cs"
+    },
+    {
+      "path": "src/OpenTK.Core/Native/SlotAttribute.cs",
+      "gitBlobSha": "0332f04a004751ff03127bb466b778610286706e",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Core/Native/SlotAttribute.cs"
+    },
+    {
+      "path": "src/OpenTK.Core/Utility/ConsoleLogger.cs",
+      "gitBlobSha": "3b6500d65da6e7fb1815a8f9157555b521e1095c",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Core/Utility/ConsoleLogger.cs"
+    },
+    {
+      "path": "src/OpenTK.Core/Utility/DebugFileLogger.cs",
+      "gitBlobSha": "1ee9fad2905175dd08ff95245ffd82592ec0bb43",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Core/Utility/DebugFileLogger.cs"
+    },
+    {
+      "path": "src/OpenTK.Core/Utility/DebugLogger.cs",
+      "gitBlobSha": "ec0fc894214860b8abd76b2c52889bae03996cfb",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Core/Utility/DebugLogger.cs"
+    },
+    {
+      "path": "src/OpenTK.Core/Utility/ILogger.cs",
+      "gitBlobSha": "413de03ab5c19268cdde870ea18acbb0b10a9111",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Core/Utility/ILogger.cs"
+    },
+    {
+      "path": "src/OpenTK.Core/Utility/Utils.cs",
+      "gitBlobSha": "6ee081e4f2077e87d78049ca5c37f378749ac6d6",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Core/Utility/Utils.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Colors/Color3.cs",
+      "gitBlobSha": "4bc262e0c31952fbb00b06d06ea0a4f6aa08fc57",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Colors/Color3.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Colors/Color4.cs",
+      "gitBlobSha": "5d8d2a2fbeac6001de45ce7822c6670f0b265ec6",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Colors/Color4.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Data/Quaternion.cs",
+      "gitBlobSha": "0333be273c28901fae0071501682d4c5b2a472b9",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Data/Quaternion.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Data/Quaterniond.cs",
+      "gitBlobSha": "625e7f19bbd464c29174c438d1624465a1e65795",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Data/Quaterniond.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Geometry/BezierCurve.cs",
+      "gitBlobSha": "250f15fbc879d016f63ae7008bb890dd1f2c0bff",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Geometry/BezierCurve.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Geometry/BezierCurveCubic.cs",
+      "gitBlobSha": "a9d2a0609618c9d610c563c495fbf461da7838ff",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Geometry/BezierCurveCubic.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Geometry/BezierCurveQuadric.cs",
+      "gitBlobSha": "2c8941aab35727e04e2dbf13cfa63f0dded3eff5",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Geometry/BezierCurveQuadric.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Geometry/Box2.cs",
+      "gitBlobSha": "eae35615de88d5650a2785111565b87bb4e7ee19",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Geometry/Box2.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Geometry/Box2d.cs",
+      "gitBlobSha": "a3ca6cd785191a4e2ef615d771bc80e9789c6998",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Geometry/Box2d.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Geometry/Box2i.cs",
+      "gitBlobSha": "63e2776f56a239ac056480c956c113d3acaf8b07",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Geometry/Box2i.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Geometry/Box3.cs",
+      "gitBlobSha": "1abb944d32356b4fa692d29502f01645204d25a5",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Geometry/Box3.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Geometry/Box3d.cs",
+      "gitBlobSha": "7d6f0d1b791fbe697bde51cb5fe8661d1434f443",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Geometry/Box3d.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Geometry/Box3i.cs",
+      "gitBlobSha": "61d7eef47c5b6283f3de348e76b498db5e8f19e1",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Geometry/Box3i.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/GlobalSuppressions.cs",
+      "gitBlobSha": "9a354f56de7b01f6f631d419fb4788955fc16ecf",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/GlobalSuppressions.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/MathHelper.cs",
+      "gitBlobSha": "acfc72afb553a741a315280b8834411bfd1b5f85",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/MathHelper.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix2.cs",
+      "gitBlobSha": "8924974e6761fbc8130df2d0f128bc6bbd852947",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix2.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix2d.cs",
+      "gitBlobSha": "e4b70f068fc23418cea40b6fd9d7e26137943896",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix2d.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix2x3.cs",
+      "gitBlobSha": "297f050f709ef2d1a041109cb1f8c1d174b12f79",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix2x3.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix2x3d.cs",
+      "gitBlobSha": "9cbe5ec22378cc334702260cba5e61780c5cf66c",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix2x3d.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix2x4.cs",
+      "gitBlobSha": "d31684372fc4d2a852e5862dd8ba34bc1e50653c",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix2x4.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix2x4d.cs",
+      "gitBlobSha": "f05281c8f350f90425f87c3f711b1d05045f5e95",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix2x4d.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix3.cs",
+      "gitBlobSha": "29f21bb40c0e1df763c624690eb8861aa2a28a51",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix3.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix3d.cs",
+      "gitBlobSha": "bb983b24b728fa44cfc42eeee16269d5c3be1e0d",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix3d.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix3x2.cs",
+      "gitBlobSha": "80aa2ed706b4d2161212d2fad043f67876d796f5",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix3x2.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix3x2d.cs",
+      "gitBlobSha": "43e2a8bbfc7beddaf9d59bc75afec68c850833e2",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix3x2d.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix3x4.cs",
+      "gitBlobSha": "d1d0b86182be0c04c120c9ea6c779238c6afff4a",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix3x4.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix3x4d.cs",
+      "gitBlobSha": "cf3e062e1004de5d64537785567409226cb88fb1",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix3x4d.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix4.cs",
+      "gitBlobSha": "0322afea3f52de1460e37f554fb4752a7b0968fc",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix4.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix4d.cs",
+      "gitBlobSha": "b83818e86f2fe06253c31f8b5b1f710897f776bf",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix4d.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix4x2.cs",
+      "gitBlobSha": "1b74df8c7c0105a13584a232c7d3914a9aa3e5d1",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix4x2.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix4x2d.cs",
+      "gitBlobSha": "d34ec710f5c41ae7836bf1f44fd40c6dd116897b",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix4x2d.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix4x3.cs",
+      "gitBlobSha": "1640c807c5f434cc0a6b904eb0fe4f56b6cfc9ed",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix4x3.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Matrix/Matrix4x3d.cs",
+      "gitBlobSha": "26f16f1a27a27fee7b6bac739815f808591b4884",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Matrix/Matrix4x3d.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Vector/Vector2.cs",
+      "gitBlobSha": "c32a301a913e5d95f9f08fc85701b660b187a38f",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Vector/Vector2.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Vector/Vector2d.cs",
+      "gitBlobSha": "7664fd681824afcd84db0ac46d0f50cf353cfd49",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Vector/Vector2d.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Vector/Vector2h.cs",
+      "gitBlobSha": "87ff1bd883b6ff8b8d041932e47ef32e1725d8a8",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Vector/Vector2h.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Vector/Vector2i.cs",
+      "gitBlobSha": "b6ace5fdd34671560b8cf067d500dd123da16247",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Vector/Vector2i.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Vector/Vector3.cs",
+      "gitBlobSha": "3eb12e19be4667b78985f1268316f2c2b4dae703",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Vector/Vector3.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Vector/Vector3d.cs",
+      "gitBlobSha": "242c1c9f58bada79d764307609370239404fe01a",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Vector/Vector3d.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Vector/Vector3h.cs",
+      "gitBlobSha": "81edf264999943ca542c6bd9067829e4c893873f",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Vector/Vector3h.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Vector/Vector3i.cs",
+      "gitBlobSha": "bcf68c78d172c54b5a00ad62ceb844257c9d5218",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Vector/Vector3i.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Vector/Vector4.cs",
+      "gitBlobSha": "5bb89422ac1c113f270a4868dedf55fb1e2d3515",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Vector/Vector4.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Vector/Vector4d.cs",
+      "gitBlobSha": "5403754bead2ee9c03c12dc82e9ba7f8db5e8df8",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Vector/Vector4d.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Vector/Vector4h.cs",
+      "gitBlobSha": "7ecc3579e0470e179166d573da1d4678d6b20211",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Vector/Vector4h.cs"
+    },
+    {
+      "path": "src/OpenTK.Mathematics/Vector/Vector4i.cs",
+      "gitBlobSha": "f0e6b540b4a9ff4968d8f8da78663df1ed98579c",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6c493587fe174d379e9b553176b114b163/src/OpenTK.Mathematics/Vector/Vector4i.cs"
+    }
+  ]
+}

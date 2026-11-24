@@ -1,0 +1,1538 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-12",
+  "package": "MisakiSharp/2.1.1",
+  "misakiSourceRef": "4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06",
+  "noticeFile": "MisakiSharp-COMPONENT-NOTICES.txt",
+  "noticeFileSha256": "C862B2D91AB7F2F09C61DE464D2394FF7AE74E151B1AB257C0E060FE3461FD92",
+  "scope": "Permissive components and conservative inherited data/model attributions identified in the pinned source and declared lineage, plus exact num2words/phonemizer copyright headers supplementing their separate copyleft license texts. Collection of texts is not a release clearance or conclusion about copyleft or derived-data obligations.",
+  "textPreservation": "Complete upstream license texts and indicated header/page excerpts are reproduced verbatim as text; CRLF normalized to LF and local section delimiters added. Original byte SHA-256 values refer to downloaded source files, not the local combined sections.",
+  "sourceArchive": {
+    "url": "https://codeload.github.com/Lyrcaxis/MisakiSharp/zip/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06",
+    "sha256": "8AF95BE23DBFD0E902E7FB6A48382A8A7C1E107D8F73F5EFFFEBC0101D4DD8E8",
+    "cache": "artifacts/license-source-audit/notices/MisakiSharp-4ec982c.zip"
+  },
+  "upstreamMisakiRelease": {
+    "version": "0.9.4",
+    "role": "Release explicitly named by native source parity comments and several generators; not a claim that it supplies every legacy resource or records the actual generator environment.",
+    "url": "https://files.pythonhosted.org/packages/1a/c7/fb01370a76585b46595a01b52f18e65c8ba6d7a313a05e5d9fff0a8e1c69/misaki-0.9.4.tar.gz",
+    "pypiMetadata": "https://pypi.org/pypi/misaki/0.9.4/json",
+    "sha256": "3960FA3E6DE179A90EE8E628446A4A4F6B8C730B6E3410999CF396189F4D9C40",
+    "cache": "artifacts/license-source-audit/notices/upstream/hexgrad--misaki/misaki-0.9.4.tar.gz",
+    "sizeBytes": 3756765,
+    "releaseFiles": [
+      {
+        "path": "LICENSE",
+        "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+      },
+      {
+        "path": "misaki/zh_frontend.py",
+        "sha256": "002023955E31C692CEA2DCD0DEA1836DF84A9FF8DAB966F5AE43CE276BDD1C0C"
+      },
+      {
+        "path": "misaki/tone_sandhi.py",
+        "sha256": "2A0ADC3854C137759F304417D844582D7FD902C57D84733D94137A4BC756C301"
+      },
+      {
+        "path": "misaki/transcription.py",
+        "sha256": "14F0F1B5EB89C5B684229A30AE8B0C19C8266B537967786A2079BA887F5FBC32"
+      },
+      {
+        "path": "misaki/num2kana.py",
+        "sha256": "26CA4B39AC7165104E53971BD2459DF6466FF8140E1DAC836A3BF1F9E811E2D2"
+      },
+      {
+        "path": "misaki/cutlet.py",
+        "sha256": "7695FC7D853AE4E99679DFF4CA0C8404D4804A6FB1059A9D6AD02BAEABC4D4DE"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "E52E3283A3F748BE921081481417E45DBFFDD67B4486FF9D0FBA741D00DED5C2"
+      }
+    ],
+    "dependencyEvidence": "pyproject.toml zh extras name jieba, ordered-set, pypinyin, cn2an and pypinyin-dict without versions. The release uv.lock is reference environment evidence, not proof of the MisakiSharp generator installation."
+  },
+  "components": [
+    {
+      "name": "cn2an",
+      "license": "MIT",
+      "inclusion": "ZhFrontend.cs ports cn2an's an2cn integer and transform behavior verbatim.",
+      "evidence": [
+        "ZhFrontend.cs"
+      ],
+      "resources": [],
+      "repository": "Ailln/cn2an",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "Ailln-cn2an-LICENSE"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "ZhFrontend.cs",
+          "sha256": "BAE9575FFEB8A8B5E4C7E719C4DEFB64EABBB1503ADA144859EFBAE96D409D0A",
+          "gitBlobSha": "c58fc22ed74ed16f5e107afcf11340b50b818f64",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/ZhFrontend.cs"
+        }
+      ],
+      "includedResourceEvidence": [],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "spaCy",
+      "license": "MIT",
+      "inclusion": "English tokenizer code and exported special-case/affix data; tagger distilled from en_core_web_sm outputs.",
+      "evidence": [
+        "EnglishTokenizer.cs",
+        "EnglishTagger.cs",
+        "generators/generate_en_tokenizer.py",
+        "generators/generate_en_tagger.py"
+      ],
+      "resources": [
+        "data/en_tokenizer.tsv.gz",
+        "data/en_tagger.bin.gz"
+      ],
+      "repository": "explosion/spaCy",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "explosion-spaCy-LICENSE"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "EnglishTokenizer.cs",
+          "sha256": "393A7368078B45C2647BEAC449A2C8A45EBC9AD28B2788FB6211A2069462C65D",
+          "gitBlobSha": "23511516bdcb43c345de7d313f52368b5e607e14",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/EnglishTokenizer.cs"
+        },
+        {
+          "path": "EnglishTagger.cs",
+          "sha256": "83676E50044C7BE870E451C49AA6397C9767289E507941DBC17165B5517F857E",
+          "gitBlobSha": "f91d201f13e0ec83489040bc6225d0c677c1ec27",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/EnglishTagger.cs"
+        },
+        {
+          "path": "generators/generate_en_tokenizer.py",
+          "sha256": "62B2262F5DAE67B994408D9F817ECFC412AA6C7AB54796572360FDEB698CF7D0",
+          "gitBlobSha": "f93919d5e9dc549dd0abd52662ae2331b2590949",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_en_tokenizer.py"
+        },
+        {
+          "path": "generators/generate_en_tagger.py",
+          "sha256": "23E10C71E7F2B38A6785EB038A4D5DDE1E3A08AEDDE85085F2DF775FE03550A1",
+          "gitBlobSha": "3dbeddb6d77b356edffd8bd1016bd9f3b48dd2c1",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_en_tagger.py"
+        }
+      ],
+      "includedResourceEvidence": [
+        {
+          "path": "data/en_tokenizer.tsv.gz",
+          "sha256": "F64970488DF9E691219D7AD6B946BF41D1D5BDB49144C5FB240093DEC76F4589",
+          "gitBlobSha": "5caffb0c5659f768c82966393e90e64ebc0f9912"
+        },
+        {
+          "path": "data/en_tagger.bin.gz",
+          "sha256": "9FB5A95639DAAF7FF403339247EA91F3BD03991DB748E1295433294FE275CEFA",
+          "gitBlobSha": "1ede9f529008c316a85e7872ab4f9b560f31285b"
+        }
+      ],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "jieba",
+      "license": "MIT",
+      "inclusion": "Segmentation/POS algorithm ports and dictionary/HMM exports.",
+      "evidence": [
+        "ChineseG2P.cs",
+        "PossegTagger.cs",
+        "generators/generate_zh_dict.py",
+        "generators/generate_zh_dict_v2.py",
+        "generators/generate_zh_posseg.py"
+      ],
+      "resources": [
+        "data/zh_g2p.tsv.gz",
+        "data/zh_g2p_v2.tsv.gz",
+        "data/zh_posseg_hmm.tsv.gz",
+        "data/zh_finalseg_hmm.tsv.gz"
+      ],
+      "repository": "fxsjy/jieba",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "fxsjy-jieba-LICENSE"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "ChineseG2P.cs",
+          "sha256": "93FB27BA4ECBB54E9EC94C7ACE8BB258E37E78DB4F7B77841EDB4575EF96C836",
+          "gitBlobSha": "faa9ed052d47222907898d2d24d0b3fb3d3b4cec",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/ChineseG2P.cs"
+        },
+        {
+          "path": "PossegTagger.cs",
+          "sha256": "5AF2AB559D6B4773C4C2810D0F67FE1812FFF77EB69612793949D4025E5B3B21",
+          "gitBlobSha": "8b65adf1c3954e51e3593342bac4723c8a71efbd",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/PossegTagger.cs"
+        },
+        {
+          "path": "generators/generate_zh_dict.py",
+          "sha256": "FB5837DC06DD75CE4F38B5341F84AD0139FC117FF55760629290F6BBA77CBF9B",
+          "gitBlobSha": "89e90d38f88495706c1f6dba6646ac4129242aaa",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict.py"
+        },
+        {
+          "path": "generators/generate_zh_dict_v2.py",
+          "sha256": "FCE00F3C48272E87DA5B218117D3B9DCCB5A65B790F0EE7AF180AEC00C965ED0",
+          "gitBlobSha": "45870f06c931b18d3de806c019a29cf863d8dd7a",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict_v2.py"
+        },
+        {
+          "path": "generators/generate_zh_posseg.py",
+          "sha256": "295D1C8526792321374A16D3BE7592AC52CDB02A5CFEA3A5BFAD57A864E340F0",
+          "gitBlobSha": "047f227476a87436059ddaf47351075a4a196b69",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_posseg.py"
+        }
+      ],
+      "includedResourceEvidence": [
+        {
+          "path": "data/zh_g2p.tsv.gz",
+          "sha256": "C22FFE300859C868AFA7753112C5A13F3EFCC0BE7171B051D5A19003ED486FD4",
+          "gitBlobSha": "1e724379d6056f8be610aa5a7d2117da55558eb7"
+        },
+        {
+          "path": "data/zh_g2p_v2.tsv.gz",
+          "sha256": "9EE53A841668D32733A32A518C16C1811D29CDEE694AABD3ABA80A5D77CBC6B1",
+          "gitBlobSha": "951d206abb6022b52c7f2d56f4ce52981147a7c4"
+        },
+        {
+          "path": "data/zh_posseg_hmm.tsv.gz",
+          "sha256": "CE5AEA6279277DB5A29DE5D80D5D3DC36F6635EF20D295BBB5CEF79C3CF92FDD",
+          "gitBlobSha": "931c9af87c93119ac4910ef135c2f6af0a1081d7"
+        },
+        {
+          "path": "data/zh_finalseg_hmm.tsv.gz",
+          "sha256": "85B2D11A35F7042894F579C7F471989149DFFEE47F4BDF9B7CEE92F4B87B51DE",
+          "gitBlobSha": "6e6017bfd8902b0ac97397c30643333509b4a839"
+        }
+      ],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "Convert-Numbers-to-Japanese",
+      "license": "MIT",
+      "inclusion": "Japanese number verbalization via misaki's copied num2kana.py.",
+      "evidence": [
+        "JapaneseG2P.cs"
+      ],
+      "resources": [],
+      "repository": "Greatdane/Convert-Numbers-to-Japanese",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "Greatdane-Convert-Numbers-to-Japanese-LICENSE"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "JapaneseG2P.cs",
+          "sha256": "8E07EC436B1E1E05220025948D8DD1D4A713013B5E2E1051793D170D4E5A4D7A",
+          "gitBlobSha": "061e8362a976a649ddd145ad11ce89be006d2fb8",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/JapaneseG2P.cs"
+        }
+      ],
+      "includedResourceEvidence": [],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "misaki",
+      "license": "Apache-2.0",
+      "inclusion": "Native G2P port and converted English lexicons/Japanese words; upstream oracle release is described as 0.9.4. Legacy Chinese path is described as 0.7.12.",
+      "evidence": [
+        "NOTICE",
+        "ChineseG2P.cs",
+        "EnglishG2P.cs",
+        "JapaneseG2P.cs",
+        "generators/generate_en_dict.py",
+        "generators/generate_ja_dict.py"
+      ],
+      "resources": [
+        "data/en_lexicon_us.tsv.gz",
+        "data/en_lexicon_gb.tsv.gz",
+        "data/ja_words.txt.gz"
+      ],
+      "repository": "hexgrad/misaki",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "hexgrad-misaki-LICENSE"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "NOTICE",
+          "sha256": "6528653B3D03B15F2A52A311842A060972F6D1705624CDC522729D634850E69C",
+          "gitBlobSha": "561ab1d0e2ab0d14a6c3dffc2364c9abb00abd88",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/NOTICE"
+        },
+        {
+          "path": "ChineseG2P.cs",
+          "sha256": "93FB27BA4ECBB54E9EC94C7ACE8BB258E37E78DB4F7B77841EDB4575EF96C836",
+          "gitBlobSha": "faa9ed052d47222907898d2d24d0b3fb3d3b4cec",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/ChineseG2P.cs"
+        },
+        {
+          "path": "EnglishG2P.cs",
+          "sha256": "509F4D1A2C4A6A5F27B7B90781C6BA88018AEA95549ADAA360B6214D8CF88012",
+          "gitBlobSha": "3e122bb2f6070e86ffce07fe22e23c3e83ec34ac",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/EnglishG2P.cs"
+        },
+        {
+          "path": "JapaneseG2P.cs",
+          "sha256": "8E07EC436B1E1E05220025948D8DD1D4A713013B5E2E1051793D170D4E5A4D7A",
+          "gitBlobSha": "061e8362a976a649ddd145ad11ce89be006d2fb8",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/JapaneseG2P.cs"
+        },
+        {
+          "path": "generators/generate_en_dict.py",
+          "sha256": "4A8DD072B7C2624C59729B79744402F71C07A822F0A52B60517C4232B353C29E",
+          "gitBlobSha": "6aa58e04c5a6310a2bc7075b648a0d353ad2fc27",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_en_dict.py"
+        },
+        {
+          "path": "generators/generate_ja_dict.py",
+          "sha256": "7E5947E0217EFE4BDFE9B8D4CD94299AB838C71069A2B8A9351773D30425AC29",
+          "gitBlobSha": "87f75ae12fc6b824fd34a27f32037220074aada1",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_ja_dict.py"
+        }
+      ],
+      "includedResourceEvidence": [
+        {
+          "path": "data/en_lexicon_us.tsv.gz",
+          "sha256": "CCC5443B5A0A64603787EEC4373E97630BEFEC6FB40092EA0BDA5BF95BC345C7",
+          "gitBlobSha": "4adf58fcfc694123de84d1eb2f5bfb78481ef499"
+        },
+        {
+          "path": "data/en_lexicon_gb.tsv.gz",
+          "sha256": "78375DFAB7D031307F7968E486663CA61154396CECA1019C2E4A003EDB5B400D",
+          "gitBlobSha": "292ede061684096c2e2b302cb11cedf9e46964e7"
+        },
+        {
+          "path": "data/ja_words.txt.gz",
+          "sha256": "1958BCD457012E8C3F112922FCDC154B3CFF33F91CB52EAF07828B835D0A70E4",
+          "gitBlobSha": "d320e9056a4b60fa1fba6c7106523f596df38eb1"
+        }
+      ],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "hotoo/pinyin",
+      "license": "MIT (current snapshot)",
+      "inclusion": "Inherited initial phrase-pinyin-data source identified by that project's README, not a direct MisakiSharp package dependency.",
+      "evidence": [
+        "generators/generate_zh_dict_v2.py"
+      ],
+      "resources": [
+        "data/zh_g2p_v2.tsv.gz"
+      ],
+      "repository": "hotoo/pinyin",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "hotoo-pinyin-LICENSE"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "generators/generate_zh_dict_v2.py",
+          "sha256": "FCE00F3C48272E87DA5B218117D3B9DCCB5A65B790F0EE7AF180AEC00C965ED0",
+          "gitBlobSha": "45870f06c931b18d3de806c019a29cf863d8dd7a",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict_v2.py"
+        }
+      ],
+      "includedResourceEvidence": [
+        {
+          "path": "data/zh_g2p_v2.tsv.gz",
+          "sha256": "9EE53A841668D32733A32A518C16C1811D29CDEE694AABD3ABA80A5D77CBC6B1",
+          "gitBlobSha": "951d206abb6022b52c7f2d56f4ce52981147a7c4"
+        }
+      ],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "phrase-pinyin-data",
+      "license": "MIT (repository wrapper; underlying datasets require separate review)",
+      "inclusion": "pypinyin base phrases and pypinyin-dict large_pinyin overrides export into Chinese tables.",
+      "evidence": [
+        "generators/generate_zh_dict.py",
+        "generators/generate_zh_dict_v2.py"
+      ],
+      "resources": [
+        "data/zh_g2p.tsv.gz",
+        "data/zh_g2p_v2.tsv.gz"
+      ],
+      "repository": "mozillazg/phrase-pinyin-data",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "mozillazg-phrase-pinyin-data-LICENSE"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "generators/generate_zh_dict.py",
+          "sha256": "FB5837DC06DD75CE4F38B5341F84AD0139FC117FF55760629290F6BBA77CBF9B",
+          "gitBlobSha": "89e90d38f88495706c1f6dba6646ac4129242aaa",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict.py"
+        },
+        {
+          "path": "generators/generate_zh_dict_v2.py",
+          "sha256": "FCE00F3C48272E87DA5B218117D3B9DCCB5A65B790F0EE7AF180AEC00C965ED0",
+          "gitBlobSha": "45870f06c931b18d3de806c019a29cf863d8dd7a",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict_v2.py"
+        }
+      ],
+      "includedResourceEvidence": [
+        {
+          "path": "data/zh_g2p.tsv.gz",
+          "sha256": "C22FFE300859C868AFA7753112C5A13F3EFCC0BE7171B051D5A19003ED486FD4",
+          "gitBlobSha": "1e724379d6056f8be610aa5a7d2117da55558eb7"
+        },
+        {
+          "path": "data/zh_g2p_v2.tsv.gz",
+          "sha256": "9EE53A841668D32733A32A518C16C1811D29CDEE694AABD3ABA80A5D77CBC6B1",
+          "gitBlobSha": "951d206abb6022b52c7f2d56f4ce52981147a7c4"
+        }
+      ],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "pinyin-data",
+      "license": "MIT (repository wrapper; underlying datasets require separate review)",
+      "inclusion": "pypinyin's base per-character data export into Chinese tables.",
+      "evidence": [
+        "generators/generate_zh_dict.py",
+        "generators/generate_zh_dict_v2.py"
+      ],
+      "resources": [
+        "data/zh_g2p.tsv.gz",
+        "data/zh_g2p_v2.tsv.gz"
+      ],
+      "repository": "mozillazg/pinyin-data",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "mozillazg-pinyin-data-LICENSE"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "generators/generate_zh_dict.py",
+          "sha256": "FB5837DC06DD75CE4F38B5341F84AD0139FC117FF55760629290F6BBA77CBF9B",
+          "gitBlobSha": "89e90d38f88495706c1f6dba6646ac4129242aaa",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict.py"
+        },
+        {
+          "path": "generators/generate_zh_dict_v2.py",
+          "sha256": "FCE00F3C48272E87DA5B218117D3B9DCCB5A65B790F0EE7AF180AEC00C965ED0",
+          "gitBlobSha": "45870f06c931b18d3de806c019a29cf863d8dd7a",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict_v2.py"
+        }
+      ],
+      "includedResourceEvidence": [
+        {
+          "path": "data/zh_g2p.tsv.gz",
+          "sha256": "C22FFE300859C868AFA7753112C5A13F3EFCC0BE7171B051D5A19003ED486FD4",
+          "gitBlobSha": "1e724379d6056f8be610aa5a7d2117da55558eb7"
+        },
+        {
+          "path": "data/zh_g2p_v2.tsv.gz",
+          "sha256": "9EE53A841668D32733A32A518C16C1811D29CDEE694AABD3ABA80A5D77CBC6B1",
+          "gitBlobSha": "951d206abb6022b52c7f2d56f4ce52981147a7c4"
+        }
+      ],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "pypinyin-dict",
+      "license": "MIT",
+      "inclusion": "large_pinyin.load() phrase overrides explicitly imported before generation.",
+      "evidence": [
+        "generators/generate_zh_dict_v2.py"
+      ],
+      "resources": [
+        "data/zh_g2p_v2.tsv.gz"
+      ],
+      "repository": "mozillazg/pypinyin-dict",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "mozillazg-pypinyin-dict-LICENSE"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "generators/generate_zh_dict_v2.py",
+          "sha256": "FCE00F3C48272E87DA5B218117D3B9DCCB5A65B790F0EE7AF180AEC00C965ED0",
+          "gitBlobSha": "45870f06c931b18d3de806c019a29cf863d8dd7a",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict_v2.py"
+        }
+      ],
+      "includedResourceEvidence": [
+        {
+          "path": "data/zh_g2p_v2.tsv.gz",
+          "sha256": "9EE53A841668D32733A32A518C16C1811D29CDEE694AABD3ABA80A5D77CBC6B1",
+          "gitBlobSha": "951d206abb6022b52c7f2d56f4ce52981147a7c4"
+        }
+      ],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "pypinyin",
+      "license": "MIT",
+      "inclusion": "Algorithm port and hanzi/phrase/syllable data exports.",
+      "evidence": [
+        "ZhFrontend.cs",
+        "ChineseG2P.cs",
+        "generators/generate_zh_dict.py",
+        "generators/generate_zh_dict_v2.py"
+      ],
+      "resources": [
+        "data/zh_g2p.tsv.gz",
+        "data/zh_g2p_v2.tsv.gz"
+      ],
+      "repository": "mozillazg/python-pinyin",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "mozillazg-python-pinyin-LICENSE-txt"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "ZhFrontend.cs",
+          "sha256": "BAE9575FFEB8A8B5E4C7E719C4DEFB64EABBB1503ADA144859EFBAE96D409D0A",
+          "gitBlobSha": "c58fc22ed74ed16f5e107afcf11340b50b818f64",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/ZhFrontend.cs"
+        },
+        {
+          "path": "ChineseG2P.cs",
+          "sha256": "93FB27BA4ECBB54E9EC94C7ACE8BB258E37E78DB4F7B77841EDB4575EF96C836",
+          "gitBlobSha": "faa9ed052d47222907898d2d24d0b3fb3d3b4cec",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/ChineseG2P.cs"
+        },
+        {
+          "path": "generators/generate_zh_dict.py",
+          "sha256": "FB5837DC06DD75CE4F38B5341F84AD0139FC117FF55760629290F6BBA77CBF9B",
+          "gitBlobSha": "89e90d38f88495706c1f6dba6646ac4129242aaa",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict.py"
+        },
+        {
+          "path": "generators/generate_zh_dict_v2.py",
+          "sha256": "FCE00F3C48272E87DA5B218117D3B9DCCB5A65B790F0EE7AF180AEC00C965ED0",
+          "gitBlobSha": "45870f06c931b18d3de806c019a29cf863d8dd7a",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict_v2.py"
+        }
+      ],
+      "includedResourceEvidence": [
+        {
+          "path": "data/zh_g2p.tsv.gz",
+          "sha256": "C22FFE300859C868AFA7753112C5A13F3EFCC0BE7171B051D5A19003ED486FD4",
+          "gitBlobSha": "1e724379d6056f8be610aa5a7d2117da55558eb7"
+        },
+        {
+          "path": "data/zh_g2p_v2.tsv.gz",
+          "sha256": "9EE53A841668D32733A32A518C16C1811D29CDEE694AABD3ABA80A5D77CBC6B1",
+          "gitBlobSha": "951d206abb6022b52c7f2d56f4ce52981147a7c4"
+        }
+      ],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "PaddleSpeech",
+      "license": "Apache-2.0",
+      "inclusion": "Chinese frontend and tone-sandhi adapted via misaki. Both 0.9.4 source headers retain the 2021 PaddlePaddle copyright.",
+      "evidence": [
+        "ZhFrontend.cs",
+        "ToneSandhi.cs"
+      ],
+      "resources": [],
+      "repository": "PaddlePaddle/PaddleSpeech",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "PaddlePaddle-PaddleSpeech-LICENSE",
+        "PaddleSpeech-misaki-0-9-4-zh-frontend-header",
+        "PaddleSpeech-misaki-0-9-4-tone-sandhi-header"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "ZhFrontend.cs",
+          "sha256": "BAE9575FFEB8A8B5E4C7E719C4DEFB64EABBB1503ADA144859EFBAE96D409D0A",
+          "gitBlobSha": "c58fc22ed74ed16f5e107afcf11340b50b818f64",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/ZhFrontend.cs"
+        },
+        {
+          "path": "ToneSandhi.cs",
+          "sha256": "7B49E7C4682C1EDA1A08EAF11AF28CA0FC6CE9568E56B351C05ADDED618A9447",
+          "gitBlobSha": "2275fdf4b0fb8e4f5770f689b5b0ad80b2fdd294",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/ToneSandhi.cs"
+        }
+      ],
+      "includedResourceEvidence": [],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "cutlet",
+      "license": "MIT",
+      "inclusion": "Japanese kana conversion copied/adapted via misaki cutlet.py.",
+      "evidence": [
+        "JapaneseG2P.cs",
+        "generators/generate_ja_dict.py"
+      ],
+      "resources": [
+        "data/ja_words.txt.gz"
+      ],
+      "repository": "polm/cutlet",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "polm-cutlet-LICENSE"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "JapaneseG2P.cs",
+          "sha256": "8E07EC436B1E1E05220025948D8DD1D4A713013B5E2E1051793D170D4E5A4D7A",
+          "gitBlobSha": "061e8362a976a649ddd145ad11ce89be006d2fb8",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/JapaneseG2P.cs"
+        },
+        {
+          "path": "generators/generate_ja_dict.py",
+          "sha256": "7E5947E0217EFE4BDFE9B8D4CD94299AB838C71069A2B8A9351773D30425AC29",
+          "gitBlobSha": "87f75ae12fc6b824fd34a27f32037220074aada1",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_ja_dict.py"
+        }
+      ],
+      "includedResourceEvidence": [
+        {
+          "path": "data/ja_words.txt.gz",
+          "sha256": "1958BCD457012E8C3F112922FCDC154B3CFF33F91CB52EAF07828B835D0A70E4",
+          "gitBlobSha": "d320e9056a4b60fa1fba6c7106523f596df38eb1"
+        }
+      ],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "pinyin-to-ipa",
+      "license": "MIT",
+      "inclusion": "misaki transcription.py adapted from pinyin-to-ipa; ZHG2P.py2ipa is called by the generator for legacy syllable-to-IPA rows.",
+      "evidence": [
+        "ChineseG2P.cs",
+        "generators/generate_zh_dict.py"
+      ],
+      "resources": [
+        "data/zh_g2p.tsv.gz"
+      ],
+      "repository": "stefantaubert/pinyin-to-ipa",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "stefantaubert-pinyin-to-ipa-LICENSE",
+        "pinyin-to-ipa-historical-attribution-snapshot"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "ChineseG2P.cs",
+          "sha256": "93FB27BA4ECBB54E9EC94C7ACE8BB258E37E78DB4F7B77841EDB4575EF96C836",
+          "gitBlobSha": "faa9ed052d47222907898d2d24d0b3fb3d3b4cec",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/ChineseG2P.cs"
+        },
+        {
+          "path": "generators/generate_zh_dict.py",
+          "sha256": "FB5837DC06DD75CE4F38B5341F84AD0139FC117FF55760629290F6BBA77CBF9B",
+          "gitBlobSha": "89e90d38f88495706c1f6dba6646ac4129242aaa",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict.py"
+        }
+      ],
+      "includedResourceEvidence": [
+        {
+          "path": "data/zh_g2p.tsv.gz",
+          "sha256": "C22FFE300859C868AFA7753112C5A13F3EFCC0BE7171B051D5A19003ED486FD4",
+          "gitBlobSha": "1e724379d6056f8be610aa5a7d2117da55558eb7"
+        }
+      ],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "MeCab",
+      "license": "BSD option of BSD/LGPL/GPL triple license",
+      "inclusion": "JapaneseTagger reimplements documented lattice behavior; conservative BSD option attribution retained. No original MeCab binary is established by this review.",
+      "evidence": [
+        "JapaneseTagger.cs",
+        "NOTICE"
+      ],
+      "resources": [],
+      "repository": "taku910/mecab",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "taku910-mecab-mecab-AUTHORS",
+        "taku910-mecab-mecab-BSD",
+        "taku910-mecab-mecab-COPYING"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "JapaneseTagger.cs",
+          "sha256": "FBFC690445927600583022DDCF2FA7D3FCB75D69378255A3DB4FD4C5AE40EE6E",
+          "gitBlobSha": "a116e15d935c997f9f8c49fbc20a491a962c7dd2",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/JapaneseTagger.cs"
+        },
+        {
+          "path": "NOTICE",
+          "sha256": "6528653B3D03B15F2A52A311842A060972F6D1705624CDC522729D634850E69C",
+          "gitBlobSha": "561ab1d0e2ab0d14a6c3dffc2364c9abb00abd88",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/NOTICE"
+        }
+      ],
+      "includedResourceEvidence": [],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "en_core_web_sm model",
+      "license": "MIT (model attribution snapshot)",
+      "inclusion": "Source of outputs used for distilled tagger training; only license and source-notice metadata fetched. Snapshot model version is 3.7.1, actual generator model version unknown.",
+      "evidence": [
+        "EnglishTagger.cs",
+        "generators/generate_en_tagger.py"
+      ],
+      "resources": [
+        "data/en_tagger.bin.gz"
+      ],
+      "repository": "spacy/en_core_web_sm",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "spacy-en-core-web-sm-LICENSE",
+        "spacy-en-core-web-sm-LICENSES-SOURCES"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "EnglishTagger.cs",
+          "sha256": "83676E50044C7BE870E451C49AA6397C9767289E507941DBC17165B5517F857E",
+          "gitBlobSha": "f91d201f13e0ec83489040bc6225d0c677c1ec27",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/EnglishTagger.cs"
+        },
+        {
+          "path": "generators/generate_en_tagger.py",
+          "sha256": "23E10C71E7F2B38A6785EB038A4D5DDE1E3A08AEDDE85085F2DF775FE03550A1",
+          "gitBlobSha": "3dbeddb6d77b356edffd8bd1016bd9f3b48dd2c1",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_en_tagger.py"
+        }
+      ],
+      "includedResourceEvidence": [
+        {
+          "path": "data/en_tagger.bin.gz",
+          "sha256": "9FB5A95639DAAF7FF403339247EA91F3BD03991DB748E1295433294FE275CEFA",
+          "gitBlobSha": "1ede9f529008c316a85e7872ab4f9b560f31285b"
+        }
+      ],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    },
+    {
+      "name": "Unicode/Unihan data",
+      "license": "Unicode License V3 (current attribution snapshot)",
+      "inclusion": "Underlying per-character pinyin-data source; actual Unicode/Unihan version used in embedded resources unknown.",
+      "evidence": [
+        "generators/generate_zh_dict.py",
+        "generators/generate_zh_dict_v2.py"
+      ],
+      "resources": [
+        "data/zh_g2p.tsv.gz",
+        "data/zh_g2p_v2.tsv.gz"
+      ],
+      "repository": "Unicode",
+      "actualIncorporatedUpstreamRevision": null,
+      "attributionTextSections": [
+        "Unicode-license-txt"
+      ],
+      "inclusionEvidence": [
+        {
+          "path": "generators/generate_zh_dict.py",
+          "sha256": "FB5837DC06DD75CE4F38B5341F84AD0139FC117FF55760629290F6BBA77CBF9B",
+          "gitBlobSha": "89e90d38f88495706c1f6dba6646ac4129242aaa",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict.py"
+        },
+        {
+          "path": "generators/generate_zh_dict_v2.py",
+          "sha256": "FCE00F3C48272E87DA5B218117D3B9DCCB5A65B790F0EE7AF180AEC00C965ED0",
+          "gitBlobSha": "45870f06c931b18d3de806c019a29cf863d8dd7a",
+          "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict_v2.py"
+        }
+      ],
+      "includedResourceEvidence": [
+        {
+          "path": "data/zh_g2p.tsv.gz",
+          "sha256": "C22FFE300859C868AFA7753112C5A13F3EFCC0BE7171B051D5A19003ED486FD4",
+          "gitBlobSha": "1e724379d6056f8be610aa5a7d2117da55558eb7"
+        },
+        {
+          "path": "data/zh_g2p_v2.tsv.gz",
+          "sha256": "9EE53A841668D32733A32A518C16C1811D29CDEE694AABD3ABA80A5D77CBC6B1",
+          "gitBlobSha": "951d206abb6022b52c7f2d56f4ce52981147a7c4"
+        }
+      ],
+      "status": "Attribution texts collected; actual incorporated revision remains unconfirmed."
+    }
+  ],
+  "underlyingData": [
+    {
+      "name": "CC-CEDICT",
+      "licenseSnapshot": "CC-BY-SA-4.0",
+      "noticeSection": "CC-CEDICT-primary-attribution",
+      "licenseFile": "CC-BY-SA-4.0.txt",
+      "inclusion": "large_pinyin merges phrase-pinyin-data cc_cedict.txt, exported via pypinyin-dict to zh_g2p_v2.tsv.gz. Actual incorporated release/merge history unconfirmed.",
+      "modifications": "Source dictionaries merged into large_pinyin; converted pinyin and phoneme rows embedded in MisakiSharp Chinese tables.",
+      "actualDataVersion": null
+    },
+    {
+      "name": "Zdic",
+      "licenseSnapshot": "CC0-1.0",
+      "noticeSections": [
+        "Zdic-current-CC0-declaration",
+        "CC0-1-0-legalcode"
+      ],
+      "inclusion": "phrase-pinyin-data large_pinyin merges zdic_cibs.txt and zdic_cybs.txt. Current primary terms section4 contains a CC0 dedication of the site's words and characters among other materials; upstream data version/collection date unknown.",
+      "actualDataVersion": null
+    }
+  ],
+  "noticeSections": [
+    {
+      "id": "Ailln-cn2an-LICENSE",
+      "component": "cn2an",
+      "source": "https://github.com/Ailln/cn2an/blob/7c9ba0770b129960d9b6e6c6b2b46c00ec580778/LICENSE",
+      "sourceRef": "7c9ba0770b129960d9b6e6c6b2b46c00ec580778",
+      "sourcePath": "LICENSE",
+      "sourceSha256": "B18D8D4AD8BC57E00AE80D08D9DA80A32176F031062F87C739EA7557C1B5D759",
+      "gitBlobSha": "a142367fe037cc7d08113dab6418ebc695a17710",
+      "snapshotOnly": true
+    },
+    {
+      "id": "explosion-spaCy-LICENSE",
+      "component": "spaCy",
+      "source": "https://github.com/explosion/spaCy/blob/c2dabfce56ad2991685ec85783cd59637a5d7b8f/LICENSE",
+      "sourceRef": "c2dabfce56ad2991685ec85783cd59637a5d7b8f",
+      "sourcePath": "LICENSE",
+      "sourceSha256": "3F4378E67708FECACD3E27651C8BC0F977CF20789E19DA0D81A2840E7CF573A2",
+      "gitBlobSha": "6cb7810c6ee4ca32c79e68b9f39fbbce2183243a",
+      "snapshotOnly": true
+    },
+    {
+      "id": "fxsjy-jieba-LICENSE",
+      "component": "jieba",
+      "source": "https://github.com/fxsjy/jieba/blob/67fa2e36e72f69d9134b8a1037b83fbb070b9775/LICENSE",
+      "sourceRef": "67fa2e36e72f69d9134b8a1037b83fbb070b9775",
+      "sourcePath": "LICENSE",
+      "sourceSha256": "18BA0984839F85853B29FADAF992F7DBA8FD0CA0FBEAE34DE2B8735222DC7A37",
+      "gitBlobSha": "9d7e66b431461c785329a1b52199d4207daefacc",
+      "snapshotOnly": true
+    },
+    {
+      "id": "Greatdane-Convert-Numbers-to-Japanese-LICENSE",
+      "component": "Convert-Numbers-to-Japanese",
+      "source": "https://github.com/Greatdane/Convert-Numbers-to-Japanese/blob/c01b072e8d52c89c307dcbcb69958d05e953d4c1/LICENSE",
+      "sourceRef": "c01b072e8d52c89c307dcbcb69958d05e953d4c1",
+      "sourcePath": "LICENSE",
+      "sourceSha256": "A2D0E21948CA52F09926D17DE411F1D989BF7B99EC05DEB668C0358CE5196E57",
+      "gitBlobSha": "b58a733b8726dff95e09065f0401ac5f9cb6a9b3",
+      "snapshotOnly": true
+    },
+    {
+      "id": "hexgrad-misaki-LICENSE",
+      "component": "misaki",
+      "source": "https://github.com/hexgrad/misaki/blob/fba1236595f2d2bf21d414ba6e57d25256afada3/LICENSE",
+      "sourceRef": "fba1236595f2d2bf21d414ba6e57d25256afada3",
+      "sourcePath": "LICENSE",
+      "sourceSha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4",
+      "gitBlobSha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "snapshotOnly": true
+    },
+    {
+      "id": "hotoo-pinyin-LICENSE",
+      "component": "hotoo/pinyin",
+      "source": "https://github.com/hotoo/pinyin/blob/6580657e327edd4a94bd87325ce4d47dc2409126/LICENSE",
+      "sourceRef": "6580657e327edd4a94bd87325ce4d47dc2409126",
+      "sourcePath": "LICENSE",
+      "sourceSha256": "CF3AFB063CBA90E0F4F5883E5936CBEE370EA3AC29E08B754D2599336E2EA994",
+      "gitBlobSha": "b09413ce1a3a75463f1a170edb31f3094986d88d",
+      "snapshotOnly": true
+    },
+    {
+      "id": "mozillazg-phrase-pinyin-data-LICENSE",
+      "component": "phrase-pinyin-data",
+      "source": "https://github.com/mozillazg/phrase-pinyin-data/blob/cee0ed6e6e4898580cafd2bd5e3723e20b214aa0/LICENSE",
+      "sourceRef": "cee0ed6e6e4898580cafd2bd5e3723e20b214aa0",
+      "sourcePath": "LICENSE",
+      "sourceSha256": "89AC55DF747E4776088C3E77531EF61B973A1A59DD8E6A4548A58996DA9A4F70",
+      "gitBlobSha": "8ff7942e2030d9fa4bb1c8766d184abd9d45a695",
+      "snapshotOnly": true
+    },
+    {
+      "id": "mozillazg-pinyin-data-LICENSE",
+      "component": "pinyin-data",
+      "source": "https://github.com/mozillazg/pinyin-data/blob/9193766130af24d2ac54230be979b2e98ac66223/LICENSE",
+      "sourceRef": "9193766130af24d2ac54230be979b2e98ac66223",
+      "sourcePath": "LICENSE",
+      "sourceSha256": "9C048697BE2502A16E8BCB282D5D465A07295B2DEF0FFB05A269C5D39DBE1586",
+      "gitBlobSha": "8a7780fcc44ad1b545754138b1b3493993eaaccb",
+      "snapshotOnly": true
+    },
+    {
+      "id": "mozillazg-pypinyin-dict-LICENSE",
+      "component": "pypinyin-dict",
+      "source": "https://github.com/mozillazg/pypinyin-dict/blob/d8a12d70ea14a929f296f21f4c493b3ce5d0b14a/LICENSE",
+      "sourceRef": "d8a12d70ea14a929f296f21f4c493b3ce5d0b14a",
+      "sourcePath": "LICENSE",
+      "sourceSha256": "239199FAA0E3098C6B7FC7C5D4C50D623C44B7C4C0D8990C1A030266AA558F2C",
+      "gitBlobSha": "f88090f1e54c71d026c2bbe4d9601509505f0740",
+      "snapshotOnly": true
+    },
+    {
+      "id": "mozillazg-python-pinyin-LICENSE-txt",
+      "component": "pypinyin",
+      "source": "https://github.com/mozillazg/python-pinyin/blob/8595294b1a97845e30f11ecfdb3caa4e61ac3988/LICENSE.txt",
+      "sourceRef": "8595294b1a97845e30f11ecfdb3caa4e61ac3988",
+      "sourcePath": "LICENSE.txt",
+      "sourceSha256": "1E6C90014B4912815C296EE64BB6F6280AF47E6D4C5D80E86232DFC5DEFE764C",
+      "gitBlobSha": "aa0e0467bd6cbee8f6a0e1380da4f9e98e00f3d7",
+      "snapshotOnly": true
+    },
+    {
+      "id": "PaddlePaddle-PaddleSpeech-LICENSE",
+      "component": "PaddleSpeech",
+      "source": "https://github.com/PaddlePaddle/PaddleSpeech/blob/6b25a400008d393f9c3af837b3c692b17f29ee1a/LICENSE",
+      "sourceRef": "6b25a400008d393f9c3af837b3c692b17f29ee1a",
+      "sourcePath": "LICENSE",
+      "sourceSha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4",
+      "gitBlobSha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "snapshotOnly": true
+    },
+    {
+      "id": "polm-cutlet-LICENSE",
+      "component": "cutlet",
+      "source": "https://github.com/polm/cutlet/blob/e97e15c287b0d6a0d936cae4219f85afd47aa509/LICENSE",
+      "sourceRef": "e97e15c287b0d6a0d936cae4219f85afd47aa509",
+      "sourcePath": "LICENSE",
+      "sourceSha256": "8736AD0D4636CB6DABAE3E97E99C08F5C0C08B8C451F1D489B29A0D63BEBF074",
+      "gitBlobSha": "4ce10570033a72f80e64d669fffc763fe98e0198",
+      "snapshotOnly": true
+    },
+    {
+      "id": "stefantaubert-pinyin-to-ipa-LICENSE",
+      "component": "pinyin-to-ipa",
+      "source": "https://github.com/stefantaubert/pinyin-to-ipa/blob/8dfee4d37d18618ce44fbb6452f630b375beec19/LICENSE",
+      "sourceRef": "8dfee4d37d18618ce44fbb6452f630b375beec19",
+      "sourcePath": "LICENSE",
+      "sourceSha256": "6F3890B59B19F6DF57BE685D3F498DAFA971D7CC5555C1A34CAF01C954240D18",
+      "gitBlobSha": "b3f366e8240390e89f311346a2ab676133a322e9",
+      "snapshotOnly": true
+    },
+    {
+      "id": "taku910-mecab-mecab-AUTHORS",
+      "component": "MeCab",
+      "source": "https://github.com/taku910/mecab/blob/61b90ba6e669dc2d7d533d4a80d206f3b31d52b1/mecab/AUTHORS",
+      "sourceRef": "61b90ba6e669dc2d7d533d4a80d206f3b31d52b1",
+      "sourcePath": "mecab/AUTHORS",
+      "sourceSha256": "ED86A26329F93C34C912D20ADC99873107F4FAB32238FCF5AF1F497C425E025A",
+      "gitBlobSha": "a44e82c02f1b0b2d83b13bd28a2cbe95ede498ae",
+      "snapshotOnly": true
+    },
+    {
+      "id": "taku910-mecab-mecab-BSD",
+      "component": "MeCab",
+      "source": "https://github.com/taku910/mecab/blob/61b90ba6e669dc2d7d533d4a80d206f3b31d52b1/mecab/BSD",
+      "sourceRef": "61b90ba6e669dc2d7d533d4a80d206f3b31d52b1",
+      "sourcePath": "mecab/BSD",
+      "sourceSha256": "62F4B23450A9AD40E4DB8063D45C1D13C78D07CA27C9ADA62C4CA9C11C1F3E7B",
+      "gitBlobSha": "9ae6ded4e20ad5b0942b25b5353eb6e1d8e19058",
+      "snapshotOnly": true
+    },
+    {
+      "id": "taku910-mecab-mecab-COPYING",
+      "component": "MeCab",
+      "source": "https://github.com/taku910/mecab/blob/61b90ba6e669dc2d7d533d4a80d206f3b31d52b1/mecab/COPYING",
+      "sourceRef": "61b90ba6e669dc2d7d533d4a80d206f3b31d52b1",
+      "sourcePath": "mecab/COPYING",
+      "sourceSha256": "9ED8A017F2226B6F0D6DD6A1D25404800374A12C70E14A56CA9613176F78778E",
+      "gitBlobSha": "326b101ea99c247784693fa9f1c050e58c9e8e4f",
+      "snapshotOnly": true
+    },
+    {
+      "id": "spacy-en-core-web-sm-LICENSE",
+      "component": "en_core_web_sm model",
+      "source": "https://huggingface.co/spacy/en_core_web_sm/blob/8fb6f8155286360bf5486fe399e2738d1df7ded2/LICENSE",
+      "sourceRef": "8fb6f8155286360bf5486fe399e2738d1df7ded2",
+      "sourcePath": "LICENSE",
+      "sourceSha256": "3933C176979B68BC6D0BCC902C7D6C130F1D127F476F17BA5CDBA8D99CFD0012",
+      "gitBlobSha": null,
+      "snapshotOnly": true
+    },
+    {
+      "id": "spacy-en-core-web-sm-LICENSES-SOURCES",
+      "component": "en_core_web_sm model",
+      "source": "https://huggingface.co/spacy/en_core_web_sm/blob/8fb6f8155286360bf5486fe399e2738d1df7ded2/LICENSES_SOURCES",
+      "sourceRef": "8fb6f8155286360bf5486fe399e2738d1df7ded2",
+      "sourcePath": "LICENSES_SOURCES",
+      "sourceSha256": "20D9DFACD215112251F15341EDD1A47B1F98BF393A212F10F194FFDC7EE98A90",
+      "gitBlobSha": null,
+      "snapshotOnly": true
+    },
+    {
+      "id": "Unicode-license-txt",
+      "component": "Unicode/Unihan data",
+      "source": "https://www.unicode.org/license.txt",
+      "sourceRef": "retrieved 2026-10-12",
+      "sourcePath": "license.txt",
+      "sourceSha256": "E7A93B009565CFCE55919A381437AC4DB883E9DA2126FA28B91D12732BC53D96",
+      "gitBlobSha": null,
+      "snapshotOnly": true
+    },
+    {
+      "id": "PaddleSpeech-misaki-0-9-4-zh-frontend-header",
+      "component": "PaddleSpeech",
+      "source": "https://files.pythonhosted.org/packages/1a/c7/fb01370a76585b46595a01b52f18e65c8ba6d7a313a05e5d9fff0a8e1c69/misaki-0.9.4.tar.gz#misaki-0.9.4/misaki/zh_frontend.py",
+      "sourceRef": "misaki 0.9.4 PyPI source release",
+      "sourcePath": "misaki/zh_frontend.py",
+      "sourceSha256": "002023955E31C692CEA2DCD0DEA1836DF84A9FF8DAB966F5AE43CE276BDD1C0C",
+      "gitBlobSha": null,
+      "extractedLines": {
+        "start": 1,
+        "end": 15
+      },
+      "snapshotOnly": false
+    },
+    {
+      "id": "PaddleSpeech-misaki-0-9-4-tone-sandhi-header",
+      "component": "PaddleSpeech",
+      "source": "https://files.pythonhosted.org/packages/1a/c7/fb01370a76585b46595a01b52f18e65c8ba6d7a313a05e5d9fff0a8e1c69/misaki-0.9.4.tar.gz#misaki-0.9.4/misaki/tone_sandhi.py",
+      "sourceRef": "misaki 0.9.4 PyPI source release",
+      "sourcePath": "misaki/tone_sandhi.py",
+      "sourceSha256": "2A0ADC3854C137759F304417D844582D7FD902C57D84733D94137A4BC756C301",
+      "gitBlobSha": null,
+      "extractedLines": {
+        "start": 1,
+        "end": 15
+      },
+      "snapshotOnly": false
+    },
+    {
+      "id": "pinyin-to-ipa-historical-attribution-snapshot",
+      "component": "pinyin-to-ipa",
+      "source": "https://github.com/stefantaubert/pinyin-to-ipa/blob/a913fcede9ac7c0193c7db587475dcd43b0f1567/LICENSE",
+      "sourceRef": "a913fcede9ac7c0193c7db587475dcd43b0f1567",
+      "sourcePath": "LICENSE",
+      "sourceSha256": "0BC847BDC29B0BA04AFB7EF9660DC0BA9B8796A9A7A814D106DB5AA373A8A86D",
+      "gitBlobSha": null,
+      "snapshotOnly": true
+    },
+    {
+      "id": "CC-CEDICT-primary-attribution",
+      "component": "CC-CEDICT",
+      "source": "https://cc-cedict.org/wiki/start?do=export_raw",
+      "sourceRef": "retrieved 2026-10-12; page last modified 2026-10-08",
+      "sourcePath": "CC-CEDICT-page-source.txt",
+      "sourceSha256": "A89EDE34084A79FBB45232A12559F9F3DBAB47C40C4989FC3786DA97E39FFA68",
+      "gitBlobSha": null,
+      "snapshotOnly": true,
+      "extraction": "License paragraph and complete Attribution section from primary page source"
+    },
+    {
+      "id": "Zdic-current-CC0-declaration",
+      "component": "Zdic underlying pinyin sources",
+      "source": "https://www.zdic.net/terms/",
+      "sourceRef": "retrieved 2026-10-12",
+      "sourcePath": "zdic-terms.html",
+      "sourceSha256": "14E882CE80851241C8663045180C4BA6F76A6FE5AA56318B74DE3C6A39FD5B3D",
+      "gitBlobSha": null,
+      "snapshotOnly": true,
+      "extractedLines": {
+        "start": 456,
+        "end": 457
+      }
+    },
+    {
+      "id": "CC0-1-0-legalcode",
+      "component": "Zdic underlying pinyin sources",
+      "source": "https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt",
+      "sourceRef": "CC0 1.0 Universal; retrieved 2026-10-12",
+      "sourcePath": "CC0-1.0.txt",
+      "sourceSha256": "A2010F343487D3F7618AFFE54F789F5487602331C0A8D03F49E9A7C547CF0499",
+      "gitBlobSha": null,
+      "snapshotOnly": true
+    },
+    {
+      "id": "num2words-source-copyright-and-license-header",
+      "component": "num2words",
+      "source": "https://github.com/savoirfairelinux/num2words/blob/07814cb114157f582c40a00119c2e9faba8dcee2/num2words/base.py",
+      "sourceRef": "07814cb114157f582c40a00119c2e9faba8dcee2",
+      "sourcePath": "num2words/base.py",
+      "sourceSha256": "3B4F9C5D64AC0DC90BD2FDCE35E51D9FD4B5053F04E51211CB268B8D55323D9B",
+      "gitBlobSha": "fb30b4ea14132e7555fddb3f9ec0a66d87c9d9f2",
+      "extractedLines": {
+        "start": 1,
+        "end": 16
+      },
+      "snapshotOnly": true,
+      "matchingHeaderSources": [
+        {
+          "path": "num2words/base.py",
+          "gitBlobSha": "fb30b4ea14132e7555fddb3f9ec0a66d87c9d9f2",
+          "sourceSha256": "3B4F9C5D64AC0DC90BD2FDCE35E51D9FD4B5053F04E51211CB268B8D55323D9B",
+          "url": "https://github.com/savoirfairelinux/num2words/blob/07814cb114157f582c40a00119c2e9faba8dcee2/num2words/base.py"
+        },
+        {
+          "path": "num2words/lang_EN.py",
+          "gitBlobSha": "87ce02e2c7c7fa9a6817be3be306188dee08c2f1",
+          "sourceSha256": "E2DA2AC74707E08FADA340D2AD937D1D94625908ADC4BB42316546D3F952E16E",
+          "url": "https://github.com/savoirfairelinux/num2words/blob/07814cb114157f582c40a00119c2e9faba8dcee2/num2words/lang_EN.py"
+        }
+      ]
+    },
+    {
+      "id": "phonemizer-source-copyright-and-license-header",
+      "component": "phonemizer",
+      "source": "https://github.com/bootphon/phonemizer/blob/8eac8d644fb90cb8aea58d9d9808c94040a69dad/phonemizer/backend/espeak/base.py",
+      "sourceRef": "8eac8d644fb90cb8aea58d9d9808c94040a69dad",
+      "sourcePath": "phonemizer/backend/espeak/base.py",
+      "sourceSha256": "12982D26E98022C9FCEAB53B3BB34337D92AA61ED3F489A1DB2BA76A7F8A5D8A",
+      "gitBlobSha": "387598becf7f08eeb3da2b3328240958cf3eec01",
+      "extractedLines": {
+        "start": 1,
+        "end": 14
+      },
+      "snapshotOnly": true,
+      "matchingHeaderSources": [
+        {
+          "path": "phonemizer/backend/espeak/base.py",
+          "gitBlobSha": "387598becf7f08eeb3da2b3328240958cf3eec01",
+          "sourceSha256": "12982D26E98022C9FCEAB53B3BB34337D92AA61ED3F489A1DB2BA76A7F8A5D8A",
+          "url": "https://github.com/bootphon/phonemizer/blob/8eac8d644fb90cb8aea58d9d9808c94040a69dad/phonemizer/backend/espeak/base.py"
+        },
+        {
+          "path": "phonemizer/backend/espeak/espeak.py",
+          "gitBlobSha": "766af5b3637c7aa0681a748c01b5d6aaae2afec1",
+          "sourceSha256": "19CE919F95E60B8FA8E6B67BF4B27D375449E381BE51406B9FFD7C04970D0F4D",
+          "url": "https://github.com/bootphon/phonemizer/blob/8eac8d644fb90cb8aea58d9d9808c94040a69dad/phonemizer/backend/espeak/espeak.py"
+        },
+        {
+          "path": "phonemizer/punctuation.py",
+          "gitBlobSha": "db764ac1a6501b4240dabf336f42a9b837e09647",
+          "sourceSha256": "638ED3D3C7FF530BDF36A0360E5E25C86F28D700AC0B437952E6E5650308734C",
+          "url": "https://github.com/bootphon/phonemizer/blob/8eac8d644fb90cb8aea58d9d9808c94040a69dad/phonemizer/punctuation.py"
+        }
+      ]
+    }
+  ],
+  "ancillaryProvenance": [
+    {
+      "repo": "mozillazg/python-pinyin",
+      "ref": "8595294b1a97845e30f11ecfdb3caa4e61ac3988",
+      "path": "README.rst",
+      "gitBlobSha": "a17a17245ce58ecd6ef81337ebdb9ab613070dba",
+      "sha256": "99C761E3A130112ADFFDB17573DC4C2BC3ADF2DCE46DA1ACAAB975D67EE5917E",
+      "url": "https://github.com/mozillazg/python-pinyin/blob/8595294b1a97845e30f11ecfdb3caa4e61ac3988/README.rst"
+    },
+    {
+      "repo": "mozillazg/pypinyin-dict",
+      "ref": "d8a12d70ea14a929f296f21f4c493b3ce5d0b14a",
+      "path": "README.md",
+      "gitBlobSha": "6733969edd8ddf96270087c33ee3b17fbb26398b",
+      "sha256": "475123E73F76242FBFF31C414714C9AF1C950F83CF3C6DA44D8C70F9DFA60C81",
+      "url": "https://github.com/mozillazg/pypinyin-dict/blob/d8a12d70ea14a929f296f21f4c493b3ce5d0b14a/README.md"
+    },
+    {
+      "repo": "mozillazg/pypinyin-dict",
+      "ref": "d8a12d70ea14a929f296f21f4c493b3ce5d0b14a",
+      "path": "tools/Makefile",
+      "gitBlobSha": "21853a4a3e36447251b468a5053431a7097ca379",
+      "sha256": "E37EF286EC4604417F870EE04252F71F54B984AF5EBA4FF0EB3385701381BBCA",
+      "url": "https://github.com/mozillazg/pypinyin-dict/blob/d8a12d70ea14a929f296f21f4c493b3ce5d0b14a/tools/Makefile"
+    },
+    {
+      "repo": "mozillazg/pinyin-data",
+      "ref": "9193766130af24d2ac54230be979b2e98ac66223",
+      "path": "README.md",
+      "gitBlobSha": "3280ad7bc4e0f0b122cd36c7c6b092a3894ce234",
+      "sha256": "9915C8385A34372BC6D95FCCF2389E161C6058988F06C0BC39E5265A892EF833",
+      "url": "https://github.com/mozillazg/pinyin-data/blob/9193766130af24d2ac54230be979b2e98ac66223/README.md"
+    },
+    {
+      "repo": "mozillazg/phrase-pinyin-data",
+      "ref": "cee0ed6e6e4898580cafd2bd5e3723e20b214aa0",
+      "path": "README.md",
+      "gitBlobSha": "ff74911ce901ead9db022ae5d127df2f49000c4b",
+      "sha256": "79E9B1A13E6948AF49C055A75A792DF7844429BB8DE3D38C75F383886E100654",
+      "url": "https://github.com/mozillazg/phrase-pinyin-data/blob/cee0ed6e6e4898580cafd2bd5e3723e20b214aa0/README.md"
+    },
+    {
+      "repo": "mozillazg/phrase-pinyin-data",
+      "ref": "cee0ed6e6e4898580cafd2bd5e3723e20b214aa0",
+      "path": "Makefile",
+      "gitBlobSha": "90cfb04ab6977ccf48c0e80f03b725dfebe48386",
+      "sha256": "7F85532B4A9B5C8FB4A5B7D7ECD9DAB5FE67E85EFD933FF69A4D31CA18DA7177",
+      "url": "https://github.com/mozillazg/phrase-pinyin-data/blob/cee0ed6e6e4898580cafd2bd5e3723e20b214aa0/Makefile"
+    },
+    {
+      "repo": "hotoo/pinyin",
+      "ref": "6580657e327edd4a94bd87325ce4d47dc2409126",
+      "path": "README.md",
+      "gitBlobSha": "ade273227fe6a384f3b0c1bd1dfb9bb24b36482e",
+      "sha256": "D2B954C37E17B61BDE4C6E3D41302B8A679CABD04EFAB3BFF5298C39EA798FC7",
+      "url": "https://github.com/hotoo/pinyin/blob/6580657e327edd4a94bd87325ce4d47dc2409126/README.md"
+    },
+    {
+      "repo": "Ailln/cn2an",
+      "ref": "7c9ba0770b129960d9b6e6c6b2b46c00ec580778",
+      "path": "cn2an/an2cn.py",
+      "sha256": "4EAA2C381A7AC8B40843A5AB02280647E8E3CE676C63C629998337BC7B10972C",
+      "gitBlobSha": "21898007ad6c1b62a9a6da2cd811e1c4a5e80903",
+      "url": "https://github.com/Ailln/cn2an/blob/7c9ba0770b129960d9b6e6c6b2b46c00ec580778/cn2an/an2cn.py",
+      "finding": "No additional source copyright header; root MIT notice retained."
+    },
+    {
+      "repo": "Ailln/cn2an",
+      "ref": "7c9ba0770b129960d9b6e6c6b2b46c00ec580778",
+      "path": "cn2an/transform.py",
+      "sha256": "43709E8A4927CC0738E235910C9FDE3395E71CCE7912334BE3BE2939480C019E",
+      "gitBlobSha": "2050353c3242501049c4ac4152a8d36f63cec6ef",
+      "url": "https://github.com/Ailln/cn2an/blob/7c9ba0770b129960d9b6e6c6b2b46c00ec580778/cn2an/transform.py",
+      "finding": "No additional source copyright header; root MIT notice retained."
+    }
+  ],
+  "misakiSourceAndResourceEvidence": [
+    {
+      "path": "ChineseG2P.cs",
+      "sha256": "93FB27BA4ECBB54E9EC94C7ACE8BB258E37E78DB4F7B77841EDB4575EF96C836",
+      "gitBlobSha": "faa9ed052d47222907898d2d24d0b3fb3d3b4cec",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/ChineseG2P.cs"
+    },
+    {
+      "path": "EnglishG2P.cs",
+      "sha256": "509F4D1A2C4A6A5F27B7B90781C6BA88018AEA95549ADAA360B6214D8CF88012",
+      "gitBlobSha": "3e122bb2f6070e86ffce07fe22e23c3e83ec34ac",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/EnglishG2P.cs"
+    },
+    {
+      "path": "EnglishG2P.Lexicon.cs",
+      "sha256": "E68091A77F53733585E87EF40F16823E3540F99923CC433A899CB8506E27D188",
+      "gitBlobSha": "5b3aeddf7003542c8419b8f8053d658092a9a0e8",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/EnglishG2P.Lexicon.cs"
+    },
+    {
+      "path": "EnglishTagger.cs",
+      "sha256": "83676E50044C7BE870E451C49AA6397C9767289E507941DBC17165B5517F857E",
+      "gitBlobSha": "f91d201f13e0ec83489040bc6225d0c677c1ec27",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/EnglishTagger.cs"
+    },
+    {
+      "path": "EnglishTokenizer.cs",
+      "sha256": "393A7368078B45C2647BEAC449A2C8A45EBC9AD28B2788FB6211A2069462C65D",
+      "gitBlobSha": "23511516bdcb43c345de7d313f52368b5e607e14",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/EnglishTokenizer.cs"
+    },
+    {
+      "path": "EspeakG2P.cs",
+      "sha256": "CA3908D622677219AC3FBC1DEA193800C33798B7AC0CE7018D79A2C10F85283C",
+      "gitBlobSha": "94ceb611b710318cfedaf95da1edd2ed2b935a4b",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/EspeakG2P.cs"
+    },
+    {
+      "path": "EspeakReplay.cs",
+      "sha256": "E220F0759B3F93A740C474DDD8728E2CC9C63F18ADC775EBF8C1C2978CD3DF55",
+      "gitBlobSha": "5876a604f45ac7e14b95220df862db0ac5574251",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/EspeakReplay.cs"
+    },
+    {
+      "path": "HindiProvider.cs",
+      "sha256": "9D1A9023CEC1BB7D3F93272DE520B157641FEB0145AA2C0FAADF5B7598821BC4",
+      "gitBlobSha": "5f5b3dffdb0e170204de44a3212e3e2d98317681",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/HindiProvider.cs"
+    },
+    {
+      "path": "JapaneseG2P.cs",
+      "sha256": "8E07EC436B1E1E05220025948D8DD1D4A713013B5E2E1051793D170D4E5A4D7A",
+      "gitBlobSha": "061e8362a976a649ddd145ad11ce89be006d2fb8",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/JapaneseG2P.cs"
+    },
+    {
+      "path": "JapaneseTagger.cs",
+      "sha256": "FBFC690445927600583022DDCF2FA7D3FCB75D69378255A3DB4FD4C5AE40EE6E",
+      "gitBlobSha": "a116e15d935c997f9f8c49fbc20a491a962c7dd2",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/JapaneseTagger.cs"
+    },
+    {
+      "path": "MisakiSharp.csproj",
+      "sha256": "B2A3238E24417BB10DE614B6E207D35B37C324D32E89998EA4AAA005B9F6F068",
+      "gitBlobSha": "cf259df38908cdd6b0b7b3803696236941793ab0",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/MisakiSharp.csproj"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "6528653B3D03B15F2A52A311842A060972F6D1705624CDC522729D634850E69C",
+      "gitBlobSha": "561ab1d0e2ab0d14a6c3dffc2364c9abb00abd88",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/NOTICE"
+    },
+    {
+      "path": "PossegTagger.cs",
+      "sha256": "5AF2AB559D6B4773C4C2810D0F67FE1812FFF77EB69612793949D4025E5B3B21",
+      "gitBlobSha": "8b65adf1c3954e51e3593342bac4723c8a71efbd",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/PossegTagger.cs"
+    },
+    {
+      "path": "ToneSandhi.cs",
+      "sha256": "7B49E7C4682C1EDA1A08EAF11AF28CA0FC6CE9568E56B351C05ADDED618A9447",
+      "gitBlobSha": "2275fdf4b0fb8e4f5770f689b5b0ad80b2fdd294",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/ToneSandhi.cs"
+    },
+    {
+      "path": "ZhFrontend.cs",
+      "sha256": "BAE9575FFEB8A8B5E4C7E719C4DEFB64EABBB1503ADA144859EFBAE96D409D0A",
+      "gitBlobSha": "c58fc22ed74ed16f5e107afcf11340b50b818f64",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/ZhFrontend.cs"
+    },
+    {
+      "path": "data/en_lexicon_gb.tsv.gz",
+      "sha256": "78375DFAB7D031307F7968E486663CA61154396CECA1019C2E4A003EDB5B400D",
+      "gitBlobSha": "292ede061684096c2e2b302cb11cedf9e46964e7",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/en_lexicon_gb.tsv.gz"
+    },
+    {
+      "path": "data/en_lexicon_us.tsv.gz",
+      "sha256": "CCC5443B5A0A64603787EEC4373E97630BEFEC6FB40092EA0BDA5BF95BC345C7",
+      "gitBlobSha": "4adf58fcfc694123de84d1eb2f5bfb78481ef499",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/en_lexicon_us.tsv.gz"
+    },
+    {
+      "path": "data/en_tagger.bin.gz",
+      "sha256": "9FB5A95639DAAF7FF403339247EA91F3BD03991DB748E1295433294FE275CEFA",
+      "gitBlobSha": "1ede9f529008c316a85e7872ab4f9b560f31285b",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/en_tagger.bin.gz"
+    },
+    {
+      "path": "data/en_tokenizer.tsv.gz",
+      "sha256": "F64970488DF9E691219D7AD6B946BF41D1D5BDB49144C5FB240093DEC76F4589",
+      "gitBlobSha": "5caffb0c5659f768c82966393e90e64ebc0f9912",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/en_tokenizer.tsv.gz"
+    },
+    {
+      "path": "data/engb_espeak.tsv.gz",
+      "sha256": "BD36180E3200FECAF9EC425E907A17143DAC918BD2F3970618F83F86BE8523A6",
+      "gitBlobSha": "52157c0afa9df979b132ee31d68f60c6f55ca6b9",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/engb_espeak.tsv.gz"
+    },
+    {
+      "path": "data/enus_espeak.tsv.gz",
+      "sha256": "F63E33663C8DD405EE7C56BAFB3ED98B2E0D80968034542CF43DA0418FEDBE87",
+      "gitBlobSha": "7fd50dfabb873bb1f3467aade582d2468b86bfd7",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/enus_espeak.tsv.gz"
+    },
+    {
+      "path": "data/es_espeak.tsv.gz",
+      "sha256": "0BE9EAF85FDB9C73A1311B34DCCDD2E35ED2BDA39972035AA28EE1620A6124EB",
+      "gitBlobSha": "f83dcfdadb21095b6fe522d82cc6b4a459b43aaa",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/es_espeak.tsv.gz"
+    },
+    {
+      "path": "data/fr_espeak.tsv.gz",
+      "sha256": "B035656ACAE98D0AED1A1F3386F158D94A2B8C33995506D082B47690A2CC9E6C",
+      "gitBlobSha": "c01f08ee4e49a9e0a7e681ff74b1927802c137ec",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/fr_espeak.tsv.gz"
+    },
+    {
+      "path": "data/hi_espeak_lexicon.tsv.gz",
+      "sha256": "BADB0D9C743E0A0CF2F379A70F979A98D94F6B73341F17C9559F040C7A67A6A9",
+      "gitBlobSha": "802b788ee5050ef9990b4da65f47b0ff3a4229d5",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/hi_espeak_lexicon.tsv.gz"
+    },
+    {
+      "path": "data/hi_espeak.tsv.gz",
+      "sha256": "636C946365A22544B097A05E4D2DFB13ACFD9B97271F4D295B2FB801F21058C4",
+      "gitBlobSha": "c55efbe17f5efaeda2b594e632a7ee3577237e02",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/hi_espeak.tsv.gz"
+    },
+    {
+      "path": "data/it_espeak.tsv.gz",
+      "sha256": "20C8F4341A3474649F5EFABAC9D83CCE1C94F5D6D8F1342155EE0CA8671AF947",
+      "gitBlobSha": "46123b4c821dda0090e69f767e7da3d13f543a0a",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/it_espeak.tsv.gz"
+    },
+    {
+      "path": "data/ja_char_unk.tsv.gz",
+      "sha256": "924A5BC1999EF98CCC9492E586FB56CAEE0A0ED7993281657725DC4D137C3FA0",
+      "gitBlobSha": "9e441b0c9be578dc00b4281db54dc97fc42c3015",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/ja_char_unk.tsv.gz"
+    },
+    {
+      "path": "data/ja_lexicon.tsv.gz",
+      "sha256": "20E8AE15BE2CD37A35A0709DC885615ECCFBEDF9EBB4455C7717F10675DFFE01",
+      "gitBlobSha": "c632dfaaec78a3f07a761412620559b09d4474b2",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/ja_lexicon.tsv.gz"
+    },
+    {
+      "path": "data/ja_matrix_compact.bin.gz",
+      "sha256": "3F9B9F451AD5CE0B019C03FCD62D05A6381E40469F89188F0DB1B8A58727338F",
+      "gitBlobSha": "b9e0c164e8299c26a2f62bbb4c127e011cbc1ade",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/ja_matrix_compact.bin.gz"
+    },
+    {
+      "path": "data/ja_words.txt.gz",
+      "sha256": "1958BCD457012E8C3F112922FCDC154B3CFF33F91CB52EAF07828B835D0A70E4",
+      "gitBlobSha": "d320e9056a4b60fa1fba6c7106523f596df38eb1",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/ja_words.txt.gz"
+    },
+    {
+      "path": "data/pt_espeak.tsv.gz",
+      "sha256": "4ACBDDFFC1ABC6C95875667AA7A03FF4F2E5020DC9C39713822F24490CF1B8CE",
+      "gitBlobSha": "975ac16e00064f27c6eacb22e0c3d96632406b02",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/pt_espeak.tsv.gz"
+    },
+    {
+      "path": "data/zh_finalseg_hmm.tsv.gz",
+      "sha256": "85B2D11A35F7042894F579C7F471989149DFFEE47F4BDF9B7CEE92F4B87B51DE",
+      "gitBlobSha": "6e6017bfd8902b0ac97397c30643333509b4a839",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/zh_finalseg_hmm.tsv.gz"
+    },
+    {
+      "path": "data/zh_g2p_v2.tsv.gz",
+      "sha256": "9EE53A841668D32733A32A518C16C1811D29CDEE694AABD3ABA80A5D77CBC6B1",
+      "gitBlobSha": "951d206abb6022b52c7f2d56f4ce52981147a7c4",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/zh_g2p_v2.tsv.gz"
+    },
+    {
+      "path": "data/zh_g2p.tsv.gz",
+      "sha256": "C22FFE300859C868AFA7753112C5A13F3EFCC0BE7171B051D5A19003ED486FD4",
+      "gitBlobSha": "1e724379d6056f8be610aa5a7d2117da55558eb7",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/zh_g2p.tsv.gz"
+    },
+    {
+      "path": "data/zh_posseg_hmm.tsv.gz",
+      "sha256": "CE5AEA6279277DB5A29DE5D80D5D3DC36F6635EF20D295BBB5CEF79C3CF92FDD",
+      "gitBlobSha": "931c9af87c93119ac4910ef135c2f6af0a1081d7",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/data/zh_posseg_hmm.tsv.gz"
+    },
+    {
+      "path": "generators/generate_en_dict.py",
+      "sha256": "4A8DD072B7C2624C59729B79744402F71C07A822F0A52B60517C4232B353C29E",
+      "gitBlobSha": "6aa58e04c5a6310a2bc7075b648a0d353ad2fc27",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_en_dict.py"
+    },
+    {
+      "path": "generators/generate_en_tagger.py",
+      "sha256": "23E10C71E7F2B38A6785EB038A4D5DDE1E3A08AEDDE85085F2DF775FE03550A1",
+      "gitBlobSha": "3dbeddb6d77b356edffd8bd1016bd9f3b48dd2c1",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_en_tagger.py"
+    },
+    {
+      "path": "generators/generate_en_tokenizer.py",
+      "sha256": "62B2262F5DAE67B994408D9F817ECFC412AA6C7AB54796572360FDEB698CF7D0",
+      "gitBlobSha": "f93919d5e9dc549dd0abd52662ae2331b2590949",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_en_tokenizer.py"
+    },
+    {
+      "path": "generators/generate_espeak_bigrams.py",
+      "sha256": "C25CE6CDBFD96D8047A7F9118036A91FCDB944B6117D99189393264B95A67909",
+      "gitBlobSha": "940db9314e901b5ff99ad50dcc036ab915aa7e36",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_espeak_bigrams.py"
+    },
+    {
+      "path": "generators/generate_espeak_corpus.py",
+      "sha256": "0CFE8467A5288D094514F3E1B53BF01C4437D51E2E720B701CF319478251CF5C",
+      "gitBlobSha": "8ec7b8fea9dc418aed497cf4ead5292719f2ff5a",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_espeak_corpus.py"
+    },
+    {
+      "path": "generators/generate_espeak_emit.py",
+      "sha256": "08B275CB1D7C5CB8B6AF68BF9F0EB388783A2D0788397A14E2B24625AA16F7BC",
+      "gitBlobSha": "2187d58849a53a21c34cbe3e42a8555e8362eb55",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_espeak_emit.py"
+    },
+    {
+      "path": "generators/generate_espeak_en.py",
+      "sha256": "EA9999BD2EBB2A5AA36FF9B07CB470A08791F1322DDEB15FD68B24D7717260DB",
+      "gitBlobSha": "b14facdc1390f0b586f3c101de2966736797ddd8",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_espeak_en.py"
+    },
+    {
+      "path": "generators/generate_espeak_extra.py",
+      "sha256": "F0B541554ED12E25439612905FBFD0AC81BAA49D6A14A811342FFEF0191E7C72",
+      "gitBlobSha": "36e357d4d4d7b681d01b2daad2d8fcd08a04307c",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_espeak_extra.py"
+    },
+    {
+      "path": "generators/generate_espeak_fixtures.py",
+      "sha256": "55EFA3BF78AFD7C7CA3989692B1202CEEC5A21A21058F824441E844B3AC83EB5",
+      "gitBlobSha": "90bc6466e0eaac1ca922f25018e3308567df7140",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_espeak_fixtures.py"
+    },
+    {
+      "path": "generators/generate_espeak_lts.py",
+      "sha256": "75A285ACFC01CF2117A5C2AC8F3F171DC2624E9104A8DF92D5E138539AD7C091",
+      "gitBlobSha": "b5b18b7a38bfb6d01fabd0f8d8a663b75e45db71",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_espeak_lts.py"
+    },
+    {
+      "path": "generators/generate_espeak_native.py",
+      "sha256": "E7BC51CA296AD3772BB1768A255525EC37B3611568678A1E0CA4F6141DBFB725",
+      "gitBlobSha": "d2b60f6442e2ba37b22c9bf0a619440a5e65133e",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_espeak_native.py"
+    },
+    {
+      "path": "generators/generate_hi_native.py",
+      "sha256": "0CB225C0B58F8093A0BAE2A7A4A2EEB89E08A2CC6B847154361F2F83836DE568",
+      "gitBlobSha": "77b2c3f7993f0846ebb72dc0351ec2f5d38f0529",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_hi_native.py"
+    },
+    {
+      "path": "generators/generate_ja_compact.py",
+      "sha256": "B7933125B4A5CE25DCE55DE129E5EB8AD71E4022903495C43CA9E3AB63DCC368",
+      "gitBlobSha": "32f9a6328d02fa6325f3c3128a416ee6d93cf00e",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_ja_compact.py"
+    },
+    {
+      "path": "generators/generate_ja_dict.py",
+      "sha256": "7E5947E0217EFE4BDFE9B8D4CD94299AB838C71069A2B8A9351773D30425AC29",
+      "gitBlobSha": "87f75ae12fc6b824fd34a27f32037220074aada1",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_ja_dict.py"
+    },
+    {
+      "path": "generators/generate_ja_fixtures.py",
+      "sha256": "0733E69217A33CF9ADF74E2B8DA405665D826C53105FA3901D7A5862ABE7A7BC",
+      "gitBlobSha": "732c232fe9c5cb0363b193ef86352970e7a3a1ef",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_ja_fixtures.py"
+    },
+    {
+      "path": "generators/generate_zh_dict_v2.py",
+      "sha256": "FCE00F3C48272E87DA5B218117D3B9DCCB5A65B790F0EE7AF180AEC00C965ED0",
+      "gitBlobSha": "45870f06c931b18d3de806c019a29cf863d8dd7a",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict_v2.py"
+    },
+    {
+      "path": "generators/generate_zh_dict.py",
+      "sha256": "FB5837DC06DD75CE4F38B5341F84AD0139FC117FF55760629290F6BBA77CBF9B",
+      "gitBlobSha": "89e90d38f88495706c1f6dba6646ac4129242aaa",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_dict.py"
+    },
+    {
+      "path": "generators/generate_zh_posseg.py",
+      "sha256": "295D1C8526792321374A16D3BE7592AC52CDB02A5CFEA3A5BFAD57A864E340F0",
+      "gitBlobSha": "047f227476a87436059ddaf47351075a4a196b69",
+      "url": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_zh_posseg.py"
+    }
+  ],
+  "remainingUncertainty": [
+    "The pinned MisakiSharp sources do not lock all generation package versions or original dataset versions; upstream refs in notice sections are attribution snapshots, not inferred generating versions.",
+    "The source labels legacy Chinese behavior misaki 0.7.12 while modern and other generators reference 0.9.4. Exact transcription and base-data revisions for zh_g2p.tsv.gz remain unknown.",
+    "hotoo/pinyin inherited phrase source is linked at 05f74496c34ccb32db1a0fd0b358a798a22a51e5, whose README/package declare MIT via hotoo.mit-license.org and contain no standalone LICENSE. The current full license is retained conservatively; its 2026 copyright is not attributed to the historical source.",
+    "Unicode V3 is the current notice. Exact Unihan version and historical applicable Unicode notice for incorporated per-character data require matching the generation environment.",
+    "CC-CEDICT CC-BY-SA attribution/share-alike implications require the separate data review; wrapper MIT licenses do not substitute for underlying data grants.",
+    "en_core_web_sm attribution snapshot on Hugging Face is 3.7.1. The exact teacher version used by generate_en_tagger.py is unknown. LICENSES_SOURCES lists OntoNotes, ClearNLP citation and WordNet; retaining the text is not a conclusion that every model source or license applies to the distilled tagger.",
+    "No separate NOTICE file was found in the full retrieved upstream trees for misaki or PaddleSpeech. Source copyright headers remain included.",
+    "MeCab behavior reimplementation is the claim in upstream NOTICE; this scoped review does not establish copied MeCab code. BSD text retained conservatively.",
+    "num2words LGPL, phonemizer GPL, espeak/wordfreq generated tables, Hindi Wikipedia-derived vocabulary and rebuild/replacement/source obligations are covered by separate reviews and remain outside attribution-text completion."
+  ],
+  "additionalCopyleftAttribution": {
+    "scope": "Copyright and license-declaration headers retained only. No licensing-route, copying-status or combined-work conclusion.",
+    "components": [
+      {
+        "name": "num2words",
+        "noticeSection": "num2words-source-copyright-and-license-header",
+        "licenseFile": "num2words-LGPL.txt",
+        "declaredLicense": "LGPL-2.1-or-later",
+        "actualIncorporatedUpstreamRevision": null
+      },
+      {
+        "name": "phonemizer",
+        "noticeSection": "phonemizer-source-copyright-and-license-header",
+        "licenseFile": "phonemizer-GPL.txt",
+        "declaredLicense": "GPL-3.0-or-later",
+        "actualIncorporatedUpstreamRevision": null
+      }
+    ]
+  }
+}

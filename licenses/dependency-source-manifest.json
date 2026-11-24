@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 2,
+  "scope": "Modified local MisakiSharp.PulseReader project and its complete embedded resources, plus original upstream and lineage archives retained as reference with their original terms.",
+  "publicReleaseReady": false,
+  "library": {
+    "kind": "local-project",
+    "packageIdentity": "MisakiSharp/2.1.1-pulsereader.1",
+    "upstreamPackage": "MisakiSharp/2.1.1",
+    "sourceRef": "4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06",
+    "localProject": "src/MisakiSharp.PulseReader/MisakiSharp.PulseReader.csproj",
+    "patchId": "number-and-punctuation-v1",
+    "sourceContractFile": "misaki-pulsereader-source.json",
+    "embeddedResourceCount": 20,
+    "dllHashPolicy": "Record the actual local build SHA-256; verify patch metadata, required helper methods, absent removed helpers and pinned resources. Reject the stock upstream DLL.",
+    "sourceContractSha256": "3B0ED12F2D5F5943E165CFBBE175DA35E3424B775C383D9EF17A4F7CD39A2187"
+  },
+  "archives": [
+    {
+      "file": "MisakiSharp-4ec982c.zip",
+      "url": "https://codeload.github.com/Lyrcaxis/MisakiSharp/zip/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06",
+      "sha256": "8AF95BE23DBFD0E902E7FB6A48382A8A7C1E107D8F73F5EFFFEBC0101D4DD8E8",
+      "role": "Original unmodified upstream source reference, resources, generators and notices; the shipped frontend is the local project included under local-frontend/."
+    },
+    {
+      "file": "misaki-before-port.zip",
+      "url": "https://codeload.github.com/hexgrad/misaki/zip/fba1236595f2d2bf21d414ba6e57d25256afada3",
+      "sha256": "0981A6F50C5921F79DAA5D133252E3873F503EFEC8734CEC479D7982F9B7F1EE",
+      "role": "Reference only; original licence retained. Pinned misaki 0.9.4 lineage comparator; exact author checkout is unconfirmed"
+    },
+    {
+      "file": "num2words-0.5.14.zip",
+      "url": "https://codeload.github.com/savoirfairelinux/num2words/zip/6abe2c64714a38e41de23fe20fa319d0ad2fd845",
+      "sha256": "D5198D85C844BCD03A28B1A2D8CE3D119786D3DD989069C2870F02126769FC28",
+      "role": "Reference only; original licence retained. Original LGPL-2.1-or-later number converter source and headers"
+    },
+    {
+      "file": "phonemizer-3.3.0.zip",
+      "url": "https://codeload.github.com/bootphon/phonemizer/zip/3ed323f0c77797b829092b07a8a4b08ee6f71187",
+      "sha256": "5C42561A951EB5AC03B5944361D7BAB7F8CDF79C3C41F37E18D77B4FA1C98E09",
+      "role": "Reference only; original licence retained. Original GPL-3.0-or-later punctuation implementation; punctuation.py matches fork 3.3.2"
+    },
+    {
+      "file": "phonemizer_fork-3.3.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/42/fa/9294d2f11890ca49d0bdac7a4da60cbe5686629bfd4987cae0ad75e051cc/phonemizer_fork-3.3.2.tar.gz",
+      "sha256": "10E16E827D0443B087062E21B55E805C00989CF1343B2E81E734CAE5F6C0CF69",
+      "role": "Reference only; original licence retained. Original GPL fork source distribution pinned by the comparator's lockfile"
+    }
+  ]
+}

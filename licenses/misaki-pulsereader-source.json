@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "sourceBase": {
+    "package": "MisakiSharp/2.1.1",
+    "sourceRef": "4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06",
+    "referenceArchive": "MisakiSharp-4ec982c.zip",
+    "rejectedStockDllSha256": "F90EF27EE2D001B15B31270003D2310297847D2B44F7DC2665150F014F9EFE0D"
+  },
+  "localProject": "src/MisakiSharp.PulseReader/MisakiSharp.PulseReader.csproj",
+  "patchId": "number-and-punctuation-v1",
+  "assemblyName": "MisakiSharp",
+  "assemblyVersion": "2.1.1.0",
+  "fileVersion": "2.1.1.1",
+  "informationalVersionPrefix": "2.1.1-pulsereader.1",
+  "assemblyMetadata": {
+    "key": "PulseReader.FrontendPatch",
+    "value": "number-and-punctuation-v1"
+  },
+  "requiredHelpers": [
+    {
+      "typeName": "MisakiSharp.PermissiveNumberWords",
+      "methods": [
+        "Cardinal",
+        "Ordinal",
+        "Year",
+        "Float"
+      ]
+    },
+    {
+      "typeName": "MisakiSharp.PermissivePunctuation",
+      "methods": [
+        "Phonemize",
+        "Plan",
+        "Normalize"
+      ]
+    }
+  ],
+  "forbiddenTypeNamePatterns": [
+    "(^|\\+)Num2Words$",
+    "(MarksRegex|LanguageFlags)_[0-9]+"
+  ],
+  "forbiddenMethods": [
+    {
+      "typeName": "MisakiSharp.EspeakG2P",
+      "methods": [
+        "Preserve",
+        "Restore",
+        "PostprocessChunk",
+        "MarksRegex",
+        "LanguageFlags"
+      ]
+    }
+  ],
+  "embeddedResources": [
+    {
+      "file": "data/en_lexicon_gb.tsv.gz",
+      "manifestName": "MisakiSharp.en_lexicon_gb.tsv.gz",
+      "length": 2896633,
+      "sha256": "78375DFAB7D031307F7968E486663CA61154396CECA1019C2E4A003EDB5B400D"
+    },
+    {
+      "file": "data/en_lexicon_us.tsv.gz",
+      "manifestName": "MisakiSharp.en_lexicon_us.tsv.gz",
+      "length": 2714349,
+      "sha256": "CCC5443B5A0A64603787EEC4373E97630BEFEC6FB40092EA0BDA5BF95BC345C7"
+    },
+    {
+      "file": "data/en_tagger.bin.gz",
+      "manifestName": "MisakiSharp.en_tagger.bin.gz",
+      "length": 2816828,
+      "sha256": "9FB5A95639DAAF7FF403339247EA91F3BD03991DB748E1295433294FE275CEFA"
+    },
+    {
+      "file": "data/en_tokenizer.tsv.gz",
+      "manifestName": "MisakiSharp.en_tokenizer.tsv.gz",
+      "length": 18222,
+      "sha256": "F64970488DF9E691219D7AD6B946BF41D1D5BDB49144C5FB240093DEC76F4589"
+    },
+    {
+      "file": "data/engb_espeak.tsv.gz",
+      "manifestName": "MisakiSharp.engb_espeak.tsv.gz",
+      "length": 5918961,
+      "sha256": "BD36180E3200FECAF9EC425E907A17143DAC918BD2F3970618F83F86BE8523A6"
+    },
+    {
+      "file": "data/enus_espeak.tsv.gz",
+      "manifestName": "MisakiSharp.enus_espeak.tsv.gz",
+      "length": 6047471,
+      "sha256": "F63E33663C8DD405EE7C56BAFB3ED98B2E0D80968034542CF43DA0418FEDBE87"
+    },
+    {
+      "file": "data/es_espeak.tsv.gz",
+      "manifestName": "MisakiSharp.es_espeak.tsv.gz",
+      "length": 4133908,
+      "sha256": "0BE9EAF85FDB9C73A1311B34DCCDD2E35ED2BDA39972035AA28EE1620A6124EB"
+    },
+    {
+      "file": "data/fr_espeak.tsv.gz",
+      "manifestName": "MisakiSharp.fr_espeak.tsv.gz",
+      "length": 4460144,
+      "sha256": "B035656ACAE98D0AED1A1F3386F158D94A2B8C33995506D082B47690A2CC9E6C"
+    },
+    {
+      "file": "data/hi_espeak_lexicon.tsv.gz",
+      "manifestName": "MisakiSharp.hi_espeak_lexicon.tsv.gz",
+      "length": 1453836,
+      "sha256": "BADB0D9C743E0A0CF2F379A70F979A98D94F6B73341F17C9559F040C7A67A6A9"
+    },
+    {
+      "file": "data/hi_espeak.tsv.gz",
+      "manifestName": "MisakiSharp.hi_espeak.tsv.gz",
+      "length": 2860523,
+      "sha256": "636C946365A22544B097A05E4D2DFB13ACFD9B97271F4D295B2FB801F21058C4"
+    },
+    {
+      "file": "data/it_espeak.tsv.gz",
+      "manifestName": "MisakiSharp.it_espeak.tsv.gz",
+      "length": 4306922,
+      "sha256": "20C8F4341A3474649F5EFABAC9D83CCE1C94F5D6D8F1342155EE0CA8671AF947"
+    },
+    {
+      "file": "data/ja_char_unk.tsv.gz",
+      "manifestName": "MisakiSharp.ja_char_unk.tsv.gz",
+      "length": 885,
+      "sha256": "924A5BC1999EF98CCC9492E586FB56CAEE0A0ED7993281657725DC4D137C3FA0"
+    },
+    {
+      "file": "data/ja_lexicon.tsv.gz",
+      "manifestName": "MisakiSharp.ja_lexicon.tsv.gz",
+      "length": 8286957,
+      "sha256": "20E8AE15BE2CD37A35A0709DC885615ECCFBEDF9EBB4455C7717F10675DFFE01"
+    },
+    {
+      "file": "data/ja_matrix_compact.bin.gz",
+      "manifestName": "MisakiSharp.ja_matrix_compact.bin.gz",
+      "length": 10018877,
+      "sha256": "3F9B9F451AD5CE0B019C03FCD62D05A6381E40469F89188F0DB1B8A58727338F"
+    },
+    {
+      "file": "data/ja_words.txt.gz",
+      "manifestName": "MisakiSharp.ja_words.txt.gz",
+      "length": 484476,
+      "sha256": "1958BCD457012E8C3F112922FCDC154B3CFF33F91CB52EAF07828B835D0A70E4"
+    },
+    {
+      "file": "data/pt_espeak.tsv.gz",
+      "manifestName": "MisakiSharp.pt_espeak.tsv.gz",
+      "length": 4267840,
+      "sha256": "4ACBDDFFC1ABC6C95875667AA7A03FF4F2E5020DC9C39713822F24490CF1B8CE"
+    },
+    {
+      "file": "data/zh_finalseg_hmm.tsv.gz",
+      "manifestName": "MisakiSharp.zh_finalseg_hmm.tsv.gz",
+      "length": 265883,
+      "sha256": "85B2D11A35F7042894F579C7F471989149DFFEE47F4BDF9B7CEE92F4B87B51DE"
+    },
+    {
+      "file": "data/zh_g2p_v2.tsv.gz",
+      "manifestName": "MisakiSharp.zh_g2p_v2.tsv.gz",
+      "length": 5136595,
+      "sha256": "9EE53A841668D32733A32A518C16C1811D29CDEE694AABD3ABA80A5D77CBC6B1"
+    },
+    {
+      "file": "data/zh_g2p.tsv.gz",
+      "manifestName": "MisakiSharp.zh_g2p.tsv.gz",
+      "length": 2304581,
+      "sha256": "C22FFE300859C868AFA7753112C5A13F3EFCC0BE7171B051D5A19003ED486FD4"
+    },
+    {
+      "file": "data/zh_posseg_hmm.tsv.gz",
+      "manifestName": "MisakiSharp.zh_posseg_hmm.tsv.gz",
+      "length": 798148,
+      "sha256": "CE5AEA6279277DB5A29DE5D80D5D3DC36F6635EF20D295BBB5CEF79C3CF92FDD"
+    }
+  ],
+  "requiredNotices": [
+    "LICENSE",
+    "THIRD-PARTY-NOTICES.md",
+    "licenses/MisakiSharp-LICENSE.txt",
+    "licenses/MisakiSharp-NOTICE.txt",
+    "licenses/number-to-words-LICENSE.txt"
+  ],
+  "scope": "Local number and punctuation replacement contract. Original Apache and resource-specific licences remain applicable; no public-release approval."
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "markdown-heading",
+    "category": "Accepted refinement",
+    "title": "Markdown heading",
+    "rationale": "Removes the visual heading marker because Kokoro can announce it as header or subheader.",
+    "originalText": "# Getting started",
+    "expectedPreparedText": "Getting started",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "list-announcement",
+    "category": "Lists",
+    "title": "One announcement for an unordered list",
+    "rationale": "Removes visual bullet markers so symbol choice cannot leak into speech.",
+    "originalText": "- Keep the original voice.\n- Restore the clipboard.\n- Preserve normal hotkeys.",
+    "expectedPreparedText": "Keep the original voice.\nRestore the clipboard.\nPreserve normal hotkeys.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "numbered-list-announcement",
+    "category": "Lists",
+    "title": "One announcement for a numbered list",
+    "rationale": "Leaves numbered lists alone because Kokoro already reads their numbers naturally.",
+    "originalText": "1. Select some text.\n2. Press the hotkey.\n3. Press it again to stop.",
+    "expectedPreparedText": "1. Select some text.\n2. Press the hotkey.\n3. Press it again to stop.",
+    "expectChange": false,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "checklist-context",
+    "category": "Lists",
+    "title": "Checklist syntax",
+    "rationale": "Removes checklist syntax without announcing either the list or the visual checked state.",
+    "originalText": "- [x] Kokoro is installed.\n- [ ] Start with Windows is enabled.",
+    "expectedPreparedText": "Kokoro is installed.\nStart with Windows is enabled.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "quote-context",
+    "category": "Quoted text",
+    "title": "One announcement for a blockquote",
+    "rationale": "Announces a contiguous quote once instead of repeating quote before every line.",
+    "originalText": "> The first quoted sentence remains intact.\n> The second sentence continues the same quotation.",
+    "expectedPreparedText": "Quote. The first quoted sentence remains intact.\nThe second sentence continues the same quotation.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "wrapped-prose",
+    "category": "Accepted refinement",
+    "title": "Hard-wrapped prose",
+    "rationale": "Keeps the preferred removal of a visual line wrap that created an audible pause.",
+    "originalText": "This sentence was wrapped\nacross two visual lines before it reached Pulse Reader.",
+    "expectedPreparedText": "This sentence was wrapped across two visual lines before it reached Pulse Reader.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "url-dash",
+    "category": "Literal identifiers",
+    "title": "Dash inside a URL",
+    "rationale": "Expands the scheme colon and path dash Kokoro omitted while retaining the otherwise acceptable URL reading.",
+    "originalText": "Open https://example.com/pulse-reader/docs for details.",
+    "expectedPreparedText": "Open https colon example.com/pulse dash reader/docs for details.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "email-punctuation",
+    "category": "Literal identifiers",
+    "title": "Dots and at-sign inside an email address",
+    "rationale": "Expands punctuation only inside the detected address so its exact spelling is audible.",
+    "originalText": "Send the report to reader.tests@example.org tomorrow.",
+    "expectedPreparedText": "Send the report to reader dot tests at example dot org tomorrow.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "file-extension",
+    "category": "Literal identifiers",
+    "title": "File-extension dot",
+    "rationale": "Expands the drive colon and final dot Kokoro omitted from the detected Windows path.",
+    "originalText": "The model is stored at C:\\Users\\Reader\\Models\\kokoro.onnx.",
+    "expectedPreparedText": "The model is stored at C colon \\Users\\Reader\\Models\\kokoro dot onnx.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "ellipsis-pause",
+    "category": "Playback cues",
+    "title": "Ellipsis as an explicit pause",
+    "rationale": "Removes the noisy ellipsis phoneme and inserts a controlled longer pause between reading units.",
+    "originalText": "Wait... is the next voice ready? Yes, it is.",
+    "expectedPreparedText": "Wait is the next voice ready? Yes, it is.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 450
+  },
+  {
+    "id": "date-and-time",
+    "category": "Dates and times",
+    "title": "British date and twenty-four-hour time",
+    "rationale": "Adds the missing ordinal and removes the unnatural colon pause from an unambiguous format.",
+    "originalText": "The test starts on 24 August 2026 at 14:35.",
+    "expectedPreparedText": "The test starts on 24th of August 2026 at fourteen thirty-five.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "math-operators",
+    "category": "Expressions",
+    "title": "Mathematical operators",
+    "rationale": "Expands operators only after the text is confidently recognized as an expression.",
+    "originalText": "The expression is x >= 10, and the result is y = x * 2.",
+    "expectedPreparedText": "The expression is x is greater than or equal to 10, and the result is y equals x multiplied by 2.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "json-properties",
+    "category": "Structured text",
+    "title": "Parsed JSON properties",
+    "rationale": "Parses valid JSON and reads its values without braces, quotes, or other noisy syntax.",
+    "originalText": "{\n  \"backend\": \"kokoro\",\n  \"speed\": 1.0\n}",
+    "expectedPreparedText": "Backend: kokoro. Speed: 1.0.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "code-block-announcement",
+    "category": "Structured text",
+    "title": "Code-block announcement",
+    "rationale": "Replaces an unreliable partial reading with a short announcement and skips the code contents.",
+    "originalText": "```csharp\nif (speech.IsSpeaking)\n{\n    speech.Stop();\n}\n```",
+    "expectedPreparedText": "Code block.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "fenced-prose",
+    "category": "Structured text",
+    "title": "Fenced prose is not code",
+    "rationale": "Removes the fence and reads its prose instead of falsely announcing a code block.",
+    "originalText": "```text\nThis is a quoted passage in a Markdown document.\nIt should still be read normally.\n```",
+    "expectedPreparedText": "This is a quoted passage in a Markdown document. It should still be read normally.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "table-rows",
+    "category": "Structured text",
+    "title": "Table rows as sentences",
+    "rationale": "Treats each row as one reading unit and uses semicolons for a moderate pause without splitting every cell into a separate utterance.",
+    "originalText": "Voice | Speed | Volume\nHeart | 1.0 | 100\nGeorge | 0 | 100",
+    "expectedPreparedText": "Voice; Speed; Volume.\nHeart; 1.0; 100.\nGeorge; 0; 100.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  }
+]

@@ -1,0 +1,39 @@
+PULSE READER DISTRIBUTION TERMS
+
+Pulse Reader's own source code is licensed under MIT. That licence is reproduced
+below and is not replaced by the Microsoft terms that follow it. Other bundled
+components retain their own licences, listed in THIRD-PARTY-NOTICES.md.
+
+MICROSOFT RUNTIME COMPONENTS
+
+This distribution includes Microsoft's unmodified msvcp140.dll,
+msvcp140_1.dll, vcruntime140.dll and vcruntime140_1.dll. By accepting these
+distribution terms, you agree to the original Microsoft runtime terms below
+for those components only. They do not restrict Pulse Reader's own MIT code.
+The original Microsoft licence documents are also included in licenses/.
+
+The publisher permits distributors of Pulse Reader to copy and redistribute
+these four unmodified Microsoft DLLs as part of Pulse Reader, subject to the
+distribution conditions stated here and the supplying Visual Studio licence's
+Section 8(a)(iii). This limited redistribution permission comes from the
+publisher's authorised distribution rights, not from the standalone Microsoft
+runtime licence.
+
+If you redistribute a packaged copy containing those Microsoft files, preserve
+their notices and these terms, keep the files unmodified, retain the
+application's significant primary functionality rather than distributing the
+files as a standalone runtime, and require downstream
+distributors and external end users to agree to the applicable Microsoft terms.
+Do not impose licence terms that require Microsoft Distributable Code to be
+disclosed in source form or permit its modification. Do not use Microsoft
+trademarks in your application's name or in a way that suggests your application
+comes from or is endorsed by Microsoft.
+
+The publisher's distribution rights and obligations come from the supplying
+Visual Studio Community licence and its Distributable Code list. That includes
+the publisher's defence and indemnity obligation; it is not a new condition
+placed on users of Pulse Reader's MIT source. Any further distribution of the
+Microsoft components remains subject to that supplying licence and list.
+
+PULSE READER MIT LICENCE
+

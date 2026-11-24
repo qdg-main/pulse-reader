@@ -1,0 +1,172 @@
+[
+  {
+    "id": "markdown-heading-levels",
+    "category": "Structural markup",
+    "title": "Heading and subheading markers",
+    "rationale": "Removes one or more leading hash markers while preserving the heading words.",
+    "originalText": "# Installation\n\n## First run\n\nSelect a short sentence and press the global hotkey.",
+    "expectedPreparedText": "Installation\n\nFirst run\n\nSelect a short sentence and press the global hotkey.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "unordered-marker-styles",
+    "category": "Structural markup",
+    "title": "Unordered list marker styles",
+    "rationale": "Removes dash, asterisk, plus, and bullet markers without changing the list content.",
+    "originalText": "- Keep the original voice.\n* Restore the clipboard.\n+ Preserve normal hotkeys.\n• Stop playback immediately.",
+    "expectedPreparedText": "Keep the original voice.\nRestore the clipboard.\nPreserve normal hotkeys.\nStop playback immediately.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "url-query-punctuation",
+    "category": "Literal identifiers",
+    "title": "URL path and query punctuation",
+    "rationale": "Makes the scheme colon, path dash, and query separators audible only inside a detected URL.",
+    "originalText": "Open https://example.com/pulse-reader/docs?voice=heart&speed=1 for the current instructions.",
+    "expectedPreparedText": "Open https colon example.com/pulse dash reader/docs question mark voice equals heart and speed equals 1 for the current instructions.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "bare-file-name",
+    "category": "Literal identifiers",
+    "title": "Bare filename punctuation",
+    "rationale": "Expands the dash and known extension dot in a filename without touching decimal numbers.",
+    "originalText": "Inspect review-notes.txt and PulseReader.exe before continuing.",
+    "expectedPreparedText": "Inspect review dash notes dot txt and PulseReader dot exe before continuing.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "full-timestamp",
+    "category": "Dates and times",
+    "title": "Timestamp with seconds",
+    "rationale": "Preserves every digit group in a full timestamp, including leading zeroes.",
+    "originalText": "12:04:09 Starting synthesis. 09:05:01 Playback completed.",
+    "expectedPreparedText": "twelve oh four oh nine Starting synthesis. nine oh five oh one Playback completed.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "table-cell-pauses",
+    "category": "Playback cues",
+    "title": "Controlled table cell and row pauses",
+    "rationale": "Keeps each row in one utterance and uses semicolons for a lighter pause between cells.",
+    "originalText": "Voice | Speed | Volume\nHeart | 1.0 | 100\nGeorge | 0.95 | 90\nSarah | 1.10 | 80",
+    "expectedPreparedText": "Voice; Speed; Volume.\nHeart; 1.0; 100.\nGeorge; 0.95; 90.\nSarah; 1.10; 80.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "technical-identifiers",
+    "category": "Technical prose",
+    "title": "Command, filename, and dotted setting",
+    "rationale": "Applies a small technical vocabulary and reads dots only inside recognised identifiers.",
+    "originalText": "Run dotnet build, inspect PulseReader.exe, and set speech.backend=kokoro. Keep net10.0 unchanged.",
+    "expectedPreparedText": "Run dot net build, inspect PulseReader dot exe, and set speech dot backend equals kokoro. Keep net10.0 unchanged.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "dotted-meridiem-time",
+    "category": "Dates and times",
+    "title": "Dotted time before p.m.",
+    "rationale": "Treats a dotted value as a time only when an a.m. or p.m. suffix removes the ambiguity.",
+    "originalText": "The meeting starts at 3.30 p.m. and ends at 4.05 p.m.",
+    "expectedPreparedText": "The meeting starts at three thirty p.m. and ends at four oh five p.m.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "curly-contractions",
+    "category": "Typography",
+    "title": "Typographic apostrophes inside contractions",
+    "rationale": "Normalises curly apostrophes between letters so contractions remain one word.",
+    "originalText": "I’ve checked it. It can’t stall, it doesn’t crash, and it isn’t noisy.",
+    "expectedPreparedText": "I've checked it. It can't stall, it doesn't crash, and it isn't noisy.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "compact-slash-abbreviation",
+    "category": "Technical prose",
+    "title": "A slash B abbreviation",
+    "rationale": "Adds a full stop after A so Kokoro pronounces it as a standalone letter while retaining the slash.",
+    "originalText": "Run an A/B comparison before approval.",
+    "expectedPreparedText": "Run an A./B comparison before approval.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "time-format-token",
+    "category": "Technical prose",
+    "title": "Literal time-format token",
+    "rationale": "Spaces the existing colons so Kokoro separates the three format groups without inserting spoken punctuation words.",
+    "originalText": "The parser accepts HH:mm:ss timestamps.",
+    "expectedPreparedText": "The parser accepts HH : MM : SS timestamps.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "capital-a-slash-phrase",
+    "category": "Technical labels",
+    "title": "Standalone A before the word slash",
+    "rationale": "Treats A as a letter when it introduces an explicit A slash B comparison.",
+    "originalText": "A slash B abbreviation",
+    "expectedPreparedText": "A. slash B abbreviation",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "capital-a-metalinguistic-reference",
+    "category": "Technical labels",
+    "title": "Standalone A referenced inside a sentence",
+    "rationale": "Treats an internal capital A as a referenced letter rather than a lowercase article.",
+    "originalText": "Adds a full stop after A so Kokoro pronounces it as a standalone letter.",
+    "expectedPreparedText": "Adds a full stop after A. so Kokoro pronounces it as a standalone letter.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "capital-a-variant-label",
+    "category": "Technical labels",
+    "title": "Standalone A in a variant label",
+    "rationale": "Treats A as a letter when label punctuation follows it.",
+    "originalText": "A · Original",
+    "expectedPreparedText": "A. · Original",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "capital-a-option-reference",
+    "category": "Technical labels",
+    "title": "Standalone A used as an option name",
+    "rationale": "Treats an internal capital A as the name of an option.",
+    "originalText": "Option A is selected, while option B remains available.",
+    "expectedPreparedText": "Option A. is selected, while option B remains available.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "capital-a-ordinary-article",
+    "category": "Preserve original",
+    "title": "Ordinary sentence-opening article",
+    "rationale": "Leaves a sentence-opening A alone when it functions as the article a.",
+    "originalText": "A good reading should sound natural.",
+    "expectedPreparedText": "A good reading should sound natural.",
+    "expectChange": false,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "capital-a-heading-article",
+    "category": "Preserve article",
+    "title": "Ordinary article at the start of a heading",
+    "rationale": "Removes the Markdown marker but leaves the heading's opening article as A.",
+    "originalText": "# A new beginning",
+    "expectedPreparedText": "A new beginning",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  }
+]

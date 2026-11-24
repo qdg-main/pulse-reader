@@ -1,0 +1,102 @@
+[
+  {
+    "id": "numeric-short-commit",
+    "category": "Short identifier",
+    "title": "Numeric-only abbreviated commit hash",
+    "rationale": "Tests whether a seven-digit commit hash should be spoken as individual digits instead of a large number.",
+    "originalText": "8018181 — Fix text preparation audit findings",
+    "expectedPreparedText": "8 0 1 8 1 8 1 — Fix text preparation audit findings",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "mixed-short-commit-control",
+    "category": "Short identifier control",
+    "title": "Mixed abbreviated commit hash",
+    "rationale": "Checks the already-acceptable mixed letter-and-digit pronunciation before applying any broader rule.",
+    "originalText": "f3d7b74 — Record pronunciation review outcomes",
+    "expectedPreparedText": "f3d7b74 — Record pronunciation review outcomes",
+    "expectChange": false,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "unformatted-quantity-control",
+    "category": "Quantity control",
+    "title": "Large quantity without commas",
+    "rationale": "Tests the safety boundary: numeric context may mean the value should remain a number even without separators.",
+    "originalText": "The migration affected 8018181 customer records.",
+    "expectedPreparedText": "The migration affected 8018181 customer records.",
+    "expectChange": false,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "formatted-quantity-control",
+    "category": "Quantity control",
+    "title": "Large quantity with commas",
+    "rationale": "Confirms that conventional numeric formatting continues to produce an ordinary quantity.",
+    "originalText": "The migration affected 8,018,181 customer records.",
+    "expectedPreparedText": "The migration affected 8,018,181 customer records.",
+    "expectChange": false,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "labelled-reference",
+    "category": "Labelled identifier",
+    "title": "Short numeric reference number",
+    "rationale": "Tests whether an explicit reference label provides enough context to read a short numeric identifier digit by digit.",
+    "originalText": "Reference number 8018181 is ready for review.",
+    "expectedPreparedText": "Reference number 8 0 1 8 1 8 1 is ready for review.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "contextual-long-message-id",
+    "category": "Contextual summarisation",
+    "title": "Long numeric message identifier",
+    "rationale": "Tests shortening a strongly labelled, eighteen-digit platform identifier while retaining the original sentence.",
+    "originalText": "Message ID 123456789012345678 was deleted.",
+    "expectedPreparedText": "Message ID 1 2 3 4, etc., was deleted.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "standalone-long-numeric",
+    "category": "Length cutoff",
+    "title": "Standalone twenty-digit string",
+    "rationale": "Tests the proposed conservative cutoff for an uninterrupted numeric line with no useful spoken structure.",
+    "originalText": "12345678901234567890",
+    "expectedPreparedText": "1 2 3 4, etc.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "full-commit-hash",
+    "category": "Known opaque format",
+    "title": "Full Git commit hash",
+    "rationale": "Tests the conventional seven-character short form while retaining the useful surrounding commit context.",
+    "originalText": "Commit 9f86d081884c7d659a2feaa0c55ad015a3bf4f1b updates playback.",
+    "expectedPreparedText": "Commit 9 f 8 6 d 0 8 updates playback.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "uuid",
+    "category": "Known opaque format",
+    "title": "Session UUID",
+    "rationale": "Tests a four-character prefix plus etc. without losing what the UUID refers to.",
+    "originalText": "Session 550e8400-e29b-41d4-a716-446655440000 failed to start.",
+    "expectedPreparedText": "Session 5 5 0 e, etc., failed to start.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  },
+  {
+    "id": "opaque-token",
+    "category": "Known opaque context",
+    "title": "Long authentication token",
+    "rationale": "Tests a short prefix plus etc. for a token whose complete literal value provides no useful listening value.",
+    "originalText": "Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+    "expectedPreparedText": "Token: e y J h, etc.",
+    "expectChange": true,
+    "expectedPauseMilliseconds": 0
+  }
+]

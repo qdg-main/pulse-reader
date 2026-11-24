@@ -1,0 +1,378 @@
+[
+  {
+    "id": "clean-prose-control",
+    "category": "Control",
+    "title": "Natural prose should remain untouched",
+    "originalText": "I've checked the latest build, and it sounds natural. Dr. Rivera said, \"Leave this sentence alone.\"",
+    "reviewGoal": "Reject gratuitous rewriting when Pulse Reader already produces natural speech.",
+    "instruction": null,
+    "expectKeep": true,
+    "protectedSequences": [
+      {
+        "description": "source order",
+        "terms": [
+          { "value": "latest build" },
+          { "value": "Dr. Rivera" },
+          { "value": "Leave this sentence alone" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accepted-url-control",
+    "category": "Control",
+    "title": "Accepted URL preparation",
+    "originalText": "Open https://example.com/pulse-reader/docs?voice=heart&speed=1 for the current instructions.",
+    "reviewGoal": "Preserve the reviewed deterministic URL pronunciation without paraphrasing it.",
+    "instruction": null,
+    "expectKeep": true,
+    "protectedSequences": [
+      {
+        "description": "URL parameter relationships",
+        "terms": [
+          { "value": "example.com" },
+          { "value": "voice equals heart", "sourceValue": "voice=heart" },
+          { "value": "speed equals 1", "sourceValue": "speed=1" },
+          { "value": "current instructions" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accepted-timestamp-control",
+    "category": "Control",
+    "title": "Accepted timestamp preparation",
+    "originalText": "12:04:09 Starting synthesis. 09:05:01 Playback completed.",
+    "reviewGoal": "Keep every time component and the accepted leading-zero pronunciation.",
+    "instruction": null,
+    "expectKeep": true,
+    "protectedSequences": [
+      {
+        "description": "timestamp-to-message relationships",
+        "terms": [
+          { "value": "twelve oh four oh nine", "sourceValue": "12:04:09" },
+          { "value": "Starting synthesis" },
+          { "value": "nine oh five oh one", "sourceValue": "09:05:01" },
+          { "value": "Playback completed" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accepted-markdown-control",
+    "category": "Control",
+    "title": "Heading and list cleanup",
+    "originalText": "# Validation passed\n\n- Release build completed.\n- Regression checks passed.\n- Playback remained responsive.",
+    "reviewGoal": "Keep the deterministic removal of structural markers and the distinct list boundaries.",
+    "instruction": null,
+    "expectKeep": true,
+    "protectedSequences": [
+      {
+        "description": "heading and item order",
+        "terms": [
+          { "value": "Validation passed" },
+          { "value": "Release build completed" },
+          { "value": "Regression checks passed" },
+          { "value": "Playback remained responsive" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "coordinate-axes",
+    "category": "Contextual pronunciation",
+    "title": "Coordinate axes rather than the plural of axe",
+    "originalText": "Set the X and Y axes to zero before exporting the graph.",
+    "reviewGoal": "See whether context can fix Kokoro's reported pronunciation of axes without changing the sentence.",
+    "instruction": "Kokoro pronounced axes as the plural of axe. Replace the target word with a familiar phonetic spelling for coordinate-system axes.",
+    "expectKeep": false,
+    "protectedSequences": [
+      {
+        "description": "coordinate relationship",
+        "terms": [
+          { "value": "X" },
+          { "value": "Y" },
+          { "value": "zero" },
+          { "value": "exporting the graph" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "audio-bass",
+    "category": "Contextual pronunciation",
+    "title": "Bass frequency rather than the fish",
+    "originalText": "Reduce the bass slightly, then listen to the speakers again.",
+    "reviewGoal": "See whether the model can make the low-frequency pronunciation unambiguous.",
+    "instruction": "Kokoro pronounced bass as the fish. Replace the target word with a familiar phonetic spelling for low-frequency bass.",
+    "expectKeep": false,
+    "protectedSequences": [
+      {
+        "description": "instruction order",
+        "terms": [
+          { "value": "slightly" },
+          { "value": "speakers" },
+          { "value": "again" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lead-metal",
+    "category": "Contextual pronunciation",
+    "title": "Lead as a metal",
+    "originalText": "The old pipe contains lead, so wear gloves before moving it.",
+    "reviewGoal": "Distinguish the metal from the verb without changing the safety instruction.",
+    "instruction": "Kokoro pronounced lead as the verb. Replace the target word with a familiar phonetic spelling for the metal lead.",
+    "expectKeep": false,
+    "protectedSequences": [
+      {
+        "description": "safety relationship",
+        "terms": [
+          { "value": "old pipe" },
+          { "value": "wear gloves" },
+          { "value": "before moving it" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wind-cable",
+    "category": "Contextual pronunciation",
+    "title": "Wind as a verb",
+    "originalText": "Wind the cable around the reel, then secure the loose end.",
+    "reviewGoal": "Distinguish the winding action from moving air.",
+    "instruction": "Kokoro pronounced wind as moving air. Replace the target word with a familiar phonetic spelling for the winding action.",
+    "expectKeep": false,
+    "protectedSequences": [
+      {
+        "description": "action relationship",
+        "terms": [
+          { "value": "cable" },
+          { "value": "reel" },
+          { "value": "secure the loose end" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "json-settings",
+    "category": "Structured text",
+    "title": "Small JSON settings object",
+    "originalText": "```json\n{\"backend\":\"kokoro\",\"voice\":\"af_heart\",\"speed\":1.05,\"enabled\":true}\n```",
+    "reviewGoal": "Read the useful key-value content naturally without narrating every brace and quote.",
+    "instruction": "This is JSON data. Preserve every key and value, but phrase the relationships naturally for speech.",
+    "expectKeep": false,
+    "protectedSequences": [
+      {
+        "description": "JSON key-value order",
+        "terms": [
+          { "value": "Backend", "sourceValue": "backend" },
+          { "value": "kokoro" },
+          { "value": "Voice", "sourceValue": "voice" },
+          { "value": "af_heart", "allowSeparatorFlexibility": true },
+          { "value": "Speed", "sourceValue": "speed" },
+          { "value": "1.05" },
+          { "value": "Enabled", "sourceValue": "enabled" },
+          { "value": "true" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "csharp-code",
+    "category": "Code",
+    "title": "Short C sharp playback guard",
+    "originalText": "```csharp\nif (speech.IsSpeaking)\n{\n    speech.Stop();\n}\n```",
+    "reviewGoal": "Test whether a tiny model can give a faithful useful description instead of merely saying code block.",
+    "instruction": "This is a real code block and the deterministic text omits its logic. Replace it with a short literal description that preserves speech, speaking, and stop without claiming behavior that is not present.",
+    "expectKeep": false,
+    "protectedSequences": [
+      {
+        "description": "condition-to-call relationship",
+        "terms": [
+          { "value": "speech" },
+          { "value": "is speaking", "sourceValue": "IsSpeaking" },
+          { "value": "speech" },
+          { "value": "stop", "sourceValue": "Stop" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stack-trace",
+    "category": "Structured text",
+    "title": "Log lines and stack trace",
+    "originalText": "12:04:09 Starting synthesis\n12:04:10 Playback failed\nat PulseReader.Speech.Playback.Run()\nat PulseReader.Program.Main()",
+    "reviewGoal": "Keep the event order and identifiers while making the boundaries easier to follow.",
+    "instruction": "Preserve both timestamps, both messages, and both stack frames in their original order.",
+    "expectKeep": false,
+    "protectedSequences": [
+      {
+        "description": "diagnostic event and frame order",
+        "terms": [
+          { "value": "twelve oh four oh nine", "sourceValue": "12:04:09" },
+          { "value": "Starting synthesis" },
+          { "value": "twelve oh four ten", "sourceValue": "12:04:10" },
+          { "value": "Playback failed" },
+          { "value": "PulseReader" },
+          { "value": "Speech" },
+          { "value": "Playback" },
+          { "value": "Run" },
+          { "value": "PulseReader" },
+          { "value": "Program" },
+          { "value": "Main" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "markdown-table",
+    "category": "Structured text",
+    "title": "Voice status table",
+    "originalText": "Voice | Backend | Speed | Status\nHeart | Kokoro | 1.0 | Ready\nHazel | Windows | 2 | Ready",
+    "reviewGoal": "Keep each row distinct and make the column relationships understandable.",
+    "instruction": "Preserve the four columns and both data rows. Do not turn the table into a summary.",
+    "expectKeep": false,
+    "protectedSequences": [
+      {
+        "description": "table header and row order",
+        "terms": [
+          { "value": "Voice" },
+          { "value": "Backend" },
+          { "value": "Speed" },
+          { "value": "Status" },
+          { "value": "Heart" },
+          { "value": "Kokoro" },
+          { "value": "1.0" },
+          { "value": "Ready" },
+          { "value": "Hazel" },
+          { "value": "Windows" },
+          { "value": "2" },
+          { "value": "Ready" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "command-line",
+    "category": "Technical prose",
+    "title": "Command with switches and path",
+    "originalText": "Run dotnet publish src/PulseReader/PulseReader.csproj --configuration Release --output artifacts/PulseReader-win-x64.",
+    "reviewGoal": "Make the command understandable without losing its exact components.",
+    "instruction": "This command may be respelled for speech, but every command, path segment, switch, and value must remain present.",
+    "expectKeep": false,
+    "protectedSequences": [
+      {
+        "description": "command token order",
+        "terms": [
+          { "value": "dot net publish", "sourceValue": "dotnet publish" },
+          { "value": "src/PulseReader/PulseReader dot csproj", "sourceValue": "src/PulseReader/PulseReader.csproj" },
+          { "value": "--configuration Release" },
+          { "value": "--output artifacts/PulseReader-win-x64" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "email-and-file",
+    "category": "Literal identifiers",
+    "title": "Email address and executable name",
+    "originalText": "Email release.team@example.com, then inspect PulseReader.exe in C:\\Tools\\Pulse Reader.",
+    "reviewGoal": "Keep the address, filename, and Windows path complete while making punctuation audible where useful.",
+    "instruction": null,
+    "expectKeep": false,
+    "protectedSequences": [
+      {
+        "description": "identifier and action order",
+        "terms": [
+          { "value": "release dot team at example dot com", "sourceValue": "release.team@example.com" },
+          { "value": "PulseReader dot exe", "sourceValue": "PulseReader.exe" },
+          { "value": "C colon \\Tools\\Pulse Reader", "sourceValue": "C:\\Tools\\Pulse Reader" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "discord-message",
+    "category": "Mixed prose",
+    "title": "Conversational message with emoji and inline code",
+    "originalText": "Sam — I pushed `fix/audio-gap` 😅 Can you compare build 8018181 with f3d7b74 before lunch?",
+    "reviewGoal": "Keep the conversational tone and identifiers while avoiding tokenizer trouble from decoration.",
+    "instruction": "The emoji may be omitted. Preserve both build identifiers exactly in meaning and order.",
+    "expectKeep": false,
+    "protectedSequences": [
+      {
+        "description": "chat request relationships",
+        "terms": [
+          { "value": "Sam" },
+          { "value": "fix/audio-gap" },
+          { "value": "8018181" },
+          { "value": "f3d7b74" },
+          { "value": "before lunch" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "status-lines",
+    "category": "Line boundaries",
+    "title": "Short status lines without bullets",
+    "originalText": "10 voices available\n2 backends installed\n1 hotkey configured\n0 errors reported",
+    "reviewGoal": "Keep a light but definite boundary between every status line.",
+    "instruction": "Preserve all four counts and statuses. Do not combine or summarize them.",
+    "expectKeep": false,
+    "protectedSequences": [
+      {
+        "description": "count-to-status relationships",
+        "terms": [
+          { "value": "10 voices available" },
+          { "value": "2 backends installed" },
+          { "value": "1 hotkey configured" },
+          { "value": "0 errors reported" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "checklist",
+    "category": "Structural markup",
+    "title": "Checklist items",
+    "originalText": "- [x] Build completed\n- [ ] Listening review pending\n- [ ] Release not published",
+    "reviewGoal": "Read the item text cleanly without announcing checkbox syntax or losing line boundaries.",
+    "instruction": "The visual checked state is not important for speech. Preserve the three item texts and their order.",
+    "expectKeep": false,
+    "protectedSequences": [
+      {
+        "description": "checklist order and negation",
+        "terms": [
+          { "value": "Build completed" },
+          { "value": "Listening review pending" },
+          { "value": "Release not published" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mixed-release-notes",
+    "category": "Mixed layout",
+    "title": "Release notes with prose, list, and code",
+    "originalText": "# Release candidate\n\nPlayback now resumes from the current sentence.\n\n- Fixed pauses around tables\n- Preserved URLs such as https://example.com/docs\n\n```json\n{\"backend\":\"kokoro\"}\n```",
+    "reviewGoal": "Test a compact mixed document without flattening its distinct sections or dropping the URL and JSON value.",
+    "instruction": "Preserve the heading, prose, both list items, URL, and JSON key-value content in order.",
+    "expectKeep": false,
+    "protectedSequences": [
+      {
+        "description": "mixed-section order",
+        "terms": [
+          { "value": "Release candidate" },
+          { "value": "current sentence" },
+          { "value": "Fixed pauses around tables" },
+          { "value": "https colon example.com/docs", "sourceValue": "https://example.com/docs" },
+          { "value": "Backend", "sourceValue": "backend" },
+          { "value": "kokoro" }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <Version>1.0.0</Version>
+    <Authors>Quantum Dot Games</Authors>
+    <Company>Quantum Dot Games</Company>
+    <Product>Pulse Reader</Product>
+    <Description>Local text-to-speech for selected text and monitored windows.</Description>
+    <RepositoryUrl>https://github.com/qdg-main/pulse-reader</RepositoryUrl>
+  </PropertyGroup>
+</Project>

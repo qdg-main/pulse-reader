@@ -1,0 +1,227 @@
+[
+  {
+    "id": "markdown-heading",
+    "category": "Structure",
+    "title": "Markdown heading marker",
+    "rationale": "Tests whether removing the visual heading marker and adding a full stop improves the opening cadence.",
+    "originalText": "# Getting started",
+    "expectedPreparedText": "Getting started.",
+    "expectChange": true
+  },
+  {
+    "id": "uppercase-heading",
+    "category": "Structure",
+    "title": "Uppercase heading",
+    "rationale": "Tests whether explicit terminal punctuation helps a short heading without changing its words.",
+    "originalText": "IMPORTANT SETTINGS",
+    "expectedPreparedText": "IMPORTANT SETTINGS.",
+    "expectChange": true
+  },
+  {
+    "id": "unordered-list",
+    "category": "Lists",
+    "title": "Dash bullet",
+    "rationale": "Tests whether naming a bullet is clearer than relying on Kokoro to interpret a leading dash.",
+    "originalText": "- Keep the original voice.",
+    "expectedPreparedText": "Bullet. Keep the original voice.",
+    "expectChange": true
+  },
+  {
+    "id": "unicode-bullet",
+    "category": "Lists",
+    "title": "Unicode bullet",
+    "rationale": "Checks the same treatment for a pasted typographic bullet.",
+    "originalText": "• Restore the clipboard after reading.",
+    "expectedPreparedText": "Bullet. Restore the clipboard after reading.",
+    "expectChange": true
+  },
+  {
+    "id": "numbered-list",
+    "category": "Lists",
+    "title": "Numbered item",
+    "rationale": "Tests whether an explicit item label sounds better than the bare list number.",
+    "originalText": "2. Select the voice you want to hear.",
+    "expectedPreparedText": "Item 2. Select the voice you want to hear.",
+    "expectChange": true
+  },
+  {
+    "id": "unchecked-task",
+    "category": "Lists",
+    "title": "Unchecked task",
+    "rationale": "Makes the state of a Markdown task explicit instead of reading punctuation.",
+    "originalText": "- [ ] Start Pulse Reader with Windows.",
+    "expectedPreparedText": "Unchecked item. Start Pulse Reader with Windows.",
+    "expectChange": true
+  },
+  {
+    "id": "checked-task",
+    "category": "Lists",
+    "title": "Checked task",
+    "rationale": "Makes a completed Markdown task explicit.",
+    "originalText": "- [x] Kokoro is installed locally.",
+    "expectedPreparedText": "Checked item. Kokoro is installed locally.",
+    "expectChange": true
+  },
+  {
+    "id": "quoted-line",
+    "category": "Structure",
+    "title": "Quoted line",
+    "rationale": "Tests an audible quote cue in place of the visual greater-than marker.",
+    "originalText": "> Please read this quoted response aloud.",
+    "expectedPreparedText": "Quote. Please read this quoted response aloud.",
+    "expectChange": true
+  },
+  {
+    "id": "inline-markdown",
+    "category": "Markup",
+    "title": "Bold and italic Markdown",
+    "rationale": "Removes paired visual emphasis markers while preserving every word.",
+    "originalText": "Use **Kokoro** for _local_ speech.",
+    "expectedPreparedText": "Use Kokoro for local speech.",
+    "expectChange": true
+  },
+  {
+    "id": "inline-code-and-hotkey",
+    "category": "Controls",
+    "title": "Inline code hotkey",
+    "rationale": "Removes backticks and expands Ctrl so the key chord is less ambiguous.",
+    "originalText": "Press `Ctrl + Shift + Space` to begin reading.",
+    "expectedPreparedText": "Press Control plus Shift plus Space to begin reading.",
+    "expectChange": true
+  },
+  {
+    "id": "ampersand",
+    "category": "Symbols",
+    "title": "Word ampersand",
+    "rationale": "Tests a narrow ampersand expansion only when it joins words.",
+    "originalText": "Research & development teams use the same build.",
+    "expectedPreparedText": "Research and development teams use the same build.",
+    "expectChange": true
+  },
+  {
+    "id": "wrapped-prose",
+    "category": "Whitespace",
+    "title": "Visually wrapped sentence",
+    "rationale": "Checks whether removing a visual line wrap changes Kokoro's pause or cadence.",
+    "originalText": "This sentence was wrapped\nacross two visual lines before it reached Pulse Reader.",
+    "expectedPreparedText": "This sentence was wrapped across two visual lines before it reached Pulse Reader.",
+    "expectChange": true
+  },
+  {
+    "id": "tabs-and-spacing",
+    "category": "Whitespace",
+    "title": "Tabs and repeated spaces",
+    "rationale": "Checks whether collapsing layout whitespace affects spoken timing.",
+    "originalText": "Voice:\t af_heart   is selected.",
+    "expectedPreparedText": "Voice: af_heart is selected.",
+    "expectChange": true
+  },
+  {
+    "id": "url-control",
+    "category": "Literal identifiers",
+    "title": "Web address control",
+    "rationale": "Makes the URL scheme colon and path dash audible without spelling out the structural slashes.",
+    "originalText": "Open https://example.com/pulse-reader/docs for details.",
+    "expectedPreparedText": "Open https colon example.com/pulse dash reader/docs for details.",
+    "expectChange": true
+  },
+  {
+    "id": "email-control",
+    "category": "Leave unchanged",
+    "title": "Email address control",
+    "rationale": "Leaves an email address untouched rather than guessing how it should be expanded.",
+    "originalText": "Send the report to reader.tests@example.org tomorrow.",
+    "expectedPreparedText": "Send the report to reader.tests@example.org tomorrow.",
+    "expectChange": false
+  },
+  {
+    "id": "version-and-decimal-control",
+    "category": "Leave unchanged",
+    "title": "Version and decimal control",
+    "rationale": "Checks Kokoro's native handling before introducing version or number rules.",
+    "originalText": "Version 2.1.0 reduced the delay from 5.5 seconds to 1.25 seconds.",
+    "expectedPreparedText": "Version 2.1.0 reduced the delay from 5.5 seconds to 1.25 seconds.",
+    "expectChange": false
+  },
+  {
+    "id": "windows-path-control",
+    "category": "Literal identifiers",
+    "title": "Windows path control",
+    "rationale": "Makes the drive colon and file-extension dot audible while retaining the structural backslashes.",
+    "originalText": "The model is stored at C:\\Users\\Reader\\Models\\kokoro.onnx.",
+    "expectedPreparedText": "The model is stored at C colon \\Users\\Reader\\Models\\kokoro dot onnx.",
+    "expectChange": true
+  },
+  {
+    "id": "acronym-control",
+    "category": "Leave unchanged",
+    "title": "Acronyms control",
+    "rationale": "Tests whether Kokoro already pronounces common technical acronyms well.",
+    "originalText": "The CPU runs TTS locally while the GPU remains available.",
+    "expectedPreparedText": "The CPU runs TTS locally while the GPU remains available.",
+    "expectChange": false
+  },
+  {
+    "id": "ellipsis-control",
+    "category": "Leave unchanged",
+    "title": "Ellipsis control",
+    "rationale": "Preserves intentional punctuation so we can hear Kokoro's natural pause.",
+    "originalText": "Wait... is the next voice ready? Yes, it is.",
+    "expectedPreparedText": "Wait... is the next voice ready? Yes, it is.",
+    "expectChange": false
+  },
+  {
+    "id": "date-time-control",
+    "category": "Leave unchanged",
+    "title": "Date and time control",
+    "rationale": "Tests Kokoro's native reading of a date and twenty-four-hour time.",
+    "originalText": "The test starts on 24 August 2026 at 14:35.",
+    "expectedPreparedText": "The test starts on 24 August 2026 at 14:35.",
+    "expectChange": false
+  },
+  {
+    "id": "currency-control",
+    "category": "Leave unchanged",
+    "title": "Currency control",
+    "rationale": "Checks whether currency already sounds natural without a replacement rule.",
+    "originalText": "The monthly total changed from £12.50 to £9.99.",
+    "expectedPreparedText": "The monthly total changed from £12.50 to £9.99.",
+    "expectChange": false
+  },
+  {
+    "id": "math-control",
+    "category": "Leave unchanged",
+    "title": "Simple expression control",
+    "rationale": "Leaves mathematical notation exact because expanding operators can change meaning.",
+    "originalText": "The expression is x >= 10, and the result is y = x * 2.",
+    "expectedPreparedText": "The expression is x >= 10, and the result is y = x * 2.",
+    "expectChange": false
+  },
+  {
+    "id": "json-control",
+    "category": "Structured text",
+    "title": "JSON block control",
+    "rationale": "Keeps structured data intact until we decide whether it should be read, summarized, or skipped.",
+    "originalText": "{\n  \"backend\": \"kokoro\",\n  \"speed\": 1.0\n}",
+    "expectedPreparedText": "{\n  \"backend\": \"kokoro\",\n  \"speed\": 1.0\n}",
+    "expectChange": false
+  },
+  {
+    "id": "code-control",
+    "category": "Structured text",
+    "title": "Fenced code control",
+    "rationale": "Preserves code exactly because a generic spoken rewrite would be unreliable.",
+    "originalText": "```csharp\nif (speech.IsSpeaking)\n{\n    speech.Stop();\n}\n```",
+    "expectedPreparedText": "```csharp\nif (speech.IsSpeaking)\n{\n    speech.Stop();\n}\n```",
+    "expectChange": false
+  },
+  {
+    "id": "table-control",
+    "category": "Structured text",
+    "title": "Table control",
+    "rationale": "Preserves the table for now so the baseline exposes how poorly or well Kokoro handles it unaided.",
+    "originalText": "Voice | Speed | Volume\nHeart | 1.0 | 100\nGeorge | 0 | 100",
+    "expectedPreparedText": "Voice | Speed | Volume\nHeart | 1.0 | 100\nGeorge | 0 | 100",
+    "expectChange": false
+  }
+]

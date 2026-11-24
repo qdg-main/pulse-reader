@@ -1,0 +1,5 @@
+# Preserve the exact reviewed upstream licence texts and frontend source/data.
+# Git line-ending conversion would invalidate their recorded byte hashes.
+licenses/** -text
+src/MisakiSharp.PulseReader/** -text
+LICENSE -text

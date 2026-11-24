@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "publicReleaseReady": false,
+  "publicReleaseGates": [
+    "Complete aggregate branch review and maintainer interactive installer/control acceptance",
+    "Qualify installation scopes and the loaded-user registry cleanup policy, including standard-user and alternative-administrator UAC behaviour",
+    "Resolve final antivirus warning status, signing decision and explicit public-release approval"
+  ],
+  "sources": [
+    {
+      "file": "KokoroSharp-LICENSE.txt",
+      "source": "https://github.com/Lyrcaxis/KokoroSharp/blob/818d22c8b2bbbcee99c81d14d6ec78fd0aad868d/LICENSE",
+      "gitBlobSha": "a911867cf26f47518e74d6e9e1c698d019759d2f",
+      "sourceRef": "818d22c8b2bbbcee99c81d14d6ec78fd0aad868d"
+    },
+    {
+      "file": "MisakiSharp-LICENSE.txt",
+      "source": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/LICENSE",
+      "gitBlobSha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "sourceRef": "4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06"
+    },
+    {
+      "file": "MisakiSharp-NOTICE.txt",
+      "source": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/NOTICE",
+      "gitBlobSha": "561ab1d0e2ab0d14a6c3dffc2364c9abb00abd88",
+      "sourceRef": "4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06"
+    },
+    {
+      "file": "OpenTK-LICENSE.txt",
+      "source": "https://github.com/opentk/opentk/blob/f6652e6/LICENSE.md",
+      "gitBlobSha": "dac5891990a734f1de85614675b6b130fab22940",
+      "sourceRef": "f6652e6"
+    },
+    {
+      "file": "llama.cpp-LICENSE.txt",
+      "source": "https://github.com/ggml-org/llama.cpp/blob/b10662/LICENSE",
+      "gitBlobSha": "e7dca554bcb802f98408383a864404e3aa4eacca",
+      "sourceRef": "b10662"
+    },
+    {
+      "file": "System.Speech-LICENSE.txt",
+      "source": "https://github.com/dotnet/dotnet/blob/e2f47b0110ed922f21a1522da67279133ce28f32/LICENSE.TXT",
+      "gitBlobSha": "a616ed188dfce68ee308f674350ad242d8588c2b",
+      "sourceRef": "e2f47b0110ed922f21a1522da67279133ce28f32"
+    },
+    {
+      "file": "num2words-LGPL.txt",
+      "source": "https://github.com/savoirfairelinux/num2words/blob/master/COPYING",
+      "gitBlobSha": "a7b7406f02f769167539316e5093cd58f609dce5",
+      "sourceRef": "default branch"
+    },
+    {
+      "file": "phonemizer-GPL.txt",
+      "source": "https://github.com/bootphon/phonemizer/blob/master/LICENSE",
+      "gitBlobSha": "733c072369ca77331f392c40da7404c85c36542c",
+      "sourceRef": "default branch"
+    },
+    {
+      "file": "Interop.UIAutomationClient-LICENSE.txt",
+      "source": "nuget:interop.uiautomationclient\\10.19041.0\\LICENSE.txt",
+      "sourceSha256": "AE507F8CB7CE8B34D9BA817D165492AF4225482305A8B92C7620F5FA7B7C57A1"
+    },
+    {
+      "file": "ONNXRuntime-LICENSE.txt",
+      "source": "nuget:microsoft.ml.onnxruntime\\1.22.0\\LICENSE",
+      "sourceSha256": "C250D6278F0B47A6439FB7592B08B58A55EB9F535AA49A1DB63211C3F982B674"
+    },
+    {
+      "file": "NAudio-LICENSE.txt",
+      "source": "nuget:naudio\\2.2.1\\license.txt",
+      "sourceSha256": "303E01786B271EB464B3F43D18A375F2F17D37BC708A37C2FDF45B289FB5BFAA"
+    },
+    {
+      "file": "NumSharp-LICENSE.txt",
+      "source": "nuget:numsharp\\0.30.0\\LICENSE",
+      "sourceSha256": "1EB85FC97224598DAD1852B5D6483BBCF0AA8608790DCC657A5A2A761AE9C8C6"
+    },
+    {
+      "file": "System.Numerics.Tensors-LICENSE.txt",
+      "source": "nuget:system.numerics.tensors\\9.0.5\\LICENSE.TXT",
+      "sourceSha256": "D7A68596AB69B06F51CA278A6545148E4269A9381C26D597C13DF5D88E08CF5B"
+    },
+    {
+      "file": "Kokoro-Voices-LICENSE.txt",
+      "source": "nuget:kokorosharp\\0.8.4\\content\\voices\\LICENSE",
+      "sourceSha256": "CFC7749B96F63BD31C3C42B5C471BF756814053E847C10F3EB003417BC523D30"
+    },
+    {
+      "file": "LLVM-OpenMP-LICENSE.txt",
+      "source": "https://github.com/ggml-org/llama.cpp/releases/download/b10662/llama-b10662-bin-win-cpu-x64.zip#LICENSE-LLVM-OpenMP",
+      "sourceSha256": "FDAD1758A9E1F9D5A81E18879B3406772115EDC92C24BFA36B70C654F325E8E4"
+    },
+    {
+      "file": "Microsoft-VC-Runtime-redistribution.txt",
+      "source": "https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files",
+      "packagedSha256": "CEEE9A9D199D5CD99D272C7435C461924B560E829B289F504152129605846B50"
+    },
+    {
+      "file": "UniDic-3.1.0-BSD.txt",
+      "source": "https://clrd.ninjal.ac.jp/unidic_archive/cwj/3.1.0/unidic-cwj-3.1.0-full/liceses/BSD",
+      "sourceRef": "Official UniDic Contemporary Written Japanese 3.1.0 (2021-04-01)",
+      "sourceSha256": "770A75DE30705439084F869DBCB0BC4EBCFFCB7C7124C0D74F5083170318A9BB",
+      "packagedSha256": "770A75DE30705439084F869DBCB0BC4EBCFFCB7C7124C0D74F5083170318A9BB"
+    },
+    {
+      "file": "UniDic-3.1.0-AUTHORS.txt",
+      "source": "https://clrd.ninjal.ac.jp/unidic_archive/cwj/3.1.0/unidic-cwj-3.1.0-full/liceses/AUTHORS",
+      "sourceRef": "Official UniDic Contemporary Written Japanese 3.1.0 (2021-04-01)",
+      "sourceSha256": "A05BFDD3A9DB36D9C64495F4A3D1824D05B95FBB4FC6DC07C660E91BC191C481",
+      "packagedSha256": "A05BFDD3A9DB36D9C64495F4A3D1824D05B95FBB4FC6DC07C660E91BC191C481"
+    },
+    {
+      "file": "UniDic-3.1.0-COPYING.txt",
+      "source": "https://clrd.ninjal.ac.jp/unidic_archive/cwj/3.1.0/unidic-cwj-3.1.0-full/liceses/COPYING",
+      "sourceRef": "Official UniDic Contemporary Written Japanese 3.1.0 (2021-04-01)",
+      "sourceSha256": "D44B49398A72590A675E55F8F7A7DBF57BB5B71A9E20BA250F09C0CC5986BEF1",
+      "packagedSha256": "819F5A9D1BE12D03C5C6816BB20432DE127CC4980BD4F4F66FD93358F8C20EC6"
+    },
+    {
+      "file": "wordfreq-LICENSE.txt",
+      "source": "https://github.com/rspeer/wordfreq/blob/912caf64b657478d1dff1138efdc078947d54bb1/LICENSE.txt",
+      "gitBlobSha": "fe88e76a90867f6546af89e7ee1e4cc07dada7da",
+      "sourceRef": "912caf64b657478d1dff1138efdc078947d54bb1",
+      "packagedSha256": "8990C551671A51765C4DFE9428F3E1D58DC327F49ACA346A32D28CC0FCC7AA88",
+      "note": "Attribution snapshot only; exact dataset version used by MisakiSharp generators remains unconfirmed."
+    },
+    {
+      "file": "wordfreq-NOTICE.md",
+      "source": "https://github.com/rspeer/wordfreq/blob/912caf64b657478d1dff1138efdc078947d54bb1/NOTICE.md",
+      "gitBlobSha": "1e7c6da3843e05b539bf096481200bb394c7796d",
+      "sourceRef": "912caf64b657478d1dff1138efdc078947d54bb1",
+      "packagedSha256": "31E2DE232B07181A2EE45B57DE25DE7769D975E2E548B1FA8F2B281456D93A35",
+      "note": "Attribution snapshot only; exact dataset version used by MisakiSharp generators remains unconfirmed."
+    },
+    {
+      "file": "CC-BY-SA-4.0.txt",
+      "source": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt",
+      "sourceRef": "Creative Commons Attribution-ShareAlike 4.0 International; retrieved 2026-10-12",
+      "sourceSha256": "28A9529C7D0BB4DC51F4BF5C116A3D16EF247A052F7591466768DDF563FD1CF5",
+      "packagedSha256": "23EE78C8BAE49CF08EA2F0C84945C66B987EBE4520881FB51B3DAD4FB43D07C2",
+      "note": "Terminal blank lines normalized in packaged text."
+    },
+    {
+      "file": "OpenTK-COPYRIGHT-NOTICES.txt",
+      "source": "https://github.com/opentk/opentk/tree/f6652e6c493587fe174d379e9b553176b114b163",
+      "sourceRef": "f6652e6c493587fe174d379e9b553176b114b163",
+      "packagedSha256": "70752EB418E0F4C39107E6C1558DEEFADD353E0771A0B124CA8658C5C8109A86",
+      "note": "Locally compiled attribution inventory; exact upstream paths and blob hashes are recorded in OpenTK-attribution-review.json."
+    },
+    {
+      "file": "OpenTK-attribution-review.json",
+      "source": "https://github.com/opentk/opentk/tree/f6652e6c493587fe174d379e9b553176b114b163",
+      "sourceRef": "f6652e6c493587fe174d379e9b553176b114b163",
+      "packagedSha256": "B66E35C5D99C43D1328CACA190607EA12D2B04F81BE63DF8CA6198F7838902BE",
+      "note": "Locally compiled attribution inventory; exact upstream paths and blob hashes are recorded in OpenTK-attribution-review.json."
+    },
+    {
+      "file": "number-to-words-LICENSE.txt",
+      "source": "https://github.com/marlun78/number-to-words/blob/02b3cc45829fbe21d8166fcf1df0d5b33e616b7e/LICENSE",
+      "sourceRef": "02b3cc45829fbe21d8166fcf1df0d5b33e616b7e",
+      "packagedSha256": "F8762248C9230AC9A02EC07F8EEADB357D254DCD83367AF7B0FDF2F976056944"
+    },
+    {
+      "file": "MisakiSharp-COMPONENT-NOTICES.txt",
+      "source": "Compiled upstream attribution texts; immutable sources/hashes in MisakiSharp-component-notices.json",
+      "packagedSha256": "C862B2D91AB7F2F09C61DE464D2394FF7AE74E151B1AB257C0E060FE3461FD92"
+    },
+    {
+      "file": "MisakiSharp-component-notices.json",
+      "source": "Locally compiled component provenance inventory",
+      "packagedSha256": "F2689876BF7B87733EE8115459B0860886A6353B0CBB09349F599AE6E5ECF148"
+    },
+    {
+      "file": "MisakiSharp-DATA-NOTICE.txt",
+      "source": "Locally authored converted-data attribution and modification notice; evidence in docs/licensing-pronunciation-data-review.md",
+      "packagedSha256": "F67316E1F8999DB32467C4889E0E049868F096F49CD066796753921DD7A829F8",
+      "note": "Modified frontend retains the exact generated resource bytes with scoped data notices."
+    },
+    {
+      "file": "dependency-source-manifest.json",
+      "source": "Locally compiled exact-library and pinned lineage source archive inventory; not complete combined-app corresponding source",
+      "packagedSha256": "03EAA687CE789879943875430E5FDA7ED1EE4339D2C0BCF67958CB357500407B",
+      "note": "Modified local frontend sources are part of the release asset; original archives are lineage references."
+    },
+    {
+      "file": "misaki-pulsereader-source.json",
+      "source": "Locally authored source contract for the modified frontend, exact embedded resources and required/removed helper metadata",
+      "packagedSha256": "3B0ED12F2D5F5943E165CFBBE175DA35E3424B775C383D9EF17A4F7CD39A2187"
+    },
+    {
+      "file": "wordfreq-README.md",
+      "source": "https://github.com/rspeer/wordfreq/blob/912caf64b657478d1dff1138efdc078947d54bb1/README.md",
+      "sourceRef": "912caf64b657478d1dff1138efdc078947d54bb1",
+      "gitBlobSha": "46f45656792d81249c51ca9cb4ac284be53dfbc5",
+      "packagedSha256": "0F1DB058E1DF2E6BDA2DB5D0EA851A7111D2390EC16A9939D971EF53EA24F684",
+      "note": "Complete bibliography and supplied underlying-source statements retained; not a claim this exact generator version was used."
+    },
+    {
+      "file": "CC-BY-SA-3.0.txt",
+      "source": "https://creativecommons.org/licenses/by-sa/3.0/legalcode.txt",
+      "packagedSha256": "3F941B3B89CF7B8370CEB83CC76D2120D471B58735D8CA60238A751A48D7F72F"
+    },
+    {
+      "file": "CC0-1.0.txt",
+      "source": "https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt",
+      "packagedSha256": "A2010F343487D3F7618AFFE54F789F5487602331C0A8D03F49E9A7C547CF0499"
+    },
+    {
+      "file": "Microsoft-VC-Runtime-LICENSE.docx",
+      "source": "https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual-C-V14-License-Redistributable_and_Runtime_ENU.docx",
+      "packagedSha256": "08651651A7602FC7C0E2763DE0FDE1FF9F868DF2780597CD1775EE9D6441C783",
+      "note": "Unmodified end-user terms, not the publisher redistribution grant."
+    },
+    {
+      "file": "Microsoft-VC-Runtime-LICENSE.txt",
+      "source": "Derived text of the preserved Microsoft-VC-Runtime-LICENSE.docx; complete original paragraph words retained, Word numbering/layout omitted",
+      "packagedSha256": "441867162C8327509A08A9C626A5D1C2DF2544A7859DF0AEB94CD22229208869"
+    },
+    {
+      "file": "distribution-terms-introduction.txt",
+      "source": "Locally authored scoped introduction and distributor agreement; original MIT and Microsoft runtime texts are appended unchanged by the build recipe",
+      "packagedSha256": "D1D660FED7F58446A931606FE9E193BB22F9BB42257BB65F026131D3C7DCA7AE"
+    },
+    {
+      "file": "Microsoft-Visual-Studio-2026-Community-LICENSE.docx",
+      "source": "https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual_Studio_2026-License-Community_ENU.docx",
+      "packagedSha256": "02AC07637F4A513A807CD3721C7620433FC483BC049D25784B0C10C54B05E1FB",
+      "note": "Unmodified supplying-tool licence; subject to publisher eligibility and distribution conditions."
+    },
+    {
+      "file": "wordfreq-provenance.json",
+      "source": "https://github.com/Lyrcaxis/MisakiSharp/tree/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators",
+      "sourceRef": "4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06",
+      "packagedSha256": "1400150DFECE92773891E349266172E0C53DD2DBBF810EA8505D6E57F59DC7F6",
+      "note": "Locally compiled provenance review; upstream generator paths and blob hashes are recorded in this file."
+    }
+  ],
+  "completedReviews": [
+    {
+      "component": "Microsoft app-local release x64 CRT, 13 October 2026",
+      "scope": "Current original Community/runtime documents, Distributable Code list, unchanged signed release DLLs and scoped agreement route",
+      "evidence": ["Microsoft-VC-Runtime-redistribution.txt", "Microsoft-Visual-Studio-2026-Community-LICENSE.docx", "Microsoft-VC-Runtime-LICENSE.docx", "distribution-terms-introduction.txt", "docs/licensing-microsoft-runtime-review.md"],
+      "result": "The documented grant covers the four release VC/redist DLLs. Maintainer confirmed individual development and acknowledged the publisher defence/indemnity condition. Installer and portable consent address the identified agreement gap and passed clean-profile checks on 13 October 2026. This is not a certification of contract enforceability."
+    },
+    {
+      "component": "MisakiSharp 2.1.1 component notices and converted-data notices",
+      "scope": "Collected 27 source notice/header sections, 53 source/resource hashes, scoped CC data attribution, modifications and bibliography",
+      "evidence": ["MisakiSharp-component-notices.json", "MisakiSharp-COMPONENT-NOTICES.txt", "MisakiSharp-DATA-NOTICE.txt", "wordfreq-README.md"],
+      "result": "Notice inputs completed without inventing generator versions. Validate these files in each release payload. This records notice collection; the subsequent code replacement and source-level data check are separate entries."
+    },
+    {
+      "component": "Historical MisakiSharp 2.1.1 source reconstruction",
+      "scope": "Exact pinned C# source rebuild and comparison of all twenty embedded resources",
+      "evidence": ["dependency-source-manifest.json", "docs/licensing-misaki-code-review.md"],
+      "result": "Build succeeded with zero warnings/errors; all twenty resource hashes match shipped DLL. Full DLL is not byte-identical. Separate source asset preserves exact library/resources and lineage references, not complete corresponding source for a GPL combined application."
+    },
+    {
+      "component": "MisakiSharp Pulse Reader permissive code replacements",
+      "scope": "Replace copied number conversion and punctuation restoration/normalization code while preserving API and resources",
+      "evidence": ["misaki-pulsereader-source.json", "docs/permissive-g2p-replacement-plan.md", "docs/licensing-misaki-code-review.md"],
+      "result": "50,342 number and 48,876 punctuation contract comparisons passed; assembled corpus matches phonemes/token IDs and all twenty resource hashes. User accepted all ten audio pairs on 13 October 2026. Matching tested output is not proof for every unseen input; final package acceptance remains separate."
+    },
+    {
+      "component": "Generated pronunciation data source-level check, 13 October 2026",
+      "scope": "Inspect project grant, generators, eight generated resources and pinned eSpeak source/API documentation",
+      "evidence": ["docs/licensing-pronunciation-data-review.md", "MisakiSharp-DATA-NOTICE.txt"],
+      "result": "No concrete conflicting output term or identified protected eSpeak source copying was found. Retain exact resource bytes and scoped input notices. Dictionary-content uncertainty is documented without creating a new permission prerequisite or claiming blanket legal clearance."
+    },
+    {
+      "component": "OpenTK.Audio.OpenAL, Core and Mathematics 5.0.0-pre.13",
+      "scope": "Missing THIRD_PARTIES.md reference and attribution of three shipped managed libraries",
+      "evidence": "OpenTK-attribution-review.json",
+      "sourceRef": "f6652e6c493587fe174d379e9b553176b114b163",
+      "result": "107 complete C# files inspected; distinct MIT copyright notices retained. No native OpenAL binary in restored package assets or inspected payload. Does not certify other distributions or legal status."
+    },
+    {
+      "component": "UniDic 3.1.0 embedded data",
+      "scope": "Retrieve exact upstream BSD option, AUTHORS and triple-license declaration",
+      "evidence": [
+        "UniDic-3.1.0-BSD.txt",
+        "UniDic-3.1.0-AUTHORS.txt",
+        "UniDic-3.1.0-COPYING.txt"
+      ],
+      "result": "Official 2021-04-01 license texts retrieved individually without downloading dataset archives. Embedded converted compact matrix is included in the attribution scope."
+    }
+  ]
+}

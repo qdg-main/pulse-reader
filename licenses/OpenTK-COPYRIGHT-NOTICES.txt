@@ -1,0 +1,20 @@
+Additional OpenTK copyright notices
+
+Copyright (C) 2019 OpenTK
+Copyright (C) 2020 OpenTK
+Copyright (C) OpenTK
+Copyright (c) 2006 - 2009 the Open Toolkit library.
+Copyright (c) 2006 - 2008 the Open Toolkit library, except where noted.
+Copyright (c) 2006 - 2013 Stefanos Apostolopoulos for the Open Toolkit library
+Copyright (c) 2006 - 2008 The Open Toolkit library.
+Copyright (c) 2006-2008 the OpenTK Team.
+
+These notices are retained from the source files for OpenTK.Audio.OpenAL,
+OpenTK.Core and OpenTK.Mathematics at commit f6652e6c493587fe174d379e9b553176b114b163.
+These components are distributed under MIT. The complete permission and
+warranty disclaimer are included in OpenTK-LICENSE.txt.
+
+OpenTK-attribution-review.json records the inspected paths and upstream blob
+hashes. No OpenAL native library was found in the restored NuGet assets or
+inspected Pulse Reader payload. This is a bounded attribution inventory,
+not a legal certification or permission to redistribute additional binaries.

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-12",
+  "component": "wordfreq data used by MisakiSharp pronunciation-table generators",
+  "misakiSourceRef": "4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06",
+  "misakiPackage": "MisakiSharp/2.1.1",
+  "wordfreqAttributionSnapshotRef": "912caf64b657478d1dff1138efdc078947d54bb1",
+  "exactGeneratorWordfreqVersion": null,
+  "generatorEvidence": [
+    {
+      "path": "generators/generate_espeak_en.py",
+      "gitBlobSha": "b14facdc1390f0b586f3c101de2966736797ddd8",
+      "source": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_espeak_en.py",
+      "finding": "wordlist() imports wordfreq and selects the top 500000 English words before generating pronunciation data."
+    },
+    {
+      "path": "generators/generate_espeak_native.py",
+      "gitBlobSha": "d2b60f6442e2ba37b22c9bf0a619440a5e65133e",
+      "source": "https://github.com/Lyrcaxis/MisakiSharp/blob/4ec982c8cd8f17d7b0cc6ef69605459ff2ce8a06/generators/generate_espeak_native.py",
+      "finding": "wordlist construction imports wordfreq and uses top_n_list for each language."
+    }
+  ],
+  "upstreamCodeLicense": "Apache-2.0",
+  "upstreamDataLicense": "CC-BY-SA-4.0",
+  "attributionFiles": [
+    "wordfreq-LICENSE.txt",
+    "wordfreq-NOTICE.md",
+    "CC-BY-SA-4.0.txt",
+    "wordfreq-README.md",
+    "MisakiSharp-DATA-NOTICE.txt"
+  ],
+  "remainingReview": "Exact generator version remains unrecorded. Reviewed v2.5.1/v3.0.2/attribution-snapshot input data blobs agree for large en/es/fr/it/pt and small hi. Converted data notices conservatively preserve CC-BY-SA conditions, source credits, bibliography and modification statements. Version uncertainty is informational; the separate code-port/source and protected eSpeak dictionary-output review remains open. See docs/licensing-pronunciation-data-review.md."
+}

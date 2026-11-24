@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>MisakiSharp</AssemblyName>
+    <RootNamespace>MisakiSharp</RootNamespace>
+    <Version>2.1.1-pulsereader.1</Version>
+    <AssemblyVersion>2.1.1.0</AssemblyVersion>
+    <FileVersion>2.1.1.1</FileVersion>
+    <Authors>Lyrcaxis; Martin Eneqvist; Quantum Dot Games</Authors>
+    <Description>Pinned MisakiSharp frontend with Pulse Reader's number and punctuation replacements.</Description>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="data/*" LogicalName="MisakiSharp.%(Filename)%(Extension)" WithCulture="false" />
+  </ItemGroup>
+</Project>
