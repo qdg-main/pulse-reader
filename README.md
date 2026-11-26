@@ -4,6 +4,8 @@
 
 Pulse Reader is a Windows tray utility that reads selected text aloud. Select text in an application, then press `Ctrl + Shift + Space` to start speaking. Press the same hotkey again to stop, or hold it briefly to monitor new text appearing in the current window.
 
+**[Download for Windows](https://github.com/qdg-main/pulse-reader/releases/latest)**
+
 Kokoro runs locally with `af_heart` as the default voice. After the first model download, speech works offline and selected text does not leave the computer. If Kokoro cannot start or synthesize a selection, Pulse Reader falls back to an installed Windows voice.
 
 ## What it does
@@ -33,7 +35,7 @@ Use a Windows edition/version covered by the [.NET 10 support policy](https://gi
 
 ## Install and run
 
-When a release is available, download the standard Windows x64 installer from [Releases](https://github.com/qdg-main/pulse-reader/releases). It includes the .NET runtime and native speech dependencies, but no models. Installation defaults to your Windows account without administrator access. You can instead install for all users with administrator approval; model downloads are then shared between accounts, while settings stay individual.
+Download the standard Windows x64 installer from the [latest release](https://github.com/qdg-main/pulse-reader/releases/latest). It includes the .NET runtime and native speech dependencies, but no models. Installation defaults to your Windows account without administrator access. You can instead install for all users with administrator approval; model downloads are then shared between accounts, while settings stay individual.
 
 The portable ZIP contains the same application files. Extract the whole folder before running `PulseReader.exe`. The smaller `framework-dependent` packages need the [.NET 10 Windows Desktop Runtime for x64](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) installed separately. No SDK is needed to use a release.
 
@@ -51,10 +53,7 @@ Packaged copies check for stable GitHub updates once a day while running. Turn
 off **Check for updates automatically** in Settings to opt out. Use **Check for
 updates** or **Update to <version>** in the tray menu to check or apply an update.
 Updates keep the package flavour, installation scope, models and settings.
-See [updating and interrupted-update recovery](docs/updating.md). The updater
-has Candidate 29 self-contained helper/per-user installer and retained-recovery
-evidence. Machine UAC, live framework-dependent updates, real update UI/HTTP
-delivery and physical power-loss checks remain open.
+See [updating and interrupted-update recovery](docs/updating.md) for details.
 
 ### Build from source
 
