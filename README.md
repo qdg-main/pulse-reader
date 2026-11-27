@@ -1,10 +1,12 @@
 # <img src="src/PulseReader/Assets/TrayIcon/pulse-reader-readme-logo.png" alt="Pulse Reader logo" width="36" height="36" align="absbottom"> Pulse Reader
 
-[![GitHub Sponsors](https://img.shields.io/badge/GitHub-Sponsors-ea4aaa?style=flat&logo=githubsponsors)](https://github.com/sponsors/Mark-A-Richardson)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub-Sponsors-ea4aaa?style=flat&logo=githubsponsors)](https://github.com/sponsors/Mark-A-Richardson) [![Latest release](https://img.shields.io/github/v/release/qdg-main/pulse-reader?label=Latest%20release&style=flat)](https://github.com/qdg-main/pulse-reader/releases/latest)
 
 Pulse Reader is a Windows tray utility that reads selected text aloud. Select text in an application, then press `Ctrl + Shift + Space` to start speaking. Press the same hotkey again to stop, or hold it briefly to monitor new text appearing in the current window.
 
 **[Download for Windows](https://github.com/qdg-main/pulse-reader/releases/latest)**
+
+<a href="docs/assets/interface-overview.png"><img src="docs/assets/interface-overview.png" alt="Pulse Reader settings, notification area menu, and floating playback controls" width="880"></a>
 
 Kokoro runs locally with `af_heart` as the default voice. After the first model download, speech works offline and selected text does not leave the computer. If Kokoro cannot start or synthesize a selection, Pulse Reader falls back to an installed Windows voice.
 
@@ -19,10 +21,6 @@ Kokoro runs locally with `af_heart` as the default voice. After the first model 
 - Can monitor one window and read newly appearing accessibility text as it arrives
 - Supports start-with-Windows registration for the current user
 - Checks quietly for stable releases, with an opt-out and a manual tray-menu update action
-
-## Interface
-
-<a href="docs/assets/interface-overview.png"><img src="docs/assets/interface-overview.png" alt="Pulse Reader settings, notification area menu, and floating playback controls" width="880"></a>
 
 ## Requirements
 
